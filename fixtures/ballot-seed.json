@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "state": "NY",
+  "generatedAt": "2026-10-12T12:00:00Z",
+  "_fixtureNote": "Fictional sample ballot for FIXTURES=1. No real people.",
+  "election": {
+    "id": "ny-2026-11-03-general",
+    "name": "Sample General Election (fictional data)",
+    "date": "2026-11-03",
+    "registrationDeadline": "2026-10-24",
+    "earlyVoting": {
+      "start": "2026-10-24",
+      "end": "2026-11-01"
+    },
+    "absenteeApplicationDeadline": "2026-10-24",
+    "pollHours": "6:00 a.m. to 9:00 p.m. (sample)",
+    "officialLinks": [
+      {
+        "label": "Sample board of elections",
+        "url": "https://example.org/sample-board-of-elections"
+      },
+      {
+        "label": "Sample poll site finder",
+        "url": "https://example.org/sample-poll-finder"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sample election calendar (fictional)",
+        "url": "https://example.org/sample-source",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  "contests": [
+    {
+      "id": "fx-governor",
+      "office": "Governor and Lieutenant Governor",
+      "level": "state",
+      "districtType": "statewide",
+      "district": null,
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate B",
+          "runningMate": "Sample Running Mate B",
+          "partyLines": [
+            "Sample Party Two"
+          ],
+          "incumbent": true,
+          "ids": {},
+          "currentOffice": "Governor of New York (sample)",
+          "website": "https://example.org/sample-candidate-b",
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate A",
+          "runningMate": "Sample Running Mate A",
+          "partyLines": [
+            "Sample Party One",
+            "Sample Party Three"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": "https://example.org/sample-candidate-a",
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-comptroller",
+      "office": "Comptroller",
+      "level": "state",
+      "districtType": "statewide",
+      "district": null,
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate D",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One"
+          ],
+          "incumbent": true,
+          "ids": {},
+          "currentOffice": "State Comptroller (sample)",
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate C",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party Two"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-attorney-general",
+      "office": "Attorney General",
+      "level": "state",
+      "districtType": "statewide",
+      "district": null,
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate F",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party Two",
+            "Sample Party Four"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate E",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One"
+          ],
+          "incumbent": true,
+          "ids": {},
+          "currentOffice": "Attorney General (sample)",
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-cd-12",
+      "office": "Representative in Congress",
+      "level": "federal",
+      "districtType": "congressional",
+      "district": "12",
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate G",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One",
+            "Sample Party Three"
+          ],
+          "incumbent": true,
+          "ids": {
+            "bioguide": "Z000012",
+            "fec": "H0NY12000"
+          },
+          "currentOffice": "U.S. Representative, District 12 (sample)",
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate H",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party Two"
+          ],
+          "incumbent": false,
+          "ids": {
+            "fec": "H6NY12001"
+          },
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-cd-10",
+      "office": "Representative in Congress",
+      "level": "federal",
+      "districtType": "congressional",
+      "district": "10",
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate Q",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-sd-28",
+      "office": "State Senator",
+      "level": "state",
+      "districtType": "state-senate",
+      "district": "28",
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate K",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party Two"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate J",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One"
+          ],
+          "incumbent": true,
+          "ids": {
+            "nysenate": "9028"
+          },
+          "currentOffice": "State Senator, District 28 (sample)",
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-ad-75",
+      "office": "Member of Assembly",
+      "level": "state",
+      "districtType": "state-assembly",
+      "district": "075",
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate L",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One",
+            "Sample Party Three"
+          ],
+          "incumbent": true,
+          "ids": {
+            "nysenate": "9075",
+            "openstates": "ocd-person/00000000-0000-4000-8000-000000000075"
+          },
+          "currentOffice": "Member of Assembly, District 75 (sample)",
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate M",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party Two"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-supreme-1",
+      "office": "Justice of the Supreme Court",
+      "level": "judicial",
+      "districtType": "judicial-district",
+      "district": "1",
+      "seats": 2,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate P",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party Two"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate N",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "name": "Sample Candidate O",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One",
+            "Sample Party Two"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx-civil-court",
+      "office": "Judge of the Civil Court",
+      "level": "judicial",
+      "districtType": "judicial-district",
+      "district": "New York County, 3rd Municipal Court District",
+      "seats": 1,
+      "sources": [
+        {
+          "label": "Sample source (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Sample Candidate R",
+          "runningMate": null,
+          "partyLines": [
+            "Sample Party One"
+          ],
+          "incumbent": false,
+          "ids": {},
+          "currentOffice": null,
+          "website": null,
+          "sources": [
+            {
+              "label": "Sample source (fictional)",
+              "url": "https://example.org/sample-source",
+              "accessed": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ballotProposals": [
+    {
+      "id": "fx-proposal-1",
+      "title": "Proposal One: Sample Amendment (fictional)",
+      "officialText": "This is fictional sample text standing in for the official text of a ballot proposal. It is used only to test how proposals are displayed.",
+      "summaryOfficial": "Fictional sample abstract of the proposal, shown verbatim as the official summary would be.",
+      "sources": [
+        {
+          "label": "Sample proposal text (fictional)",
+          "url": "https://example.org/sample-source",
+          "accessed": "2026-10-13"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": [
+      "Sample contests"
+    ],
+    "partial": [],
+    "missing": [
+      "Real data: this is a fixture"
+    ],
+    "notes": "Fixture for FIXTURES=1 mode."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "memberId": 9075,
+  "chamber": "ASSEMBLY",
+  "name": "Sample Candidate L",
+  "district": "75",
+  "session": 2025,
+  "sponsored": [
+    {
+      "p": "A99003",
+      "t": "Sample Transit Fare Act (fictional)",
+      "ls": "Public Authorities Law",
+      "st": "Passed Assembly",
+      "sd": "2025-06-10",
+      "sg": false,
+      "ch": null,
+      "sum": "Caps sample fares (fictional summary).",
+      "fis": null,
+      "pub": "2025-01-20"
+    }
+  ],
+  "votes": []
+}

@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "candidate_id": "H0NY12000",
+      "cycle": 2026,
+      "support_oppose_indicator": "S",
+      "total": 50000
+    },
+    {
+      "candidate_id": "H0NY12000",
+      "cycle": 2026,
+      "support_oppose_indicator": "O",
+      "total": 125000
+    }
+  ]
+}

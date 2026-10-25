@@ -1,0 +1,87 @@
+name: Refresh data
+
+# Nightly: rebuild the vote, New York and outside-spending data in /data and commit any changes.
+# Vercel redeploys automatically when the commit lands on the main branch.
+on:
+  schedule:
+    - cron: "17 8 * * *" # 08:17 UTC (about 4 a.m. in New York)
+  workflow_dispatch: {}
+  # Also rebuild when the ballot file or this workflow changes, or when .github/refresh-trigger
+  # is edited (an easy way to request a run with a commit). The job's own data commits don't
+  # trigger it: pushes made with the workflow's GITHUB_TOKEN never start new workflow runs.
+  push:
+    branches: [main]
+    paths:
+      - "data/ballots/**"
+      - ".github/workflows/refresh-data.yml"
+      - ".github/refresh-trigger"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Working caches (NY bill store) persist between runs without bloating git.
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: data-cache-${{ github.run_id }}
+          restore-keys: data-cache-
+
+      - name: Build federal vote indexes (Voteview + Congress.gov)
+        continue-on-error: true
+        env:
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
+        run: node scripts/build-votes.mjs
+
+      - name: Build New York indexes (Open Legislation + Open States)
+        continue-on-error: true
+        env:
+          NYSENATE_API_KEY: ${{ secrets.NYSENATE_API_KEY }}
+          OPENSTATES_API_KEY: ${{ secrets.OPENSTATES_API_KEY }}
+        run: node scripts/build-nysenate.mjs
+
+      - name: Build New York campaign finance (data.ny.gov, no key needed)
+        continue-on-error: true
+        env:
+          NY_SOCRATA_APP_TOKEN: ${{ secrets.NY_SOCRATA_APP_TOKEN }}
+        run: node scripts/build-nymoney.mjs
+
+      - name: Build outside spending for federal candidates (FEC independent expenditures)
+        continue-on-error: true
+        env:
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
+        run: node scripts/build-outside.mjs
+
+      - name: Validate seed ballots
+        run: node scripts/validate-seed.mjs
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "Data refresh $(date -u +%Y-%m-%d)"
+            # The ballot file may have been updated while this job ran; replay on top of it.
+            git pull --rebase origin "${GITHUB_REF_NAME:-main}"
+            git push
+          fi

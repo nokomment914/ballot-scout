@@ -1,0 +1,82 @@
+{
+  "sponsoredLegislation": [
+    {
+      "congress": 119,
+      "introducedDate": "2025-02-03",
+      "latestAction": {
+        "actionDate": "2025-03-10",
+        "text": "Received in the Senate. (sample)"
+      },
+      "number": "99001",
+      "policyArea": {
+        "name": "Housing and Community Development"
+      },
+      "title": "Sample Housing Act",
+      "type": "HR",
+      "url": "https://api.congress.gov/v3/bill/119/hr/99001?format=json"
+    },
+    {
+      "congress": 119,
+      "introducedDate": "2025-04-15",
+      "latestAction": {
+        "actionDate": "2025-06-01",
+        "text": "Became Public Law No: 119-999. (sample)"
+      },
+      "number": "99002",
+      "policyArea": {
+        "name": "Health"
+      },
+      "title": "Sample Community Health Act",
+      "type": "HR",
+      "url": "https://api.congress.gov/v3/bill/119/hr/99002?format=json"
+    },
+    {
+      "congress": 119,
+      "introducedDate": "2025-09-09",
+      "latestAction": {
+        "actionDate": "2025-09-09",
+        "text": "Referred to the Sample Committee. (sample)"
+      },
+      "number": "99008",
+      "policyArea": {
+        "name": "Taxation"
+      },
+      "title": "Sample Small Business Tax Act",
+      "type": "HR",
+      "url": "https://api.congress.gov/v3/bill/119/hr/99008?format=json"
+    },
+    {
+      "amendmentNumber": "9",
+      "congress": 119,
+      "introducedDate": "2025-03-04",
+      "latestAction": {
+        "actionDate": "2025-03-04",
+        "text": "Amendment failed. (sample)"
+      },
+      "url": "https://api.congress.gov/v3/amendment/119/hamdt/9?format=json"
+    },
+    {
+      "congress": 116,
+      "introducedDate": "2019-02-03",
+      "latestAction": {
+        "actionDate": "2019-02-03",
+        "text": "Introduced. (sample)"
+      },
+      "number": "99009",
+      "policyArea": {
+        "name": "Housing and Community Development"
+      },
+      "title": "Sample Old Housing Act",
+      "type": "HR",
+      "url": "https://api.congress.gov/v3/bill/116/hr/99009?format=json"
+    }
+  ],
+  "pagination": {
+    "count": 5
+  },
+  "request": {
+    "bioguideId": "Z000012",
+    "contentType": "application/json",
+    "format": "json"
+  }
+}

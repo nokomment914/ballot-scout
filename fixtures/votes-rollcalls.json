@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-12T07:30:00Z",
+  "fields": [
+    "chamber",
+    "congress",
+    "session",
+    "date",
+    "clerkRoll",
+    "voteviewRoll",
+    "bill",
+    "question",
+    "kind",
+    "result",
+    "desc"
+  ],
+  "rollcalls": {
+    "H119-0101": [
+      "H",
+      119,
+      1,
+      "2025-03-04",
+      101,
+      95,
+      "119-hr-99001",
+      "On Passage",
+      "passage",
+      "Passed",
+      "Sample Housing Act"
+    ],
+    "H119-0102": [
+      "H",
+      119,
+      1,
+      "2025-03-04",
+      100,
+      94,
+      "119-hr-99001",
+      "On Agreeing to the Amendment",
+      "amendment",
+      "Failed",
+      "Sample amendment to the Sample Housing Act"
+    ],
+    "H119-0150": [
+      "H",
+      119,
+      1,
+      "2025-05-12",
+      150,
+      141,
+      "119-hr-99002",
+      "On Motion to Suspend the Rules and Pass",
+      "suspension",
+      "Passed",
+      "Sample Community Health Act"
+    ],
+    "H119-0230": [
+      "H",
+      119,
+      1,
+      "2025-07-21",
+      230,
+      219,
+      "119-hr-99004",
+      "On Agreeing to the Conference Report",
+      "conference",
+      "Agreed to",
+      "Sample Transit Funding Act"
+    ],
+    "H119-0410": [
+      "H",
+      119,
+      2,
+      "2026-02-10",
+      41,
+      410,
+      "119-hr-99005",
+      "On Passage, Objections of the President Not Withstanding",
+      "veto-override",
+      "Failed",
+      "Sample Clean Rivers Act"
+    ],
+    "H118-0777": [
+      "H",
+      118,
+      2,
+      "2024-06-03",
+      277,
+      777,
+      "118-hr-99006",
+      "On Passage",
+      "passage",
+      "Passed",
+      "Sample Tax Credit Act"
+    ],
+    "H119-0500": [
+      "H",
+      119,
+      2,
+      "2026-03-02",
+      80,
+      500,
+      "119-hr-99007",
+      "On Passage",
+      "passage",
+      "Passed",
+      "Sample Rail Safety Act"
+    ]
+  }
+}

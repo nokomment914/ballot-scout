@@ -1,0 +1,125 @@
+{
+  "_fixtureFetchedAt": "2026-10-13T14:00:00Z",
+  "kind": "civicinfo#voterInfoResponse",
+  "election": {
+    "id": "9999",
+    "name": "Sample General Election (fictional)",
+    "electionDay": "2026-11-03",
+    "ocdDivisionId": "ocd-division/country:us/state:ny"
+  },
+  "normalizedInput": {
+    "line1": "350 5th Ave",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10118"
+  },
+  "pollingLocations": [
+    {
+      "address": {
+        "locationName": "Sample Polling Site",
+        "line1": "1 Example Plaza",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "sources": [
+        {
+          "name": "Sample Board of Elections",
+          "official": true
+        }
+      ],
+      "pollingHours": "6:00 AM - 9:00 PM"
+    }
+  ],
+  "earlyVoteSites": [
+    {
+      "address": {
+        "locationName": "Sample Early Voting Center",
+        "line1": "2 Example Street",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "sources": [
+        {
+          "name": "Sample Board of Elections",
+          "official": true
+        }
+      ],
+      "name": "Sample Early Voting Center",
+      "pollingHours": "Oct 24 - Nov 1: 9 AM - 5 PM (sample)",
+      "startDate": "2026-10-24",
+      "endDate": "2026-11-01"
+    },
+    {
+      "address": {
+        "locationName": "Sample Library Branch",
+        "line1": "3 Example Avenue",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "sources": [
+        {
+          "name": "Sample Board of Elections",
+          "official": true
+        }
+      ],
+      "name": "Sample Library Branch",
+      "pollingHours": "Oct 24 - Nov 1: 10 AM - 6 PM (sample)",
+      "startDate": "2026-10-24",
+      "endDate": "2026-11-01"
+    }
+  ],
+  "contests": [
+    {
+      "type": "General",
+      "office": "Representative in Congress",
+      "level": [
+        "country"
+      ],
+      "roles": [
+        "legislatorLowerBody"
+      ],
+      "district": {
+        "name": "New York's 12th congressional district",
+        "scope": "congressional",
+        "id": "ocd-division/country:us/state:ny/cd:12"
+      },
+      "candidates": [
+        {
+          "name": "Sample Candidate G",
+          "party": "Sample Party One",
+          "orderOnBallot": 2
+        },
+        {
+          "name": "Sample Candidate G",
+          "party": "Sample Party Three",
+          "orderOnBallot": 5
+        },
+        {
+          "name": "Sample Candidate H",
+          "party": "Sample Party Two",
+          "orderOnBallot": 1
+        }
+      ],
+      "sources": [
+        {
+          "name": "Sample Board of Elections",
+          "official": true
+        }
+      ]
+    }
+  ],
+  "state": [
+    {
+      "name": "New York",
+      "electionAdministrationBody": {
+        "name": "Sample State Board of Elections",
+        "electionInfoUrl": "https://example.org/sample-election-info",
+        "votingLocationFinderUrl": "https://example.org/sample-poll-finder",
+        "electionRegistrationConfirmationUrl": "https://example.org/sample-registration-check"
+      }
+    }
+  ]
+}

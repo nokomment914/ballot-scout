@@ -1,0 +1,18 @@
+{
+  "summaries": [
+    {
+      "actionDate": "2025-04-15",
+      "actionDesc": "Introduced in House",
+      "text": "<p>Introduced version of a fictional sample bill.</p>",
+      "updateDate": "2025-04-30T15:00:00Z",
+      "versionCode": "00"
+    },
+    {
+      "actionDate": "2025-06-01",
+      "actionDesc": "Public Law",
+      "text": "<p><strong>Sample Community Health Act</strong></p> <p>This fictional sample law authorizes sample grants for community clinics. It is test data, not a real statute.</p>",
+      "updateDate": "2025-06-20T15:00:00Z",
+      "versionCode": "49"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "civicinfo#electionsQueryResponse",
+  "elections": [
+    {
+      "id": "2000",
+      "name": "VIP Test Election",
+      "electionDay": "2031-12-31",
+      "ocdDivisionId": "ocd-division/country:us"
+    },
+    {
+      "id": "9999",
+      "name": "Sample General Election (fictional)",
+      "electionDay": "2026-11-03",
+      "ocdDivisionId": "ocd-division/country:us/state:ny"
+    }
+  ]
+}

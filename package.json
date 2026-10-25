@@ -1,0 +1,22 @@
+{
+  "name": "ballot-scout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nonpartisan politician report card: every candidate on your ballot, their votes and bills on the issues you pick, official analyses, and who funds them, with a link to every public record.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "dev:sample": "FIXTURES=1 node dev-server.mjs",
+    "test": "node --test \"tests/*.test.js\"",
+    "e2e": "node e2e/e2e.mjs",
+    "build-data": "node scripts/build-data.mjs",
+    "build-votes": "node scripts/build-votes.mjs",
+    "build-ny": "node scripts/build-nysenate.mjs",
+    "build-ny-money": "node scripts/build-nymoney.mjs",
+    "build-outside": "node scripts/build-outside.mjs",
+    "validate-seed": "node scripts/validate-seed.mjs"
+  }
+}

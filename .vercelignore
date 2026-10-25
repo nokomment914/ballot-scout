@@ -1,0 +1,8 @@
+.github
+.cache
+e2e
+screenshots
+scripts
+tests
+dev-server.mjs
+*.log

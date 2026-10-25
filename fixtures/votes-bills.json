@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-12T07:30:00Z",
+  "bills": {
+    "119-hr-99001": {
+      "t": "Sample Housing Act",
+      "pa": "Housing and Community Development",
+      "la": {
+        "d": "2025-03-10",
+        "t": "Received in the Senate. (sample)"
+      },
+      "laws": [],
+      "cbo": [
+        {
+          "t": "H.R. 99001, Sample Housing Act",
+          "u": "https://example.org/sample-cbo-estimate",
+          "d": "2025-04-01",
+          "desc": "As ordered reported by the Sample Committee (fictional)"
+        }
+      ],
+      "f": "2026-10-12"
+    },
+    "119-hr-99002": {
+      "t": "Sample Community Health Act",
+      "pa": "Health",
+      "la": {
+        "d": "2025-06-01",
+        "t": "Became Public Law No: 119-999. (sample)"
+      },
+      "laws": [
+        "119-999"
+      ],
+      "cbo": [],
+      "f": "2026-10-12"
+    },
+    "119-hr-99004": {
+      "t": "Sample Transit Funding Act",
+      "pa": "Transportation and Public Works",
+      "la": {
+        "d": "2025-08-01",
+        "t": "Became Public Law No: 119-998. (sample)"
+      },
+      "laws": [
+        "119-998"
+      ],
+      "cbo": [],
+      "f": "2026-10-12"
+    },
+    "119-hr-99005": {
+      "t": "Sample Clean Rivers Act",
+      "pa": "Water Resources Development",
+      "la": {
+        "d": "2026-02-10",
+        "t": "Failed to pass over veto. (sample)"
+      },
+      "laws": [],
+      "cbo": [],
+      "f": "2026-10-12"
+    },
+    "118-hr-99006": {
+      "t": "Sample Tax Credit Act",
+      "pa": "Taxation",
+      "la": {
+        "d": "2024-06-03",
+        "t": "Received in the Senate. (sample)"
+      },
+      "laws": [],
+      "cbo": [],
+      "f": "2026-10-12"
+    },
+    "119-hr-99007": {
+      "t": "Sample Rail Safety Act",
+      "pa": "Transportation and Public Works",
+      "la": {
+        "d": "2026-03-02",
+        "t": "Received in the Senate. (sample)"
+      },
+      "laws": [],
+      "cbo": [],
+      "f": "2026-10-12"
+    }
+  }
+}

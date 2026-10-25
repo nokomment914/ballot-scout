@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "status": "not-built",
+  "generatedAt": null,
+  "session": 2025,
+  "openLegislation": { "status": "not-built", "lastUpdated": null, "bills": 0 },
+  "openStates": { "status": "not-built", "lastUpdated": null, "exportUpdatedAt": null, "voteEvents": 0 },
+  "note": "Run scripts/build-nysenate.mjs (the nightly GitHub Action does this) to build the New York indexes."
+}

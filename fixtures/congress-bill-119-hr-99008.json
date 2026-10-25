@@ -1,0 +1,18 @@
+{
+  "bill": {
+    "congress": 119,
+    "number": "99008",
+    "type": "HR",
+    "originChamber": "House",
+    "title": "Sample Small Business Tax Act",
+    "introducedDate": "2025-09-09",
+    "latestAction": {
+      "actionDate": "2025-09-09",
+      "text": "Referred to the Sample Committee. (sample)"
+    },
+    "policyArea": {
+      "name": "Taxation"
+    },
+    "cboCostEstimates": []
+  }
+}

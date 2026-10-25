@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-12T08:30:00Z",
+  "cycle": 2026,
+  "years": [
+    "2025",
+    "2026"
+  ],
+  "_fixtureNote": "Fictional committees and amounts for FIXTURES=1 mode.",
+  "source": {
+    "filers": "https://data.ny.gov/d/7x2g-h32p",
+    "disclosures": "https://data.ny.gov/d/e9ss-239a"
+  },
+  "candidates": {
+    "state-senate|28|sample candidate j": {
+      "filer": {
+        "id": "99028",
+        "name": "FRIENDS OF SAMPLE CANDIDATE J (FICTIONAL)",
+        "status": "Active",
+        "office": "State Senator",
+        "district": null
+      },
+      "years": [
+        "2025",
+        "2026"
+      ],
+      "schedules": [
+        {
+          "abbrev": "A",
+          "desc": "Monetary Contributions Received From Ind. & Part. (sample)",
+          "total": 182500,
+          "count": 640
+        },
+        {
+          "abbrev": "B",
+          "desc": "Monetary Contributions Received From Corporation (sample)",
+          "total": 12000,
+          "count": 8
+        },
+        {
+          "abbrev": "C",
+          "desc": "Monetary Contributions Received From All Other Contributors (sample)",
+          "total": 41000,
+          "count": 37
+        },
+        {
+          "abbrev": "F",
+          "desc": "Expenditures/ Payments (sample)",
+          "total": 151230.55,
+          "count": 212
+        }
+      ],
+      "transactions": 897,
+      "rowsRead": 897,
+      "latestDate": "2026-09-30"
+    },
+    "state-senate|28|sample candidate k": {
+      "filer": {
+        "id": "99029",
+        "name": "SAMPLE CANDIDATE K FOR SENATE (FICTIONAL)",
+        "status": "Active",
+        "office": "State Senator",
+        "district": null
+      },
+      "years": [
+        "2025",
+        "2026"
+      ],
+      "schedules": [
+        {
+          "abbrev": "A",
+          "desc": "Monetary Contributions Received From Ind. & Part. (sample)",
+          "total": 48200,
+          "count": 210
+        },
+        {
+          "abbrev": "F",
+          "desc": "Expenditures/ Payments (sample)",
+          "total": 30110,
+          "count": 64
+        }
+      ],
+      "transactions": 274,
+      "rowsRead": 274,
+      "latestDate": "2026-09-28"
+    }
+  },
+  "unmatched": [
+    "Sample Candidate M (Member of Assembly 75)"
+  ]
+}

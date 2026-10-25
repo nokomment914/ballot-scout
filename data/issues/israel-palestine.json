@@ -1,0 +1,721 @@
+{
+  "id": "israel-palestine",
+  "label": "Israel and Palestine",
+  "generatedAt": "2026-10-17T23:01:00Z",
+  "window": {
+    "from": "2023-01-03",
+    "to": "2026-10-17"
+  },
+  "rule": "Counted: every recorded U.S. House vote from January 3, 2023 through October 17, 2026 on passing a bill or joint resolution whose main purpose is military or security aid, weapons or arms sales for Israel, or limiting, conditioning or blocking them (including passage under suspension of the rules, agreeing to Senate changes and veto overrides), and every recorded vote on an amendment whose official description would add, cut, condition or bar military aid, weapons or arms transfers to Israel. Not counted: procedural votes, final passage of broad bills such as the annual defense bill or full-year spending bills, resolutions that state a position without funding or arms provisions, and measures that apply to every country without naming Israel. Everything considered and not counted is listed.",
+  "scopeNote": "Military aid and arms sales are decided by Congress, so this list has U.S. House votes only; state and local officials have no votes on it.",
+  "voteNote": "Votes are as recorded by the Clerk of the House. On amendment votes taken in the Committee of the Whole the Clerk prints Aye and No; they are shown here as Yea and Nay.",
+  "rollcalls": [
+    {
+      "chamber": "House",
+      "congress": 118,
+      "session": 1,
+      "date": "2023-11-02",
+      "roll": 577,
+      "kind": "passage",
+      "bill": {
+        "number": "H.R. 6126",
+        "title": "Israel Security Supplemental Appropriations Act, 2024",
+        "url": "https://www.congress.gov/bill/118th-congress/house-bill/6126"
+      },
+      "amendment": null,
+      "question": "On Passage",
+      "result": "Passed",
+      "tally": "226-196",
+      "sourceUrl": "https://clerk.house.gov/evs/2023/roll577",
+      "pageUrl": "https://clerk.house.gov/Votes/2023577",
+      "votes": {
+        "L000598": "Yea",
+        "G000597": "Not voting",
+        "S001201": "Not in office",
+        "G000602": "Not in office",
+        "M001137": "Nay",
+        "M001188": "Nay",
+        "J000294": "Nay",
+        "C001067": "Nay",
+        "M000317": "Yea",
+        "O000172": "Nay",
+        "T000486": "Nay",
+        "L000606": "Not in office",
+        "L000599": "Yea"
+      }
+    },
+    {
+      "chamber": "House",
+      "congress": 118,
+      "session": 2,
+      "date": "2024-02-06",
+      "roll": 38,
+      "kind": "suspension",
+      "bill": {
+        "number": "H.R. 7217",
+        "title": "Israel Security Supplemental Appropriations Act",
+        "url": "https://www.congress.gov/bill/118th-congress/house-bill/7217"
+      },
+      "amendment": null,
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Failed",
+      "tally": "250-180",
+      "sourceUrl": "https://clerk.house.gov/evs/2024/roll038",
+      "pageUrl": "https://clerk.house.gov/Votes/2024038",
+      "votes": {
+        "L000598": "Yea",
+        "G000597": "Yea",
+        "S001201": "Not in office",
+        "G000602": "Not in office",
+        "M001137": "Nay",
+        "M001188": "Yea",
+        "J000294": "Nay",
+        "C001067": "Nay",
+        "M000317": "Yea",
+        "O000172": "Nay",
+        "T000486": "Yea",
+        "L000606": "Not in office",
+        "L000599": "Yea"
+      }
+    },
+    {
+      "chamber": "House",
+      "congress": 118,
+      "session": 2,
+      "date": "2024-04-20",
+      "roll": 152,
+      "kind": "passage",
+      "bill": {
+        "number": "H.R. 8034",
+        "title": "Israel Security Supplemental Appropriations Act, 2024",
+        "url": "https://www.congress.gov/bill/118th-congress/house-bill/8034"
+      },
+      "amendment": null,
+      "question": "On Passage",
+      "result": "Passed",
+      "tally": "366-58",
+      "sourceUrl": "https://clerk.house.gov/evs/2024/roll152",
+      "pageUrl": "https://clerk.house.gov/Votes/2024152",
+      "votes": {
+        "L000598": "Yea",
+        "G000597": "Yea",
+        "S001201": "Yea",
+        "G000602": "Not in office",
+        "M001137": "Yea",
+        "M001188": "Yea",
+        "J000294": "Yea",
+        "C001067": "Yea",
+        "M000317": "Yea",
+        "O000172": "Nay",
+        "T000486": "Yea",
+        "L000606": "Not in office",
+        "L000599": "Yea"
+      }
+    },
+    {
+      "chamber": "House",
+      "congress": 118,
+      "session": 2,
+      "date": "2024-05-16",
+      "roll": 217,
+      "kind": "passage",
+      "bill": {
+        "number": "H.R. 8369",
+        "title": "Israel Security Assistance Support Act",
+        "url": "https://www.congress.gov/bill/118th-congress/house-bill/8369"
+      },
+      "amendment": null,
+      "question": "On Passage",
+      "result": "Passed",
+      "tally": "224-187",
+      "sourceUrl": "https://clerk.house.gov/evs/2024/roll217",
+      "pageUrl": "https://clerk.house.gov/Votes/2024217",
+      "votes": {
+        "L000598": "Yea",
+        "G000597": "Yea",
+        "S001201": "Yea",
+        "G000602": "Not in office",
+        "M001137": "Nay",
+        "M001188": "Nay",
+        "J000294": "Nay",
+        "C001067": "Nay",
+        "M000317": "Yea",
+        "O000172": "Nay",
+        "T000486": "Yea",
+        "L000606": "Not in office",
+        "L000599": "Yea"
+      }
+    },
+    {
+      "chamber": "House",
+      "congress": 119,
+      "session": 1,
+      "date": "2025-07-18",
+      "roll": 207,
+      "kind": "amendment",
+      "bill": {
+        "number": "H.R. 4016",
+        "title": "Department of Defense Appropriations Act, 2026",
+        "url": "https://www.congress.gov/bill/119th-congress/house-bill/4016"
+      },
+      "amendment": {
+        "number": "Part A Amendment No. 114",
+        "sponsor": "Rep. Marjorie Taylor Greene (R-GA)",
+        "description": "Strikes funding for the \"Israeli Cooperative Programs.\"",
+        "descriptionSource": {
+          "label": "House Republican Cloakroom vote sheet (amendment summaries as made in order)",
+          "url": "https://repcloakroom.house.gov/vote_sheet/vote-series-ii-thursday-july-17th-2025"
+        }
+      },
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "tally": "6-422",
+      "sourceUrl": "https://clerk.house.gov/evs/2025/roll207",
+      "pageUrl": "https://clerk.house.gov/Votes/2025207",
+      "votes": {
+        "L000598": "Nay",
+        "G000597": "Nay",
+        "S001201": "Not voting",
+        "G000602": "Nay",
+        "M001137": "Nay",
+        "M001188": "Nay",
+        "J000294": "Nay",
+        "C001067": "Nay",
+        "M000317": "Nay",
+        "O000172": "Nay",
+        "T000486": "Nay",
+        "L000606": "Nay",
+        "L000599": "Nay"
+      }
+    },
+    {
+      "chamber": "House",
+      "congress": 119,
+      "session": 2,
+      "date": "2026-07-15",
+      "roll": 243,
+      "kind": "amendment",
+      "bill": {
+        "number": "H.R. 8595",
+        "title": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+        "url": "https://www.congress.gov/bill/119th-congress/house-bill/8595"
+      },
+      "amendment": {
+        "number": "Part A Amendment No. 8",
+        "sponsor": "Rep. Thomas Massie (R-KY)",
+        "description": "Prohibits funds appropriated by the Act from being used for Israel, and accordingly reduces the Foreign Military Financing Program account by $3,300,000,000",
+        "descriptionSource": {
+          "label": "House Republican Cloakroom vote sheet (amendment summaries as made in order)",
+          "url": "https://repcloakroom.house.gov/vote_sheet/vote-series-i-wednesday-july-15th-2026/"
+        }
+      },
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "tally": "104-314-10",
+      "sourceUrl": "https://clerk.house.gov/evs/2026/roll243",
+      "pageUrl": "https://clerk.house.gov/Votes/2026243",
+      "votes": {
+        "L000598": "Nay",
+        "G000597": "Nay",
+        "S001201": "Nay",
+        "G000602": "Nay",
+        "M001137": "Nay",
+        "M001188": "Nay",
+        "J000294": "Nay",
+        "C001067": "Nay",
+        "M000317": "Nay",
+        "O000172": "Yea",
+        "T000486": "Nay",
+        "L000606": "Nay",
+        "L000599": "Nay"
+      }
+    }
+  ],
+  "related": [
+    {
+      "what": "Massie and McGovern amendment No. 77 to H.R. 4665 (State and Foreign Operations appropriations): barred funds to transfer cluster munitions to any foreign country",
+      "date": "2023-09-28",
+      "roll": 497,
+      "result": "Not adopted, 178-253",
+      "source": "https://repcloakroom.house.gov/floor/thursday-september-28th-2023/"
+    },
+    {
+      "what": "Ogles amendment No. 50 to H.R. 8771 (State and Foreign Operations appropriations): barred funds to administer or enforce National Security Memorandum 20, which sets conditions on U.S. arms transfers to every recipient",
+      "date": "2024-06-27",
+      "roll": 314,
+      "rollNote": "roll number inferred from the order of votes that day",
+      "result": "Agreed to, 216-197",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-118hrpt559/pdf/CRPT-118hrpt559.pdf"
+    },
+    {
+      "what": "Titus, Nehls and Crawford amendment No. 171 to H.R. 8774 (Defense appropriations): \"Prohibits funds in the bill from being used to acquire, use, transfer, or sell cluster munitions.\"",
+      "date": "2024-06-28",
+      "roll": 329,
+      "result": "Failed",
+      "source": "https://clerk.house.gov/evs/2024/index.asp"
+    }
+  ],
+  "excluded": [
+    {
+      "what": "H.Con.Res. 57: Sense of Congress that the State of Israel is not a racist or apartheid state",
+      "date": "2023-07-18",
+      "roll": null,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 42 (Greene): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 473,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 43 (Greene): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 474,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 44 (Steube): no funds for the Lebanese Armed Forces OR no assistance to Iraq",
+      "date": "2023-09-28",
+      "roll": 475,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 45 (Steube): no assistance to Iraq OR no funds for the Lebanese Armed Forces",
+      "date": "2023-09-28",
+      "roll": 476,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 46 (Gaetz): prohibits funds made available by the bill from being used to implement the Paris Agreement",
+      "date": "2023-09-28",
+      "roll": 477,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 47 (Boebert): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 478,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 48 (Boebert): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 479,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 49 (Boebert): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 480,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 50 (Boebert): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 481,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 51 (Ogles): description not uniquely identified",
+      "date": "2023-09-28",
+      "roll": 482,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 54 (Gooden): no funds to implement the Global Compact for Safe, Orderly and Regular Migration OR no funds for the International Organization for Migration",
+      "date": "2023-09-28",
+      "roll": 483,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 57 (Spartz): prohibits funding for United Nations entities unless specifically appropriated in the bill",
+      "date": "2023-09-28",
+      "roll": 484,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 58 (Hageman): no funds for the State Department's Office of Global Change OR no State Department remote-work agreements",
+      "date": "2023-09-28",
+      "roll": 485,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 61 (Foxx): prohibits the State Department from using taxpayer funds to send employees to an event or conference hosted by certain organizations (summary truncated in the reading)",
+      "date": "2023-09-28",
+      "roll": 486,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 63 (Burchett): $1 salary for the Special Assistant to the Director of Programming at Voice of America OR $1 salary for the USAGM Chief Management Officer",
+      "date": "2023-09-28",
+      "roll": 487,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 64 (Burchett): $1 salary for the USAGM Chief Management Officer OR $1 salary for the VOA Special Assistant to the Director of Programming",
+      "date": "2023-09-28",
+      "roll": 488,
+      "reason": "None of the candidate descriptions adds, cuts, transfers, conditions or prohibits military aid, weapons or arms transfers to Israel.",
+      "source": "https://democrats-rules.house.gov/bill/118/hr-4665"
+    },
+    {
+      "what": "H.R. 4665 (FY2024 State-Foreign Operations) Part D Amendment No. 69 (Tenney): bars funds to move the U.S. Embassy in Israel out of Jerusalem",
+      "date": "2023-09-28",
+      "roll": 491,
+      "reason": "Embassy location, not military aid or arms.",
+      "source": "https://clerk.house.gov/Votes/2023491"
+    },
+    {
+      "what": "H.R. 4665 Part D Amendment No. 74 (Perry): bars funds for the United Nations Relief and Works Agency",
+      "date": "2023-09-28",
+      "roll": 495,
+      "reason": "UNRWA funding, not military aid or arms for Israel.",
+      "source": "https://clerk.house.gov/Votes/2023495"
+    },
+    {
+      "what": "H.R. 4665: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2024 (passage)",
+      "date": "2023-09-28",
+      "roll": 500,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://clerk.house.gov/Votes/2023500"
+    },
+    {
+      "what": "H.R. 4365: Department of Defense Appropriations Act, 2024 (passage)",
+      "date": "2023-09-28",
+      "roll": 502,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://clerk.house.gov/Votes/2023502"
+    },
+    {
+      "what": "H.Res. 771: Standing with Israel as it defends itself against the war launched by Hamas",
+      "date": "2023-10-25",
+      "roll": 528,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 340: Hamas and Other Palestinian Terrorist Groups International Financing Prevention Act",
+      "date": "2023-11-02",
+      "roll": 561,
+      "reason": "Sanctions on foreign supporters of Hamas; no military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Res. 838: rule providing for consideration of H.R. 4821, H.R. 4820 and H.R. 6126",
+      "date": "2023-11-02",
+      "roll": 566,
+      "reason": "Procedural vote (special rule). Rule (1) covers only passage, suspension, concurrence and veto-override votes.",
+      "source": "https://clerk.house.gov/evs/2023/roll566"
+    },
+    {
+      "what": "H.Res. 798: Condemning support for Hamas, Hezbollah and other terrorist organizations at institutions of higher education",
+      "date": "2023-11-02",
+      "roll": 578,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": "https://govinfo.gov/link/crec/169/h/5313"
+    },
+    {
+      "what": "H.Res. 845: Censuring Rep. Rashida Tlaib over statements on Israel and Oct. 7",
+      "date": "2023-11-07",
+      "roll": null,
+      "reason": "Disciplinary simple resolution with no funding or arms provisions.",
+      "source": null
+    },
+    {
+      "what": "H.Res. 793: Calling on Hamas to immediately release the hostages",
+      "date": "2023-11-28",
+      "roll": 676,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Res. 888: Reaffirming the State of Israel's right to exist",
+      "date": "2023-11-28",
+      "roll": 677,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Amdt. 813 to H.R. 5961: findings condemning Hamas and Iran-backed groups' use of human shields",
+      "date": "2023-11-30",
+      "roll": 680,
+      "reason": "Amendment adds findings only; it does not add, cut, condition or prohibit military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Amdt. 817 to H.R. 5961: sense of Congress urging Middle East allies to condemn antisemitism by Iran-backed groups",
+      "date": "2023-11-30",
+      "roll": 681,
+      "reason": "Sense-of-Congress amendment with no aid or arms provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Res. 894: Condemning the rise of antisemitism, including the statement that anti-Zionism is antisemitism",
+      "date": "2023-12-05",
+      "roll": null,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": null
+    },
+    {
+      "what": "H.R. 2670: National Defense Authorization Act for FY2024 (conference report; includes subtitle on matters relating to Israel)",
+      "date": "2023-12-14",
+      "roll": 723,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 6679: No Immigration Benefits for Hamas Terrorists Act",
+      "date": "2024-01-31",
+      "roll": 28,
+      "reason": "Immigration penalties; no military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Res. 966: Condemning rape and sexual violence committed by Hamas",
+      "date": "2024-02-14",
+      "roll": 44,
+      "reason": "Simple or concurrent resolution expressing sentiment, with no funding or arms provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 2882: Further Consolidated Appropriations Act, 2024 (includes Israel provisions)",
+      "date": "2024-03-22",
+      "roll": 102,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 5917: Strengthening Tools to Counter the Use of Human Shields Act",
+      "date": "2024-04-16",
+      "roll": 128,
+      "reason": "Sanctions and a DOD report; no military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.Res. 1160: special rule for the April 2024 national security supplemental bills (CRS ties it to H.R. 815)",
+      "date": "2024-04-19",
+      "roll": 142,
+      "reason": "Procedural vote (special rule). Rule (1) covers only passage, suspension, concurrence and veto-override votes.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 8038: 21st Century Peace through Strength Act (fourth bill of the April 2024 package)",
+      "date": "2024-04-20",
+      "roll": 145,
+      "reason": "Sanctions and other foreign-policy measures, including on supporters of Hamas and PIJ; not military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 8036: Indo-Pacific Security Supplemental Appropriations Act, 2024 (April 2024 package)",
+      "date": "2024-04-20",
+      "roll": 146,
+      "reason": "Part of the combined supplemental, but this bill is not about Israel; the Israel portion (H.R. 8034) is included above.",
+      "source": "https://clerk.house.gov/Votes/2024146"
+    },
+    {
+      "what": "H.R. 8035: Ukraine Security Supplemental Appropriations Act, 2024 (April 2024 package)",
+      "date": "2024-04-20",
+      "roll": 151,
+      "reason": "Part of the combined supplemental, but this bill is about Ukraine, not Israel.",
+      "source": "https://clerk.house.gov/Votes/2024151"
+    },
+    {
+      "what": "H.R. 8282: Illegitimate Court Counteraction Act (ICC sanctions)",
+      "date": "2024-06-04",
+      "roll": 242,
+      "reason": "Sanctions on the International Criminal Court; not military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 8070: Servicemember Quality of Life Improvement and NDAA for FY2025 (passage)",
+      "date": "2024-06-14",
+      "roll": 279,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 8771 (FY2025 State-Foreign Operations) Part B Amendment No. 45 (Moskowitz et al.): bars the State Department from citing Gaza Health Ministry statistics",
+      "date": "2024-06-27",
+      "roll": 313,
+      "reason": "Statistics citation, not military aid or arms.",
+      "source": "https://clerk.house.gov/Votes/2024313"
+    },
+    {
+      "what": "H.R. 8771 Part B Amendment No. 72 (Waltz et al.): bars funds to support the Gaza pier",
+      "date": "2024-06-27",
+      "roll": 321,
+      "reason": "U.S. humanitarian pier for Gaza, not military aid or arms for Israel.",
+      "source": "https://clerk.house.gov/Votes/2024321"
+    },
+    {
+      "what": "H.R. 8774: Department of Defense Appropriations Act, 2025 (passage; includes Iron Dome and Israeli missile defense funds)",
+      "date": "2024-06-28",
+      "roll": 331,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 8771: State, Foreign Operations, and Related Programs Appropriations Act, 2025 (passage; includes Israel assistance)",
+      "date": "2024-06-28",
+      "roll": 335,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 5009: NDAA for FY2025 (agreeing to Senate amendment with amendment; includes Israel cooperative programs)",
+      "date": "2024-12-11",
+      "roll": 500,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 23: Illegitimate Court Counteraction Act (ICC sanctions)",
+      "date": "2025-01-09",
+      "roll": 7,
+      "reason": "Sanctions on the International Criminal Court; not military aid or arms for Israel.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 1968: Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "date": "2025-03-11",
+      "roll": 70,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 4016: Department of Defense Appropriations Act, 2026 (passage; Sec. 8067 Israeli missile defense)",
+      "date": "2025-07-18",
+      "roll": 212,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 3838: NDAA for FY2026 (passage; Israel war reserve stockpile, anti-tunnel cooperation)",
+      "date": "2025-09-10",
+      "roll": 262,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "S. 1071: NDAA for FY2026 (final; Iron Dome co-development, anti-tunnel cooperation)",
+      "date": "2025-12-10",
+      "roll": 320,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 7006: Financial Services and General Government and National Security, Department of State, and Related Programs Appropriations Act, 2026 (passage)",
+      "date": "2026-01-14",
+      "roll": 28,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 7148: Consolidated Appropriations Act, 2026 (passage; includes Israeli missile defense and FMF provisions)",
+      "date": "2026-01-22",
+      "roll": 45,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "H.R. 7148: Consolidated Appropriations Act, 2026 (agreeing to Senate amendments)",
+      "date": "2026-02-03",
+      "roll": 53,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    },
+    {
+      "what": "S. 2, Secure America Act (budget reconciliation)",
+      "date": "2026-06-09",
+      "roll": 214,
+      "reason": "Final passage of a broad bill; whether it includes Israel aid wasn't checked, and its primary purpose isn't aid or arms for Israel.",
+      "source": "https://repcloakroom.house.gov/floor/tuesday-june-9th-2026/"
+    },
+    {
+      "what": "H.R. 8595 (FY2027 National Security-State) Part A Amendment No. 9 (Massie): bars funds for Jordan and cuts accounts including FMF by $2.1 billion",
+      "date": "2026-07-15",
+      "roll": 244,
+      "reason": "Companion to the included Massie amendment, but about Jordan, not Israel.",
+      "source": "https://clerk.house.gov/Votes/2026244"
+    },
+    {
+      "what": "H.R. 8595: National Security, Department of State, and Related Programs Appropriations Act, 2027 (passage; includes $3.3B security assistance for Israel)",
+      "date": "2026-07-15",
+      "roll": 247,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://clerk.house.gov/Votes/2026247"
+    },
+    {
+      "what": "H.R. 8800: NDAA for FY2027 (passage; includes Sec. 219, U.S.-Israel Defense Technology Cooperation Initiative)",
+      "date": "2026-07-22",
+      "roll": 278,
+      "reason": "Final passage of a broad bill (full NDAA, full-year appropriations or continuing resolution) that is not specifically about Israel, although it contains Israel provisions.",
+      "source": "https://clerk.house.gov/Votes/2026278"
+    },
+    {
+      "what": "H.Con.Res. 89: directing the President to remove U.S. Armed Forces from hostilities with Iran (War Powers Resolution)",
+      "date": "2026-07-23",
+      "roll": 282,
+      "reason": "Concerns U.S. forces and Iran, not military aid or arms for Israel.",
+      "source": "https://clerk.house.gov/Votes/2026282"
+    },
+    {
+      "what": "H.R. 4795: Protect Economic and Academic Freedom Act (bars Higher Education Act funds for institutions in a commercial boycott of Israel), passage",
+      "date": "2026-09-03",
+      "roll": 295,
+      "reason": "Anti-boycott education bill; no military aid or arms for Israel. Its rule, H.Res. 1499, was adopted on 2026-09-01 (rolls 287 and 288).",
+      "source": "https://clerk.house.gov/Votes/2026295"
+    },
+    {
+      "what": "H.Con.Res. 93: directing the President to remove U.S. Armed Forces from hostilities with Iran (War Powers Resolution)",
+      "date": "2026-09-15",
+      "roll": 307,
+      "reason": "Concerns U.S. forces and Iran, not military aid or arms for Israel.",
+      "source": "https://clerk.house.gov/Votes/2026307"
+    },
+    {
+      "what": "H.R. 5334: agreeing to the Senate amendments (Lindsey O. Graham Sanctioning Russia and Iran Act of 2026)",
+      "date": "2026-09-16",
+      "roll": 308,
+      "reason": "Sanctions on Russia and Iran; its title and the vote sheet show no military aid or arms for Israel.",
+      "source": "https://clerk.house.gov/Votes/2026308"
+    }
+  ],
+  "openChecks": [
+    {
+      "check": "Recorded amendment votes on the FY2024 defense authorization bill (H.R. 2670, July 2023)",
+      "status": "Not yet confirmed from an official list"
+    },
+    {
+      "check": "Recorded amendment votes on the FY2025 defense authorization bill (H.R. 8070, June 2024)",
+      "status": "Not yet confirmed from an official list; the Congressional Research Service lists its Israel-related amendments only as voice votes"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Clerk of the U.S. House of Representatives: roll call votes",
+      "url": "https://clerk.house.gov/Votes"
+    },
+    {
+      "label": "Congressional Research Service, R48289: Congressional Votes Related to the Israel-Hamas Conflict",
+      "url": "https://www.everycrsreport.com/files/2025-07-03_R48289_3e7ce2eca93d9e83930706eab2f44081f631bd62.html"
+    }
+  ]
+}

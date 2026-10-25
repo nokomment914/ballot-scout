@@ -1,0 +1,63 @@
+{
+  "memberId": 9028,
+  "chamber": "SENATE",
+  "name": "Sample Candidate J",
+  "district": "28",
+  "session": 2025,
+  "sponsored": [
+    {
+      "p": "S99001",
+      "t": "Sample Tenant Notice Act (fictional)",
+      "ls": "Real Property Law",
+      "st": "Passed Senate",
+      "sd": "2025-05-20",
+      "sg": false,
+      "ch": null,
+      "sum": "Requires sample landlords to give sample notice (fictional summary).",
+      "fis": "None to the state (fictional sponsor memo text).",
+      "pub": "2025-01-15"
+    },
+    {
+      "p": "S99005",
+      "t": "Sample Sentencing Review Act (fictional)",
+      "ls": "Penal Law",
+      "st": "In Senate Committee",
+      "sd": "2025-02-01",
+      "sg": false,
+      "ch": null,
+      "sum": "Creates a sample review panel (fictional summary).",
+      "fis": null,
+      "pub": "2025-02-01"
+    }
+  ],
+  "votes": [
+    [
+      "S99001",
+      "2025-05-20",
+      "F",
+      "AYE",
+      ""
+    ],
+    [
+      "S99002",
+      "2025-06-01",
+      "F",
+      "NAY",
+      ""
+    ],
+    [
+      "S99001",
+      "2025-03-01",
+      "C",
+      "AYE",
+      "Sample Housing Committee"
+    ],
+    [
+      "S99005",
+      "2025-03-03",
+      "F",
+      "EXC",
+      ""
+    ]
+  ]
+}

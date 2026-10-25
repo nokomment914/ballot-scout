@@ -1,0 +1,26 @@
+{
+  "session": 2025,
+  "actions": [
+    {
+      "p": "S99002",
+      "t": "Sample Clinic Access Act (fictional)",
+      "ls": "Public Health Law",
+      "a": "signed",
+      "d": "2025-08-15",
+      "ch": 999,
+      "sig": null,
+      "si": "SAMPLE CANDIDATE B",
+      "x": null
+    },
+    {
+      "p": "A99004",
+      "t": "Sample School Meals Act (fictional)",
+      "ls": "Education Law",
+      "a": "vetoed",
+      "d": "2025-11-01",
+      "vn": 99,
+      "sig": "SAMPLE CANDIDATE B",
+      "x": "This fictional veto message stands in for the Governor’s official veto memo."
+    }
+  ]
+}

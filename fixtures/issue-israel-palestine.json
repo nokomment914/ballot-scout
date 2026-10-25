@@ -1,0 +1,103 @@
+{
+  "id": "israel-palestine",
+  "label": "Israel and Palestine",
+  "generatedAt": "2026-10-12T07:30:00Z",
+  "window": {
+    "from": "2025-01-03",
+    "to": "2026-10-12"
+  },
+  "rule": "Sample rule: every recorded House vote on the fictional Sample Security Assistance Act and amendments to it.",
+  "scopeNote": "Sample data. Military aid and arms sales are decided by Congress, so this list has U.S. House votes only.",
+  "voteNote": "Sample data.",
+  "rollcalls": [
+    {
+      "chamber": "House",
+      "congress": 119,
+      "session": 1,
+      "date": "2025-03-04",
+      "roll": 100,
+      "kind": "amendment",
+      "bill": {
+        "number": "H.R. 99001",
+        "title": "Sample Housing Act",
+        "url": "https://example.org/bill/99001"
+      },
+      "amendment": {
+        "number": "Amendment No. 1",
+        "sponsor": "Rep. Sample (X-NY)",
+        "description": "Sample amendment description.",
+        "descriptionSource": {
+          "label": "Sample source",
+          "url": "https://example.org/amendment/1"
+        }
+      },
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "tally": "100-300",
+      "sourceUrl": "https://example.org/roll/2025/100",
+      "pageUrl": "https://example.org/votes/2025100",
+      "votes": {
+        "Z000012": "Nay"
+      }
+    },
+    {
+      "chamber": "House",
+      "congress": 119,
+      "session": 1,
+      "date": "2025-03-04",
+      "roll": 101,
+      "kind": "passage",
+      "bill": {
+        "number": "H.R. 99001",
+        "title": "Sample Housing Act",
+        "url": "https://example.org/bill/99001"
+      },
+      "amendment": null,
+      "question": "On Passage",
+      "result": "Passed",
+      "tally": "264-156",
+      "sourceUrl": "https://example.org/roll/2025/101",
+      "pageUrl": "https://example.org/votes/2025101",
+      "votes": {}
+    },
+    {
+      "chamber": "House",
+      "congress": 118,
+      "session": 2,
+      "date": "2024-02-06",
+      "roll": 38,
+      "kind": "suspension",
+      "bill": {
+        "number": "H.R. 99009",
+        "title": "Sample Security Assistance Act",
+        "url": "https://example.org/bill/99009"
+      },
+      "amendment": null,
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Failed",
+      "tally": "250-180",
+      "sourceUrl": "https://example.org/roll/2024/38",
+      "pageUrl": "https://example.org/votes/2024038",
+      "votes": {
+        "Z000012": "Not in office"
+      }
+    }
+  ],
+  "related": [],
+  "excluded": [
+    {
+      "what": "Sample resolution",
+      "date": "2025-04-01",
+      "roll": 120,
+      "reason": "Sample reason.",
+      "source": "https://example.org/roll/2025/120"
+    }
+  ],
+  "openChecks": [],
+  "sources": [
+    {
+      "label": "Sample source",
+      "url": "https://example.org/"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "builtAt": "2026-10-12T07:30:00Z",
+  "source": {
+    "label": "FEC (sample)",
+    "url": "https://www.fec.gov/data/independent-expenditures/"
+  },
+  "cycles": [
+    2026,
+    2024
+  ],
+  "note": "Sample data.",
+  "candidates": {
+    "NY|us-house|12|samplecandidateg": {
+      "name": "Sample Candidate G",
+      "contestId": "fx-cd-12",
+      "status": "ok",
+      "fecCandidateId": "H0NY12000",
+      "matchedBy": "seed",
+      "cycles": {
+        "2026": {
+          "cycle": 2026,
+          "totals": {
+            "support": 1500,
+            "oppose": 250
+          },
+          "byGroup": {
+            "super-pac": {
+              "support": 1000,
+              "oppose": 250
+            },
+            "party": {
+              "support": 500,
+              "oppose": 0
+            },
+            "pac": {
+              "support": 0,
+              "oppose": 0
+            },
+            "other": {
+              "support": 0,
+              "oppose": 0
+            }
+          },
+          "spenders": [
+            {
+              "committeeId": "C99999101",
+              "name": "Sample Super PAC",
+              "type": "O",
+              "typeLabel": "Super PAC (independent expenditure-only)",
+              "group": "super-pac",
+              "position": "support",
+              "total": 1000
+            },
+            {
+              "committeeId": "C99999102",
+              "name": "Sample Party Committee",
+              "type": "Y",
+              "typeLabel": "Party committee",
+              "group": "party",
+              "position": "support",
+              "total": 500
+            },
+            {
+              "committeeId": "C99999101",
+              "name": "Sample Super PAC",
+              "type": "O",
+              "typeLabel": "Super PAC (independent expenditure-only)",
+              "group": "super-pac",
+              "position": "oppose",
+              "total": 250
+            }
+          ],
+          "notices": {
+            "support": 300,
+            "oppose": 0,
+            "count": 1,
+            "latestFiled": "2026-10-10",
+            "byGroup": {
+              "super-pac": {
+                "support": 300,
+                "oppose": 0
+              },
+              "party": {
+                "support": 0,
+                "oppose": 0
+              },
+              "pac": {
+                "support": 0,
+                "oppose": 0
+              },
+              "other": {
+                "support": 0,
+                "oppose": 0
+              }
+            }
+          }
+        },
+        "2024": {
+          "cycle": 2024,
+          "totals": {
+            "support": 0,
+            "oppose": 0
+          },
+          "byGroup": {
+            "super-pac": {
+              "support": 0,
+              "oppose": 0
+            },
+            "party": {
+              "support": 0,
+              "oppose": 0
+            },
+            "pac": {
+              "support": 0,
+              "oppose": 0
+            },
+            "other": {
+              "support": 0,
+              "oppose": 0
+            }
+          },
+          "spenders": [],
+          "notices": null
+        }
+      },
+      "links": [
+        {
+          "label": "Candidate page on FEC.gov",
+          "url": "https://www.fec.gov/data/candidate/H0NY12000/"
+        }
+      ]
+    },
+    "NY|us-house|12|samplecandidateh": {
+      "name": "Sample Candidate H",
+      "contestId": "fx-cd-12",
+      "status": "ok",
+      "fecCandidateId": "H6NY12001",
+      "matchedBy": "seed",
+      "cycles": {
+        "2026": {
+          "cycle": 2026,
+          "totals": {
+            "support": 0,
+            "oppose": 0
+          },
+          "byGroup": {
+            "super-pac": {
+              "support": 0,
+              "oppose": 0
+            },
+            "party": {
+              "support": 0,
+              "oppose": 0
+            },
+            "pac": {
+              "support": 0,
+              "oppose": 0
+            },
+            "other": {
+              "support": 0,
+              "oppose": 0
+            }
+          },
+          "spenders": [],
+          "notices": {
+            "support": 0,
+            "oppose": 0,
+            "count": 0,
+            "latestFiled": null,
+            "byGroup": {
+              "super-pac": {
+                "support": 0,
+                "oppose": 0
+              },
+              "party": {
+                "support": 0,
+                "oppose": 0
+              },
+              "pac": {
+                "support": 0,
+                "oppose": 0
+              },
+              "other": {
+                "support": 0,
+                "oppose": 0
+              }
+            }
+          }
+        }
+      },
+      "links": []
+    }
+  }
+}

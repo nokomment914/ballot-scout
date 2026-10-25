@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "candidate_id": "H6NY12001",
+      "cycle": 2026,
+      "candidate_election_year": 2026,
+      "election_full": true,
+      "receipts": 456789.12,
+      "disbursements": 319752,
+      "last_cash_on_hand_end_period": 159876,
+      "individual_contributions": 320000,
+      "individual_itemized_contributions": 208000,
+      "individual_unitemized_contributions": 112000,
+      "other_political_committee_contributions": 60000,
+      "political_party_committee_contributions": 2000,
+      "candidate_contribution": 0,
+      "coverage_start_date": "2025-01-01T00:00:00",
+      "coverage_end_date": "2026-09-30T00:00:00",
+      "last_report_type_full": "OCTOBER QUARTERLY"
+    }
+  ],
+  "pagination": {
+    "count": 1,
+    "page": 1,
+    "pages": 1,
+    "per_page": 5
+  }
+}

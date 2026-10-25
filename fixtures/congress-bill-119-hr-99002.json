@@ -1,0 +1,24 @@
+{
+  "bill": {
+    "congress": 119,
+    "number": "99002",
+    "type": "HR",
+    "originChamber": "House",
+    "title": "Sample Community Health Act",
+    "introducedDate": "2025-04-15",
+    "latestAction": {
+      "actionDate": "2025-06-01",
+      "text": "Became Public Law No: 119-999. (sample)"
+    },
+    "policyArea": {
+      "name": "Health"
+    },
+    "laws": [
+      {
+        "number": "119-999",
+        "type": "Public Law"
+      }
+    ],
+    "cboCostEstimates": []
+  }
+}

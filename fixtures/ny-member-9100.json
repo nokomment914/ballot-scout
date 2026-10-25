@@ -1,0 +1,17 @@
+{
+  "memberId": 9100,
+  "chamber": "SENATE",
+  "name": "Sample Running Mate A",
+  "district": "99",
+  "session": 2025,
+  "sponsored": [],
+  "votes": [
+    [
+      "S99002",
+      "2025-06-01",
+      "F",
+      "AYE",
+      ""
+    ]
+  ]
+}

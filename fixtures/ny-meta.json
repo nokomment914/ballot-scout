@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "generatedAt": "2026-10-12T08:00:00Z",
+  "session": 2025,
+  "openLegislation": {
+    "status": "ok",
+    "lastUpdated": "2026-10-12T07:50:00Z",
+    "bills": 5,
+    "apiCalls": 3
+  },
+  "openStates": {
+    "status": "ok",
+    "lastUpdated": "2026-10-12T07:55:00Z",
+    "exportUpdatedAt": "2026-10-11T10:00:00Z",
+    "voteEvents": 3
+  }
+}

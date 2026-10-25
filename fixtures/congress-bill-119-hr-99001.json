@@ -1,0 +1,29 @@
+{
+  "bill": {
+    "congress": 119,
+    "number": "99001",
+    "type": "HR",
+    "originChamber": "House",
+    "title": "Sample Housing Act",
+    "introducedDate": "2025-02-03",
+    "latestAction": {
+      "actionDate": "2025-03-10",
+      "text": "Received in the Senate. (sample)"
+    },
+    "policyArea": {
+      "name": "Housing and Community Development"
+    },
+    "cboCostEstimates": [
+      {
+        "description": "As ordered reported by the Sample Committee on March 1, 2025 (fictional)",
+        "pubDate": "2025-04-01T12:00:00Z",
+        "title": "H.R. 99001, Sample Housing Act",
+        "url": "https://example.org/sample-cbo-estimate"
+      }
+    ],
+    "summaries": {
+      "count": 1,
+      "url": "https://api.congress.gov/v3/bill/119/hr/99001/summaries?format=json"
+    }
+  }
+}

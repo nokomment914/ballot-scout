@@ -1,0 +1,41 @@
+{
+  "session": 2025,
+  "bills": {
+    "S99001": {
+      "t": "Sample Tenant Notice Act (fictional)",
+      "ls": "Real Property Law",
+      "st": "Passed Senate",
+      "sd": "2025-05-20",
+      "sg": false
+    },
+    "S99002": {
+      "t": "Sample Clinic Access Act (fictional)",
+      "ls": "Public Health Law",
+      "st": "Signed by Governor",
+      "sd": "2025-08-15",
+      "sg": true,
+      "ch": 999
+    },
+    "A99003": {
+      "t": "Sample Transit Fare Act (fictional)",
+      "ls": "Public Authorities Law",
+      "st": "Passed Assembly",
+      "sd": "2025-06-10",
+      "sg": false
+    },
+    "A99004": {
+      "t": "Sample School Meals Act (fictional)",
+      "ls": "Education Law",
+      "st": "Vetoed",
+      "sd": "2025-11-01",
+      "sg": false
+    },
+    "S99005": {
+      "t": "Sample Sentencing Review Act (fictional)",
+      "ls": "Penal Law",
+      "st": "In Senate Committee",
+      "sd": "2025-02-01",
+      "sg": false
+    }
+  }
+}

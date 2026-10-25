@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "committee_id": "C99999101",
+      "committee_name": "SAMPLE ADVOCACY PAC (FICTIONAL)",
+      "candidate_id": "H6NY12001",
+      "support_oppose_indicator": "S",
+      "total": 125000,
+      "count": 3,
+      "cycle": 2026
+    }
+  ]
+}

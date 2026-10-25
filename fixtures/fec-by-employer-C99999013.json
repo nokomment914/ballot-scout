@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "employer": "SAMPLE LAW FIRM",
+      "total": 21000,
+      "count": 12,
+      "cycle": 2026
+    },
+    {
+      "employer": "RETIRED",
+      "total": 15000,
+      "count": 33,
+      "cycle": 2026
+    },
+    {
+      "employer": "SAMPLE BANK",
+      "total": 9000,
+      "count": 6,
+      "cycle": 2026
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "personId": "ocd-person/00000000-0000-4000-8000-000000000075",
+  "name": "Sample Candidate L",
+  "district": "75",
+  "chamber": "lower",
+  "session": "2025-2026",
+  "votes": [
+    [
+      "A99003",
+      "2025-06-10",
+      "passage",
+      "yes",
+      "Floor vote (sample)",
+      "https://example.org/sample-assembly-vote-1"
+    ],
+    [
+      "A99004",
+      "2025-06-11",
+      "passage",
+      "no",
+      "Floor vote (sample)",
+      "https://example.org/sample-assembly-vote-2"
+    ],
+    [
+      "S99002",
+      "2025-06-12",
+      "passage",
+      "yes",
+      "Floor vote (sample)",
+      "https://example.org/sample-assembly-vote-3"
+    ]
+  ]
+}

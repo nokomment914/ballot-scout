@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "members": {
+    "Z000012": {
+      "n": "G, Sample Candidate",
+      "st": "NY",
+      "ch": "House",
+      "d": "12",
+      "c": [
+        118,
+        119
+      ]
+    }
+  }
+}

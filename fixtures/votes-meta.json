@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "generatedAt": "2026-10-12T07:30:00Z",
+  "congresses": [
+    118,
+    119
+  ],
+  "rollcallCount": 7,
+  "voteview": {
+    "downloadedAt": "2026-10-12T07:05:00Z",
+    "urls": [
+      "https://voteview.com/static/data/out/votes/HS119_votes.csv"
+    ]
+  },
+  "congressGov": {
+    "status": "ok",
+    "lastRun": "2026-10-12T07:25:00Z",
+    "billsTotal": 6,
+    "billsWithPolicyArea": 6,
+    "calls": 6
+  }
+}
