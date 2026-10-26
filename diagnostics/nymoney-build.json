@@ -1,12 +1,12 @@
 {
-  "at": "2026-10-26T14:58:05.165Z",
+  "at": "2026-10-26T15:04:15.959Z",
   "build": {
     "exitCode": 0,
-    "seconds": 107,
+    "seconds": 118,
     "log": [
-      "[build-nymoney 14:56:18] 280 state-level candidates; filing years 2025, 2026",
-      "[build-nymoney 14:56:37] 36673 candidate filers, 28089 committees; 6005 filers filed for 2025, 2026",
-      "[build-nymoney 14:58:05] Linked 171 candidates to their committees; 109 not linked (ambiguous 10, no-committee 69, no-registration 30).",
+      "[build-nymoney 15:02:18] 280 state-level candidates; filing years 2025, 2026",
+      "[build-nymoney 15:02:49] 36673 candidate filers, 28089 committees; 6005 filers filed for 2025, 2026",
+      "[build-nymoney 15:04:15] Linked 171 candidates to their committees; 109 not linked (ambiguous 10, no-committee 69, no-registration 30).",
       ""
     ]
   },
@@ -19,7 +19,7 @@
   },
   "meta": {
     "status": "ok",
-    "lastUpdated": "2026-10-26T14:58:05.146Z",
+    "lastUpdated": "2026-10-26T15:04:15.941Z",
     "matched": 171,
     "unmatched": 109
   },
