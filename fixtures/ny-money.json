@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "generatedAt": "2026-10-12T08:30:00Z",
   "cycle": 2026,
   "years": [
@@ -14,12 +14,23 @@
   "candidates": {
     "state-senate|28|sample candidate j": {
       "filer": {
-        "id": "99028",
-        "name": "FRIENDS OF SAMPLE CANDIDATE J (FICTIONAL)",
-        "status": "Active",
+        "id": "99027",
+        "name": "Sample Candidate J (fictional)",
+        "status": "ACTIVE",
         "office": "State Senator",
-        "district": null
+        "district": "28"
       },
+      "committees": [
+        {
+          "id": "99028",
+          "name": "Friends of Sample Candidate J (fictional)",
+          "type": "Authorized Single Candidate Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
       "years": [
         "2025",
         "2026"
@@ -56,12 +67,23 @@
     },
     "state-senate|28|sample candidate k": {
       "filer": {
-        "id": "99029",
-        "name": "SAMPLE CANDIDATE K FOR SENATE (FICTIONAL)",
-        "status": "Active",
+        "id": "99030",
+        "name": "Sample Candidate K (fictional)",
+        "status": "ACTIVE",
         "office": "State Senator",
-        "district": null
+        "district": "28"
       },
+      "committees": [
+        {
+          "id": "99029",
+          "name": "Sample Candidate K for Senate (fictional)",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
       "years": [
         "2025",
         "2026"
@@ -86,6 +108,12 @@
     }
   },
   "unmatched": [
-    "Sample Candidate M (Member of Assembly 75)"
+    {
+      "name": "Sample Candidate M",
+      "office": "Member of Assembly",
+      "district": "75",
+      "code": "no-registration",
+      "reason": "No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race."
+    }
   ]
 }
