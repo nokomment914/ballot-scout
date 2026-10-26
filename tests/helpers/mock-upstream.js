@@ -98,21 +98,54 @@ export const OPENSTATES_ZIP = makeZip({
 });
 
 const col = (name, type = 'text') => ({ name, fieldName: name.toLowerCase(), dataTypeName: type });
+// As on data.ny.gov: transactions are filed by committees, and a committee's own rows carry no office.
+// The candidate filers (registrations) carry the office and district.
+const txn = (filer, name, year, trans, sched, amount, extra = {}) => ({
+  filer_id: filer, cand_comm_name: name, election_year: year, filing_desc: year === '2026' ? 'July Periodic' : 'January Periodic', r_amend: 'N',
+  filing_sched_abbrev: sched, filing_sched_desc: sched === 'A' ? 'Monetary Contributions Received From Ind. & Part.' : 'Expenditures/ Payments',
+  trans_number: trans, sched_date: `${year}-06-01T00:00:00.000`, org_amt: amount, ...extra,
+});
 export const SOCRATA = {
   columns: {
-    '7x2g-h32p': ['FILER_ID', 'FILER_NAME', 'COMPLIANCE_TYPE_DESC', 'FILER_TYPE_DESC', 'FILER_STATUS', 'COMMITTEE_TYPE_DESC', 'OFFICE_DESC', 'DISTRICT', 'COUNTY_DESC'].map((n) => col(n, n === 'FILER_ID' ? 'number' : 'text')),
-    'e9ss-239a': ['FILER_ID', 'FILER_PREVIOUS_ID', 'CAND_COMM_NAME', 'ELECTION_YEAR', 'ELECTION_TYPE', 'FILING_ABBREV', 'FILING_DESC', 'R_AMEND', 'FILING_SCHED_ABBREV', 'FILING_SCHED_DESC', 'TRANS_NUMBER', 'SCHED_DATE', 'ORG_AMT'].map((n) => col(n, n === 'FILER_ID' || n === 'ORG_AMT' ? 'number' : 'text')),
+    '7x2g-h32p': ['FILER_ID', 'FILER_NAME', 'COMPLIANCE_TYPE_DESC', 'FILER_TYPE_DESC', 'FILER_STATUS', 'COMMITTEE_TYPE_DESC', 'OFFICE_DESC', 'DISTRICT', 'COUNTY_DESC'].map((n) => col(n)),
+    'e9ss-239a': ['FILER_ID', 'FILER_PREVIOUS_ID', 'CAND_COMM_NAME', 'ELECTION_YEAR', 'ELECTION_TYPE', 'FILING_ABBREV', 'FILING_DESC', 'R_AMEND', 'FILING_SCHED_ABBREV', 'FILING_SCHED_DESC', 'TRANS_NUMBER', 'SCHED_DATE', 'ORG_AMT', 'OFFICE_DESC', 'DISTRICT'].map((n) => col(n, n === 'FILER_ID' || n === 'ORG_AMT' ? 'number' : 'text')),
   },
-  filers: [
-    { filer_id: '5001', filer_name: 'FRIENDS OF PAT SENATOR', compliance_type_desc: 'Candidate', filer_type_desc: 'State', filer_status: 'ACTIVE', office_desc: 'State Senator', district: '28' },
-    { filer_id: '5002', filer_name: 'LEE ASSEMBLER 2026', compliance_type_desc: 'Candidate', filer_type_desc: 'State', filer_status: 'ACTIVE', office_desc: 'Member of Assembly', district: '75' },
+  candidates: [
+    { filer_id: '5001', filer_name: 'Pat  Senator', compliance_type_desc: 'CANDIDATE', filer_type_desc: 'State', filer_status: 'ACTIVE', office_desc: 'State Senator', district: '28' },
+    { filer_id: '5002', filer_name: 'Lee Assembler', compliance_type_desc: 'CANDIDATE', filer_type_desc: 'State', filer_status: 'TERMINATED', office_desc: 'Member of Assembly', district: '75' },
+  ],
+  committees: [
+    { filer_id: '6001', filer_name: 'Friends of Pat Senator', compliance_type_desc: 'COMMITTEE', filer_type_desc: 'State', filer_status: 'ACTIVE', committee_type_desc: 'Authorized Single Candidate Committee' },
+    { filer_id: '6002', filer_name: 'Pat Senator 2026', compliance_type_desc: 'COMMITTEE', filer_type_desc: 'State', filer_status: 'ACTIVE', committee_type_desc: 'Public Campaign Finance Committee' },
+    { filer_id: '6003', filer_name: 'Friends Of Pat Senator', compliance_type_desc: 'COMMITTEE', filer_type_desc: 'State', filer_status: 'TERMINATED', committee_type_desc: 'Authorized Single Candidate Committee' },
+    { filer_id: '6004', filer_name: 'Assembler for Assembly', compliance_type_desc: 'COMMITTEE', filer_type_desc: 'State', filer_status: 'ACTIVE', committee_type_desc: 'Public Campaign Finance Committee' },
+    { filer_id: '6005', filer_name: 'Committee To Elect Lee Assembler', compliance_type_desc: 'COMMITTEE', filer_type_desc: 'County', filer_status: 'ACTIVE', committee_type_desc: 'Authorized Single Candidate Committee', county_desc: 'Albany' },
+    { filer_id: '7001', filer_name: 'Senate Majority Fund', compliance_type_desc: 'COMMITTEE', filer_type_desc: 'State', filer_status: 'ACTIVE', committee_type_desc: 'Independent Expenditure Committee' },
   ],
   transactions: [
-    { filer_id: '5001', election_year: '2026', filing_desc: 'July Periodic', r_amend: 'N', filing_sched_abbrev: 'A', filing_sched_desc: 'Monetary Contributions/Individual & Partnerships', trans_number: 'T1', sched_date: '2026-06-01T00:00:00.000', org_amt: '250' },
-    { filer_id: '5001', election_year: '2026', filing_desc: 'July Periodic', r_amend: 'Y', filing_sched_abbrev: 'A', filing_sched_desc: 'Monetary Contributions/Individual & Partnerships', trans_number: 'T1', sched_date: '2026-06-01T00:00:00.000', org_amt: '300' },
-    { filer_id: '5001', election_year: '2025', filing_desc: 'January Periodic', r_amend: 'N', filing_sched_abbrev: 'F', filing_sched_desc: 'Expenditure/Payments', trans_number: 'T2', sched_date: '2025-12-01T00:00:00.000', org_amt: '120.5' },
+    txn('6001', 'Friends of Pat Senator', '2026', 'T1', 'A', '250'),
+    txn('6001', 'Friends of Pat Senator', '2026', 'T1', 'A', '300', { r_amend: 'Y' }),
+    txn('6001', 'Friends of Pat Senator', '2025', 'T2', 'F', '120.5'),
+    txn('6002', 'Pat Senator 2026', '2026', 'T1', 'A', '50'), // same transaction number, different committee
+    txn('6003', 'Friends Of Pat Senator', '2025', 'T9', 'A', '999'), // terminated committee
+    txn('6004', 'Assembler for Assembly', '2026', 'T1', 'A', '75'),
+    txn('6005', 'Committee To Elect Lee Assembler', '2026', 'T1', 'A', '5000'), // county committee: someone else's race
+    txn('7001', 'Senate Majority Fund', '2026', 'T1', 'F', '9000', { office_desc: 'State Senator', district: '28' }),
+    txn('6001', 'Friends of Pat Senator', '2024', 'T0', 'A', '40'), // outside the years covered
   ],
 };
+
+/** Socrata's grouped count, as `$select=<cols>, count(*) as n&$group=<cols>` returns it. */
+function groupRows(rows, cols) {
+  const groups = new Map();
+  for (const r of rows) {
+    const key = JSON.stringify(cols.map((c) => r[c] ?? null));
+    const g = groups.get(key) ?? { ...Object.fromEntries(cols.filter((c) => r[c] !== undefined).map((c) => [c, r[c]])), n: 0 };
+    g.n += 1;
+    groups.set(key, g);
+  }
+  return [...groups.values()].map((g) => ({ ...g, n: String(g.n) }));
+}
 
 export function startMockUpstream() {
   const hits = [];
@@ -173,10 +206,18 @@ export function startMockUpstream() {
     if (resource) {
       const where = url.searchParams.get('$where') ?? '';
       const offset = Number(url.searchParams.get('$offset') ?? 0);
-      if (resource[1] === '7x2g-h32p') return json(200, offset ? [] : SOCRATA.filers.filter(() => /upper\(compliance_type_desc\) like '%CANDIDATE%'/.test(where)));
-      const id = /filer_id = (\d+)/.exec(where)?.[1];
+      if (offset) return json(200, []);
+      if (resource[1] === '7x2g-h32p') {
+        if (/upper\(compliance_type_desc\) like '%CANDIDATE%'/.test(where)) return json(200, SOCRATA.candidates);
+        if (/upper\(compliance_type_desc\) like '%COMMITTEE%'/.test(where)) return json(200, SOCRATA.committees);
+        return json(400, { message: 'bad where' });
+      }
       if (!/election_year in \('2025', '2026'\)/.test(where)) return json(400, { message: 'bad where' });
-      return json(200, offset ? [] : SOCRATA.transactions.filter((t) => t.filer_id === id));
+      const inYears = SOCRATA.transactions.filter((t) => ['2025', '2026'].includes(t.election_year));
+      const group = url.searchParams.get('$group');
+      if (group) return json(200, groupRows(inYears, group.split(',').map((s) => s.trim())));
+      const ids = (/filer_id in \(([^)]*)\)/.exec(where)?.[1] ?? '').split(',').map((s) => s.trim());
+      return json(200, inYears.filter((t) => ids.includes(t.filer_id)));
     }
     json(404, { error: 'unknown mock route' });
   });

@@ -648,7 +648,12 @@ function renderEffects(ef) {
 
 function renderStateMoney(m) {
   const out = [];
-  out.push(h('p', { class: 'panel-note' }, `Registered committee: ${m.filer?.name ?? 'Unknown'}${m.filer?.id ? ` (NYS Board of Elections filer ID ${m.filer.id}${m.filer.status ? `, ${m.filer.status}` : ''})` : ''}.`));
+  // Each filer whose reports are summed, with the official search to look it up by filer ID.
+  const filers = (m.committees ?? []).map((c) => ({ name: c.name, detail: [`NYS Board of Elections filer ID ${c.id}`, c.type, c.status].filter(Boolean).join(', '), search: c.search }));
+  if (m.filerFilings && m.filer) filers.push({ name: m.filer.name, detail: `the candidate’s own registration, filer ID ${m.filer.id}${m.filer.status ? `, ${m.filer.status}` : ''}`, search: m.filer.search });
+  out.push(h('p', { class: 'panel-note' }, (m.committees ?? []).length > 1 ? 'Registered committees:' : (m.committees ?? []).length ? 'Registered committee:' : 'Filed by the candidate:'));
+  out.push(h('ul', { class: 'link-list' }, filers.map((f) => h('li', {}, `${f.name} (${f.detail}). `, f.search ? extLink(f.search.url, f.search.label) : null))));
+  if (m.matchNote) out.push(h('p', { class: 'panel-note small' }, `How these records were matched: ${m.matchNote}`));
   out.push(h('div', { class: 'table-wrap' }, h('table', {},
     h('caption', {}, `Itemized transactions by schedule, ${m.years} filings${m.latestDate ? `, through ${fmtDate(m.latestDate)}` : ''}`),
     h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Schedule (as named in the filings)'), h('th', { scope: 'col', class: 'num' }, 'Amount'), h('th', { scope: 'col', class: 'num' }, 'Items'))),

@@ -62,7 +62,8 @@ test('New York contribution schedules: A, B and C, confirmed by the name in the 
 });
 
 test('money line: New York State candidates', () => {
-  const state = (schedules, extra = {}) => money({ kind: 'state', status: 'ok', years: '2025–2026', filer: { name: 'Friends of Pat Example' }, schedules, ...extra });
+  const committee = (name) => ({ id: '1', name, type: 'Authorized Single Candidate Committee', status: 'ACTIVE' });
+  const state = (schedules, extra = {}) => money({ kind: 'state', status: 'ok', years: '2025–2026', filer: { id: '9', name: 'Pat Example' }, committees: [committee('Friends of Pat Example')], filerFilings: false, schedules, ...extra });
   assert.equal(state([
     { abbrev: 'A', desc: 'Monetary Contributions Received From Ind. & Part.', total: 182500, count: 640 },
     { abbrev: 'B', desc: 'Monetary Contributions Received From Corporation', total: 12000, count: 8 },
@@ -77,7 +78,14 @@ test('money line: New York State candidates', () => {
   assert.equal(state([]), fallback, 'no transactions: no total is claimed');
   assert.equal(state([{ abbrev: 'F', desc: 'Expenditures/ Payments', total: 100, count: 1 }]), fallback);
   assert.equal(state([{ abbrev: 'A', desc: 'A', total: 100, count: 1 }, { abbrev: 'C', desc: 'Monetary Contributions Received From All Other', total: 50, count: 1 }]), fallback, 'an unnamed contribution schedule would make a partial total');
-  assert.equal(state([{ abbrev: 'A', desc: 'Monetary Contributions Received From Ind. & Part.', total: 100, count: 1 }], { filer: null }), 'Itemized contributions of $100 reported in 2025–2026 filings.');
+  // The filers named are the committees (and the candidate, when they file under their own registration).
+  const a100 = [{ abbrev: 'A', desc: 'Monetary Contributions Received From Ind. & Part.', total: 100, count: 1 }];
+  assert.equal(state(a100, { committees: [committee('Friends of Pat Example'), committee('Pat Example 2026')] }),
+    'Itemized contributions of $100 reported in 2025–2026 filings (Friends of Pat Example and Pat Example 2026).');
+  assert.equal(state(a100, { committees: [committee('A'), committee('B'), committee('C')] }), 'Itemized contributions of $100 reported in 2025–2026 filings (A, B and C).');
+  assert.equal(state(a100, { committees: [], filerFilings: true, filer: { id: '34083', name: 'Hemalee J Patel' } }), 'Itemized contributions of $100 reported in 2025–2026 filings (Hemalee J Patel).');
+  assert.equal(state(a100, { committees: [], filerFilings: false }), 'Itemized contributions of $100 reported in 2025–2026 filings.', 'the candidate’s registration is not a filer unless it files');
+  assert.equal(state(a100, { committees: undefined }), 'Itemized contributions of $100 reported in 2025–2026 filings.');
 });
 
 test('positions line follows the Positions tab', () => {
