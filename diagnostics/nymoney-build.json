@@ -1,0 +1,686 @@
+{
+  "at": "2026-10-26T14:58:05.165Z",
+  "build": {
+    "exitCode": 0,
+    "seconds": 107,
+    "log": [
+      "[build-nymoney 14:56:18] 280 state-level candidates; filing years 2025, 2026",
+      "[build-nymoney 14:56:37] 36673 candidate filers, 28089 committees; 6005 filers filed for 2025, 2026",
+      "[build-nymoney 14:58:05] Linked 171 candidates to their committees; 109 not linked (ambiguous 10, no-committee 69, no-registration 30).",
+      ""
+    ]
+  },
+  "linked": 171,
+  "unmatchedCount": 109,
+  "unmatchedByReason": {
+    "ambiguous": 10,
+    "no-committee": 69,
+    "no-registration": 30
+  },
+  "meta": {
+    "status": "ok",
+    "lastUpdated": "2026-10-26T14:58:05.146Z",
+    "matched": 171,
+    "unmatched": 109
+  },
+  "linkedWithZeroTransactions": [],
+  "byMatchedBy": {
+    "registration+name": 162,
+    "registration": 9
+  },
+  "spotChecks": [
+    {
+      "key": "governor||kathy hochul",
+      "name": "Kathy C. Hochul",
+      "filer": {
+        "id": "27197",
+        "name": "Kathy C. Hochul",
+        "status": "ACTIVE",
+        "office": "Governor",
+        "district": null
+      },
+      "committees": [
+        {
+          "id": "16851",
+          "name": "Friends for Kathy Hochul",
+          "type": "Authorized Single Candidate Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 54337,
+      "rowsRead": 54343,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 22720657.36,
+      "schedules": [
+        "A 18686454.1 (46807)",
+        "B 1916968.51 (599)",
+        "C 2117234.75 (530)",
+        "D 130666.34 (50)",
+        "E 15516.9 (6)",
+        "F 40080694.71 (3332)",
+        "G 16500000 (2)",
+        "L 92085.91 (27)",
+        "M 4951123.68 (2087)",
+        "O 886353.1 (897)"
+      ],
+      "atAGlance": "Itemized contributions of $22.7 million reported in 2025–2026 filings (Friends for Kathy Hochul)."
+    },
+    {
+      "key": "state-senate|28|liz krueger",
+      "name": "Liz Krueger",
+      "filer": {
+        "id": "27168",
+        "name": "Liz Krueger",
+        "status": "TERMINATED",
+        "office": "State Senator",
+        "district": "28"
+      },
+      "committees": [
+        {
+          "id": "371436",
+          "name": "Krueger for New York",
+          "type": "Authorized Single Candidate Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 283,
+      "rowsRead": 283,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 123306,
+      "schedules": [
+        "A 67631 (178)",
+        "B 10450 (14)",
+        "C 45225 (37)",
+        "F 56027.44 (52)",
+        "H 50000 (1)",
+        "L 300 (1)"
+      ],
+      "atAGlance": "Itemized contributions of $123,000 reported in 2025–2026 filings (Krueger for New York)."
+    },
+    {
+      "key": "comptroller||thomas dinapoli",
+      "name": "Thomas P. DiNapoli",
+      "filer": {
+        "id": "28979",
+        "name": "Thomas P. DiNapoli",
+        "status": "ACTIVE",
+        "office": "State Comptroller",
+        "district": null
+      },
+      "committees": [
+        {
+          "id": "308716",
+          "name": "DiNapoli for New York",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 10729,
+      "rowsRead": 10729,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 2676626.86,
+      "schedules": [
+        "A 1398572.36 (8763)",
+        "B 87950 (65)",
+        "C 1190104.5 (584)",
+        "D 47630.62 (21)",
+        "E 17427.96 (28)",
+        "F 1653300.97 (646)",
+        "G 5000 (1)",
+        "H 60000 (3)",
+        "L 3111.18 (5)",
+        "M 44449.32 (66)",
+        "O 193300 (161)",
+        "S 3131318.1 (12)",
+        "T 4334406.51 (374)"
+      ],
+      "atAGlance": "Itemized contributions of $2.7 million reported in 2025–2026 filings (DiNapoli for New York)."
+    },
+    {
+      "key": "governor||bruce blakeman",
+      "name": "Bruce A. Blakeman",
+      "filer": {
+        "id": "165157",
+        "name": "Bruce Blakeman",
+        "status": "ACTIVE",
+        "office": "Governor",
+        "district": null
+      },
+      "committees": [
+        {
+          "id": "580499",
+          "name": "Blakeman for New York",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 114949,
+      "rowsRead": 121949,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 11927776.26,
+      "schedules": [
+        "A 11257743.56 (73396)",
+        "B 328045 (164)",
+        "C 341987.7 (132)",
+        "D 1000 (1)",
+        "F 8065 (6)",
+        "G 6972215 (44)",
+        "H 308850 (8)",
+        "L 4837 (4)",
+        "M 47724.77 (52)",
+        "O 36000 (10)",
+        "S 3500004.4 (6)",
+        "T 20901642.52 (41126)"
+      ],
+      "atAGlance": "Itemized contributions of $11.9 million reported in 2025–2026 filings (Blakeman for New York)."
+    },
+    {
+      "key": "tony simone",
+      "linked": false,
+      "unmatched": [
+        {
+          "name": "Tony Simone",
+          "office": "Member of Assembly",
+          "district": "75",
+          "code": "no-committee",
+          "reason": "Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings."
+        }
+      ]
+    }
+  ],
+  "randomChecks": [
+    {
+      "key": "supreme-court|13|michael pinto",
+      "name": "Michael J. Pinto",
+      "filer": {
+        "id": "308745",
+        "name": "Michael J. Pinto",
+        "status": "ACTIVE",
+        "office": "Supreme Court Justice",
+        "district": "Thirteenth"
+      },
+      "committees": [
+        {
+          "id": "592222",
+          "name": "Pinto for Supreme Court",
+          "type": "Authorized Single Candidate Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 203,
+      "rowsRead": 203,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 64621,
+      "schedules": [
+        "A 50021 (149)",
+        "B 12650 (23)",
+        "C 1950 (4)",
+        "D 1000 (1)",
+        "F 38283.31 (20)",
+        "H 2700 (1)",
+        "O 1950 (5)"
+      ],
+      "atAGlance": "Itemized contributions of $65,000 reported in 2025–2026 filings (Pinto for Supreme Court)."
+    },
+    {
+      "key": "state-senate|11|toby ann stavisky",
+      "name": "Toby Ann Stavisky",
+      "filer": {
+        "id": "25631",
+        "name": "Toby Ann Stavisky",
+        "status": "ACTIVE",
+        "office": "State Senator",
+        "district": "11"
+      },
+      "committees": [
+        {
+          "id": "445875",
+          "name": "Friends of Toby Stavisky 2026",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 791,
+      "rowsRead": 791,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 322394,
+      "schedules": [
+        "A 81594 (339)",
+        "B 21750 (21)",
+        "C 219050 (197)",
+        "F 111048.85 (149)",
+        "G 27659.9 (1)",
+        "H 350 (1)",
+        "L 150 (1)",
+        "M 12250 (10)",
+        "S 139468 (2)",
+        "T 274107.52 (70)"
+      ],
+      "atAGlance": "Itemized contributions of $322,000 reported in 2025–2026 filings (Friends of Toby Stavisky 2026)."
+    },
+    {
+      "key": "state-assembly|68|diana ayala",
+      "name": "Diana I. Ayala",
+      "filer": {
+        "id": "33522",
+        "name": "Diana Ayala",
+        "status": "ACTIVE",
+        "office": "Member of Assembly",
+        "district": "68"
+      },
+      "committees": [
+        {
+          "id": "591051",
+          "name": "Ayala2026",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 548,
+      "rowsRead": 548,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 72166.65,
+      "schedules": [
+        "A 54416.65 (350)",
+        "C 17750 (10)",
+        "F 500 (1)",
+        "H 700 (1)",
+        "M 250 (1)",
+        "O 3500 (2)",
+        "S 123630 (7)",
+        "T 189461.55 (176)"
+      ],
+      "atAGlance": "Itemized contributions of $72,000 reported in 2025–2026 filings (Ayala2026)."
+    },
+    {
+      "key": "state-assembly|30|brandon castro",
+      "name": "Brandon P. Castro",
+      "filer": {
+        "id": "414665",
+        "name": "Brandon Castro",
+        "status": "ACTIVE",
+        "office": "Member of Assembly",
+        "district": "30"
+      },
+      "committees": [
+        {
+          "id": "590876",
+          "name": "Castro for Queens",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 244,
+      "rowsRead": 244,
+      "latestDate": "2026-10-16",
+      "contributionTotal": 12848.2,
+      "schedules": [
+        "A 12848.2 (211)",
+        "F 5522.75 (23)",
+        "M 670 (6)",
+        "N 5112 (3)",
+        "S 41808.8 (1)"
+      ],
+      "atAGlance": "Itemized contributions of $13,000 reported in 2025–2026 filings (Castro for Queens)."
+    },
+    {
+      "key": "state-assembly|95|laurie ryan",
+      "name": "Laurie Ryan",
+      "filer": {
+        "id": "165020",
+        "name": "Laurie Ryan",
+        "status": "ACTIVE",
+        "office": "Member of Assembly",
+        "district": "95"
+      },
+      "committees": [
+        {
+          "id": "591178",
+          "name": "LAURIE RYAN 4NY",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 149,
+      "rowsRead": 149,
+      "latestDate": "2026-10-18",
+      "contributionTotal": 11549.33,
+      "schedules": [
+        "A 10585.69 (122)",
+        "C 963.64 (2)",
+        "F 3664.29 (17)",
+        "G 2700 (1)",
+        "M 1187.38 (7)"
+      ],
+      "atAGlance": "Itemized contributions of $12,000 reported in 2025–2026 filings (LAURIE RYAN 4NY)."
+    },
+    {
+      "key": "state-assembly|7|patricia kopp",
+      "name": "Patricia A. Kopp",
+      "filer": {
+        "id": "591039",
+        "name": "Patricia Kopp",
+        "status": "ACTIVE",
+        "office": "Member of Assembly",
+        "district": "7"
+      },
+      "committees": [
+        {
+          "id": "591041",
+          "name": "Friends of Trish Kopp",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 552,
+      "rowsRead": 552,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 55989.87,
+      "schedules": [
+        "A 47402.37 (389)",
+        "B 8487.5 (5)",
+        "C 100 (1)",
+        "F 19581.95 (34)",
+        "M 4300 (5)",
+        "S 175000 (5)",
+        "T 166984.59 (113)"
+      ],
+      "atAGlance": "Itemized contributions of $56,000 reported in 2025–2026 filings (Friends of Trish Kopp)."
+    },
+    {
+      "key": "state-assembly|87|karines reyes",
+      "name": "Karines Reyes",
+      "filer": {
+        "id": "27858",
+        "name": "Karines Reyes",
+        "status": "ACTIVE",
+        "office": "Member of Assembly",
+        "district": "87"
+      },
+      "committees": [
+        {
+          "id": "18659",
+          "name": "Friends Of Karines Reyes",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 1081,
+      "rowsRead": 1081,
+      "latestDate": "2026-10-19",
+      "contributionTotal": 227044,
+      "schedules": [
+        "A 117394 (503)",
+        "B 9650 (13)",
+        "C 100000 (82)",
+        "D 1000 (1)",
+        "E 6000 (1)",
+        "F 63789.97 (167)",
+        "G 1500 (1)",
+        "L 1661.12 (6)",
+        "M 900 (3)",
+        "S 87163 (7)",
+        "T 296214.57 (297)"
+      ],
+      "atAGlance": "Itemized contributions of $227,000 reported in 2025–2026 filings (Friends Of Karines Reyes)."
+    },
+    {
+      "key": "state-assembly|91|steven otis",
+      "name": "Steven Otis",
+      "filer": {
+        "id": "29862",
+        "name": "Steven Otis",
+        "status": "TERMINATED",
+        "office": "Member of Assembly",
+        "district": "91"
+      },
+      "committees": [
+        {
+          "id": "14718",
+          "name": "Friends Of Steve Otis",
+          "type": "Authorized Single Candidate Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 228,
+      "rowsRead": 236,
+      "latestDate": "2026-10-18",
+      "contributionTotal": 45735,
+      "schedules": [
+        "A 6235 (14)",
+        "B 1700 (4)",
+        "C 37800 (52)",
+        "F 21546.14 (120)",
+        "H 19275 (13)",
+        "N 420000 (24)",
+        "O 500 (1)"
+      ],
+      "atAGlance": "Itemized contributions of $46,000 reported in 2025–2026 filings (Friends Of Steve Otis)."
+    },
+    {
+      "key": "state-assembly|15|paolo pironi",
+      "name": "Paolo A. Pironi",
+      "filer": {
+        "id": "154945",
+        "name": "Paolo A Pironi",
+        "status": "ACTIVE",
+        "office": "Member of Assembly",
+        "district": "15"
+      },
+      "committees": [
+        {
+          "id": "591600",
+          "name": "Pironi For NY Assembly",
+          "type": "Public Campaign Finance Committee",
+          "status": "ACTIVE",
+          "match": "surname"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 183,
+      "rowsRead": 183,
+      "latestDate": "2026-10-16",
+      "contributionTotal": 33349.27,
+      "schedules": [
+        "A 22249.27 (135)",
+        "B 2950 (6)",
+        "C 8150 (13)",
+        "E 6.19 (5)",
+        "F 190 (1)",
+        "G 525 (2)",
+        "H 10800 (2)",
+        "L 20 (1)",
+        "M 1005 (2)",
+        "O 3525 (3)",
+        "S 80195.3 (4)",
+        "T 7627.65 (9)"
+      ],
+      "atAGlance": "Itemized contributions of $33,000 reported in 2025–2026 filings (Pironi For NY Assembly)."
+    },
+    {
+      "key": "supreme-court|1|christopher chin",
+      "name": "Christopher Chin",
+      "filer": {
+        "id": "37388",
+        "name": "Christopher Chin",
+        "status": "ACTIVE",
+        "office": "Supreme Court Justice",
+        "district": "First"
+      },
+      "committees": [
+        {
+          "id": "590993",
+          "name": "Christopher Chin for Supreme Court",
+          "type": "Authorized Single Candidate Committee",
+          "status": "ACTIVE",
+          "match": "full"
+        }
+      ],
+      "filerFilings": false,
+      "matchedBy": "registration+name",
+      "transactions": 168,
+      "rowsRead": 168,
+      "latestDate": "2026-09-28",
+      "contributionTotal": 28377.43,
+      "schedules": [
+        "A 21772.32 (58)",
+        "B 4541.98 (5)",
+        "C 2063.13 (3)",
+        "F 48209.18 (86)",
+        "H 600 (2)",
+        "I 30000 (2)",
+        "N 90000 (6)",
+        "O 2063.13 (6)"
+      ],
+      "atAGlance": "Itemized contributions of $28,000 reported in 2025–2026 filings (Christopher Chin for Supreme Court)."
+    }
+  ],
+  "unmatched": [
+    "Letitia A. James (Attorney General): ambiguous | Committee \"James for NY 2026\" (filer ID 308810) names only the surname, and another active candidate has it: Mariama N. James, Member of Assembly 65.",
+    "Saritha Komatireddy (Attorney General): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Pamela H. Michos (State Senator 11): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Aber Kawas (State Senator 12): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Han-Khon To (State Senator 12): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Jessica Gonzalez-Rojas (State Senator 13): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "John Patrick Healy (State Senator 13): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Zellnor Y. Myrie (State Senator 20): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Jessica Scarcella-Spanton (State Senator 23): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Ruslan Shamal (State Senator 23): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Alexis Rodriguez (State Senator 24): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Jabari Brisport (State Senator 25): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Tom Stanten (State Senator 26): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Jason C. Murillo (State Senator 27): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Alina Bonsell (State Senator 28): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Adrian Romero (State Senator 34): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Grace Marrero (State Senator 36): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Charlotte Friedman (State Senator 47): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Kristen Gonzalez (State Senator 59): ambiguous | Committee \"Gonzalez for New York 2026\" (filer ID 445624) names only the surname, and another active candidate has it: Veronica I. Gonzalez, Member of Assembly 74.",
+    "Welson Chang (Member of Assembly 24): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Nily D. Rozic (Member of Assembly 25): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Robert J. Speranza (Member of Assembly 26): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Jonathan Rinaldi (Member of Assembly 28): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "David J. Kemp (Member of Assembly 28): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Patrick Martinez (Member of Assembly 30): ambiguous | Committee \"Martinez for Queens\" (filer ID 591219) names only the surname, and another active candidate has it: Monica R. Martinez, State Senator 4; Emmanuel A. Martinez, Member of Assembly 78.",
+    "Khaleel M. Anderson (Member of Assembly 31): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Nathaniel Hezekiah III (Member of Assembly 32): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Oster Bryan (Member of Assembly 33): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Brian Romero (Member of Assembly 34): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Larinda C. Hooks (Member of Assembly 35): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Diana C. Moreno (Member of Assembly 36): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Edward Lee (Member of Assembly 36): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Samantha Kattan (Member of Assembly 37): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "David Orkin (Member of Assembly 38): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Ruben D. Cruz II (Member of Assembly 38): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Catalina Cruz (Member of Assembly 39): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Ramses S. Frias (Member of Assembly 39): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Herman G. Hall (Member of Assembly 42): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Anna Shpilkovskaya (Member of Assembly 43): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Joey Cohen-Saban (Member of Assembly 45): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Michael Novakhov (Member of Assembly 45): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Alec Brook-Krasny (Member of Assembly 46): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Simcha Eichenstein (Member of Assembly 48): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Joyce Xiaoqiong Xie (Member of Assembly 49): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Lester Chang (Member of Assembly 49): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Marcela Mitaynes (Member of Assembly 51): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Carla Danielson (Member of Assembly 51): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Jo Anne Simon (Member of Assembly 52): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Brett Wynkoop (Member of Assembly 52): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Phara Souffrant Forrest (Member of Assembly 57): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Yolanda Allison (Member of Assembly 57): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Monique Chandler-Waterman (Member of Assembly 58): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Jaime R. Williams (Member of Assembly 59): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Tim Qorraj (Member of Assembly 64): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Illapa Sairitupac (Member of Assembly 65): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Helen Qiu (Member of Assembly 65): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Eli Northrup (Member of Assembly 69): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Vanessa Aronson (Member of Assembly 73): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Keith Powers (Member of Assembly 74): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Veronica I. Gonzalez (Member of Assembly 74): ambiguous | Committee \"Gonzalez for New York 2026\" (filer ID 445624) names only the surname, and another active candidate has it: Kristen S Gonzalez, State Senator 59.",
+    "Tony Simone (Member of Assembly 75): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Louis Puliafito (Member of Assembly 76): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Emmanuel A. Findlay Jr. (Member of Assembly 79): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Denise Smith (Member of Assembly 80): ambiguous | Committee \"Smith for New York\" (filer ID 382194) names only the surname, and another active candidate has it: Yvette Valdes Smith, State Senator 39; Doug M. Smith, Member of Assembly 5; William P. Smith, Member of Assembly 68.",
+    "James Washington-Ward (Member of Assembly 83): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Tyreek Goodman (Member of Assembly 84): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Maria Diaz (Member of Assembly 86): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Zenobia Merced-Bonilla (Member of Assembly 87): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Zakir Choudhury (Member of Assembly 87): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Bob Cohen (Justice of the Supreme Court 1): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Sienna M. Fontaine (Justice of the Supreme Court 1): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Joshua E. Goldfein (Justice of the Supreme Court 1): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Jeffrey W. Rizzo (Justice of the Supreme Court 1): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Amy S. Taylor (Justice of the Supreme Court 1): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Betsey Jean Jacques (Justice of the Supreme Court 2): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "William D. Spain Jr. (Justice of the Supreme Court 2): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Gail A. Adams (Justice of the Supreme Court 11): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "David A. Bellon (Justice of the Supreme Court 11): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Gary Muraca (Justice of the Supreme Court 11): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Edwin I. Novillo (Justice of the Supreme Court 11): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Oma D. Phillips (Justice of the Supreme Court 11): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Alvin M. Yearwood (Justice of the Supreme Court 12): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Sergio J. Esposito (State Senator 40): ambiguous | Committee \"Esposito For NY\" (filer ID 591221) names only the surname, and another active candidate has it: Christine Esposito, Member of Assembly 119.",
+    "Braille Diaz (Member of Assembly 93): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Dana Levenberg (Member of Assembly 95): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "John Ciampoli (Justice of the Supreme Court 9): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Harjot Singh (State Senator 2): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Antonio Vargas-Ayala (State Senator 3): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Dean Murray (State Senator 3): ambiguous | Committee \"Murray for New York\" (filer ID 496633) names only the surname, and another active candidate has it: E. Christopher Murray, State Senator 1.",
+    "Monica R. Martinez (State Senator 4): ambiguous | Committee \"Martinez for Queens\" (filer ID 591219) names only the surname, and another active candidate has it: Emmanuel A. Martinez, Member of Assembly 78; Patrick Martinez, Member of Assembly 30.",
+    "Siela A. Bynoe (State Senator 6): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Rory Lancman (State Senator 7): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Richard Ambro (Justice of the Supreme Court 10): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "John Kelly (Justice of the Supreme Court 10): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Anthony R. Portesy (Justice of the Supreme Court 10): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "William D. Wexler (Justice of the Supreme Court 10): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Thomas J. Schiavoni (Member of Assembly 1): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Stephen F. Kiely (Member of Assembly 1): ambiguous | Committee \"Kiely for Assembly\" (filer ID 414546) names only the surname, and another active candidate has it: Jeannine Kiely, Member of Assembly 66.",
+    "Michael J. Szika (Member of Assembly 2): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Victoria A. Russell (Member of Assembly 5): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Douglas M. Smith (Member of Assembly 5): ambiguous | Committee \"Smith for New York\" (filer ID 382194) names only the surname, and another active candidate has it: Yvette Valdes Smith, State Senator 39; William P. Smith, Member of Assembly 68; Denise Smith, Member of Assembly 80.",
+    "Dennis J. Barravecchio (Member of Assembly 6): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Dawn Marie D. Kuhn (Member of Assembly 7): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Christopher J. Walis (Member of Assembly 9): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Tiffany L. LeGrow (Member of Assembly 10): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Kwani B. O'Pharrow (Member of Assembly 11): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Craig G. Herskowitz (Member of Assembly 12): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings.",
+    "Sunita J. Lofters (Member of Assembly 17): no-registration | No registration as a candidate for this office and district was found in the filer data, so no committee can be tied to this race.",
+    "Jon Estreich (County Comptroller Suffolk): no-committee | Registered for this office, but no active candidate committee that filed in these years has a name that names the candidate, and the registration itself has no filings."
+  ]
+}
