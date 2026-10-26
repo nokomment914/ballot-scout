@@ -127,7 +127,7 @@ test('build-nysenate.mjs builds NY indexes, then refreshes incrementally', async
   }
 });
 
-test('build-nymoney.mjs links state candidates to committees and sums transactions', async () => {
+test('build-nymoney.mjs links state candidates to their committees and sums transactions', async () => {
   const dataDir = path.join(tmp, 'money-data');
   fs.mkdirSync(path.join(dataDir, 'ballots'), { recursive: true });
   const src = [{ label: 'Test source', url: 'https://example.org/src' }];
@@ -144,14 +144,30 @@ test('build-nymoney.mjs links state candidates to committees and sums transactio
   const r = await run('scripts/build-nymoney.mjs', { DATA_DIR: dataDir, NY_SOCRATA_BASE: `${mock.base}/socrata` });
   assert.equal(r.code, 0, r.out);
   const money = JSON.parse(fs.readFileSync(path.join(dataDir, 'ny', 'money-2026.json'), 'utf8'));
+  assert.equal(money.schemaVersion, 2);
   const pat = money.candidates['state-senate|28|pat senator'];
-  assert.equal(pat.filer.id, '5001');
-  assert.deepEqual(pat.schedules.map((s) => [s.abbrev, s.total, s.count]), [['A', 300, 1], ['F', 120.5, 1]], 'amended transaction counted once');
-  assert.equal(money.candidates['state-assembly|75|lee assembler'].filer.id, '5002');
-  assert.deepEqual(money.unmatched, ['Robin Rival (State Senator 28)']);
+  assert.equal(pat.filer.id, '5001', 'the candidate filer (registration) is kept');
+  assert.deepEqual(pat.committees.map((k) => [k.id, k.name, k.type, k.status, k.match]), [
+    ['6001', 'Friends of Pat Senator', 'Authorized Single Candidate Committee', 'ACTIVE', 'full'],
+    ['6002', 'Pat Senator 2026', 'Public Campaign Finance Committee', 'ACTIVE', 'full'],
+  ], 'authorized and public-financing committees; terminated committee left out');
+  assert.equal(pat.matchedBy, 'registration+name');
+  assert.equal(pat.filerFilings, false);
+  assert.deepEqual(pat.schedules.map((s) => [s.abbrev, s.total, s.count]), [['A', 350, 2], ['F', 120.5, 1]],
+    'amended transaction counted once; the same transaction number in two committees counted twice; other years left out');
+  const lee = money.candidates['state-assembly|75|lee assembler'];
+  assert.deepEqual(lee.committees.map((k) => [k.id, k.match]), [['6004', 'surname']], 'county committee of the same name left out');
+  assert.deepEqual(lee.schedules.map((s) => [s.abbrev, s.total]), [['A', 75]]);
+  assert.deepEqual(money.unmatched.map((u) => [u.name, u.office, u.district, u.code]), [['Robin Rival', 'State Senator', '28', 'no-registration']]);
+  assert.ok(money.unmatched[0].reason.length > 20, 'unmatched candidates carry the reason');
   assert.ok(!Object.keys(money.candidates).some((k) => k.includes('fed person')), 'federal candidates use the FEC instead');
-  // Filer id is a number column, so it is not quoted in the SoQL filter.
-  assert.ok(mock.hits.some((h) => (new URL(h, 'http://x').searchParams.get('$where') ?? '').includes('filer_id = 5001')));
+  const meta = JSON.parse(fs.readFileSync(path.join(dataDir, 'ny', 'meta.json'), 'utf8'));
+  assert.deepEqual([meta.nyMoney.status, meta.nyMoney.matched, meta.nyMoney.unmatched], ['ok', 2, 1]);
+  const wheres = mock.hits.map((h) => new URL(h, 'http://x').searchParams);
+  // One grouped query lists the filers with filings in these years.
+  assert.ok(wheres.some((q) => q.get('$group') === 'filer_id, cand_comm_name, office_desc, district' && /count\(\*\) as n/.test(q.get('$select') ?? '')));
+  // Filer id is a number column in the disclosure data, so it is not quoted in the SoQL filter.
+  assert.ok(wheres.some((q) => (q.get('$where') ?? '').startsWith('filer_id in (6001, 6002) AND ')));
 });
 
 test('build scripts skip cleanly without keys', async () => {
