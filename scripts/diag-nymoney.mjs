@@ -1,41 +1,70 @@
-// Diagnostic: why do NY candidate filers have no disclosure rows? Writes diagnostics/nymoney.json.
+// Diagnostic (temporary branch): download the raw inputs the committee matching needs, so the
+// rules can be calibrated offline. Writes gzipped JSON to diagnostics/raw/.
 import fs from 'node:fs';
-const BASE = 'https://data.ny.gov';
-const F = '7x2g-h32p', D = 'e9ss-239a';
-const get = async (u) => { const r = await fetch(u); const t = await r.text(); try { return JSON.parse(t); } catch { return { status: r.status, text: t.slice(0, 500) }; } };
-const q = (id, params) => `${BASE}/resource/${id}.json?` + new URLSearchParams(params).toString();
-const out = { at: new Date().toISOString() };
-out.filerColumns = (await get(`${BASE}/api/views/${F}/columns.json`)).map?.((c) => ({ name: c.name, field: c.fieldName })) ?? null;
-out.disclosureColumns = (await get(`${BASE}/api/views/${D}/columns.json`)).map?.((c) => ({ name: c.name, field: c.fieldName })) ?? null;
-out.filerMeta = await get(`${BASE}/api/views/${F}.json`).then((v) => ({ name: v.name, rowsUpdatedAt: v.rowsUpdatedAt, viewLastModified: v.viewLastModified }));
-out.disclosureMeta = await get(`${BASE}/api/views/${D}.json`).then((v) => ({ name: v.name, rowsUpdatedAt: v.rowsUpdatedAt, viewLastModified: v.viewLastModified, description: String(v.description ?? '').slice(0, 800) }));
-const ff = (n) => out.filerColumns?.find((c) => c.name.toUpperCase().replace(/\s+/g, '_') === n || c.field.toUpperCase() === n)?.field;
-const df = (n) => out.disclosureColumns?.find((c) => c.name.toUpperCase().replace(/\s+/g, '_') === n || c.field.toUpperCase() === n)?.field;
-const fComp = ff('COMPLIANCE_TYPE_DESC'), fName = ff('FILER_NAME'), fId = ff('FILER_ID');
-out.complianceTypes = await get(q(F, { $select: `${fComp}, count(*) as n`, $group: fComp, $limit: 50 }));
-const ct = out.filerColumns?.find((c) => /committee.?type/i.test(c.name))?.field;
-if (ct) out.committeeTypes = await get(q(F, { $select: `${ct}, count(*) as n`, $group: ct, $limit: 80 }));
-const dYear = df('ELECTION_YEAR'), dId = df('FILER_ID');
-out.disclosureYears = await get(q(D, { $select: `${dYear}, count(*) as n`, $group: dYear, $order: `${dYear} DESC`, $limit: 8 }));
-out.people = {};
-for (const s of ['HOCHUL', 'KRUEGER', 'SIMONE', 'LASHER', 'BLAKEMAN', 'DINAPOLI']) {
-  const filers = await get(q(F, { $where: `upper(${fName}) like '%${s}%'`, $limit: 20 }));
-  const rows = [];
-  for (const f of (Array.isArray(filers) ? filers : []).slice(0, 8)) {
-    const id = f[fId];
-    const cnt = await get(q(D, { $select: `${dYear}, count(*) as n`, $where: `${dId} = '${id}'`, $group: dYear, $order: `${dYear} DESC`, $limit: 5 }));
-    const cntNum = Array.isArray(cnt) && !cnt.length ? await get(q(D, { $select: `${dYear}, count(*) as n`, $where: `${dId} = ${Number(id)}`, $group: dYear, $order: `${dYear} DESC`, $limit: 5 })) : null;
-    rows.push({ filer: f, disclosuresByYear: cnt, disclosuresByYearNumeric: cntNum });
+import zlib from 'node:zlib';
+import { fetchJson, buildUrl, sleep } from '../lib/http.js';
+import { DATASETS, datasetLinks, mapColumns } from '../lib/nymoney.js';
+
+const PAGE = 50000;
+const info = { at: new Date().toISOString(), steps: [] };
+const get = (url) => fetchJson(url, { label: 'data.ny.gov', timeoutMs: 300000, retries: 4, maxWaitMs: 60000 });
+async function queryAll(id, params) {
+  const out = [];
+  for (let offset = 0; ; offset += PAGE) {
+    const rows = await get(buildUrl(datasetLinks(id).resource, { ...params, $limit: PAGE, $offset: offset }));
+    out.push(...rows);
+    if (rows.length < PAGE) break;
+    await sleep(250);
   }
-  out.people[s] = rows;
+  return out;
 }
-// Disclosure rows naming the candidate, whatever filer they're under (if a name column exists).
-const dName = out.disclosureColumns?.find((c) => /cand.?comm|filer.?name|committee.?name/i.test(c.name))?.field;
-out.disclosureNameField = dName ?? null;
-if (dName) {
-  out.byName = {};
-  for (const s of ['HOCHUL', 'KRUEGER']) out.byName[s] = await get(q(D, { $select: `${dId}, ${dName}, ${dYear}, count(*) as n`, $where: `upper(${dName}) like '%${s}%' AND ${dYear} in ('2025','2026')`, $group: `${dId}, ${dName}, ${dYear}`, $limit: 20 }));
+async function step(name, fn) {
+  const t = Date.now();
+  try {
+    const v = await fn();
+    info.steps.push({ name, ms: Date.now() - t, rows: Array.isArray(v) ? v.length : null });
+    return v;
+  } catch (err) {
+    info.steps.push({ name, ms: Date.now() - t, error: err.message });
+    return null;
+  }
 }
-fs.mkdirSync('diagnostics', { recursive: true });
-fs.writeFileSync('diagnostics/nymoney.json', JSON.stringify(out, null, 2));
-console.log('done');
+const save = (name, v) => fs.writeFileSync(`diagnostics/raw/${name}.json.gz`, zlib.gzipSync(JSON.stringify(v)));
+fs.mkdirSync('diagnostics/raw', { recursive: true });
+
+const fcols = await get(datasetLinks(DATASETS.filers).columns);
+const dcols = await get(datasetLinks(DATASETS.disclosures).columns);
+info.filerColumnTypes = fcols.map((c) => [c.name, c.fieldName, c.dataTypeName]);
+info.disclosureColumnTypes = dcols.map((c) => [c.name, c.fieldName, c.dataTypeName]);
+const fc = mapColumns(fcols, ['FILER_ID', 'FILER_NAME', 'COMPLIANCE_TYPE_DESC', 'FILER_TYPE_DESC', 'FILER_STATUS', 'COMMITTEE_TYPE_DESC', 'OFFICE_DESC', 'DISTRICT', 'COUNTY_DESC']).map;
+const dc = mapColumns(dcols, ['FILER_ID', 'CAND_COMM_NAME', 'ELECTION_YEAR', 'OFFICE_DESC', 'DISTRICT', 'COUNTY_DESC']).map;
+const f = (k) => fc[k].field;
+const d = (k) => dc[k].field;
+const lit = (col, v) => (col.type === 'number' ? String(Number(v)) : `'${v}'`);
+
+const groups = await step('groups', () => queryAll(DATASETS.disclosures, {
+  $select: `${d('FILER_ID')}, ${d('CAND_COMM_NAME')}, ${d('OFFICE_DESC')}, ${d('DISTRICT')}, count(*) as n`,
+  $where: `${d('ELECTION_YEAR')} in (${['2025', '2026'].map((y) => lit(dc.ELECTION_YEAR, y)).join(', ')})`,
+  $group: `${d('FILER_ID')}, ${d('CAND_COMM_NAME')}, ${d('OFFICE_DESC')}, ${d('DISTRICT')}`,
+  $order: `${d('FILER_ID')}, ${d('CAND_COMM_NAME')}, ${d('OFFICE_DESC')}, ${d('DISTRICT')}`,
+}));
+if (groups) save('groups', groups);
+const groupsByCounty = await step('groupsCounty', () => queryAll(DATASETS.disclosures, {
+  $select: `${d('FILER_ID')}, ${d('COUNTY_DESC')}, count(*) as n`,
+  $where: `${d('ELECTION_YEAR')} in (${['2025', '2026'].map((y) => lit(dc.ELECTION_YEAR, y)).join(', ')})`,
+  $group: `${d('FILER_ID')}, ${d('COUNTY_DESC')}`,
+  $order: `${d('FILER_ID')}, ${d('COUNTY_DESC')}`,
+}));
+if (groupsByCounty) save('groups-county', groupsByCounty);
+const sel = ['FILER_ID', 'FILER_NAME', 'COMPLIANCE_TYPE_DESC', 'FILER_TYPE_DESC', 'FILER_STATUS', 'COMMITTEE_TYPE_DESC', 'OFFICE_DESC', 'DISTRICT', 'COUNTY_DESC'].map(f).join(',');
+const committees = await step('committees', () => queryAll(DATASETS.filers, { $select: sel, $where: `upper(${f('COMPLIANCE_TYPE_DESC')}) like '%COMMITTEE%'` }));
+if (committees) save('committees', committees);
+const candidates = await step('candidates', () => queryAll(DATASETS.filers, { $select: sel, $where: `upper(${f('COMPLIANCE_TYPE_DESC')}) like '%CANDIDATE%'` }));
+if (candidates) save('candidates', candidates);
+// Timing probe: one large committee's rows (Friends for Kathy Hochul) as the build would fetch them.
+await step('hochulRows', () => queryAll(DATASETS.disclosures, {
+  $select: ['FILER_ID', 'ELECTION_YEAR', 'CAND_COMM_NAME'].map(d).join(','),
+  $where: `${d('FILER_ID')} = ${lit(dc.FILER_ID, '16851')} AND ${d('ELECTION_YEAR')} in (${['2025', '2026'].map((y) => lit(dc.ELECTION_YEAR, y)).join(', ')})`,
+}));
+fs.writeFileSync('diagnostics/raw/info.json', JSON.stringify(info, null, 2));
+console.log(JSON.stringify(info.steps));
