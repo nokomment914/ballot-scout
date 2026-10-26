@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-20T12:00:00Z",
+  "election": "ny-2026-11-03-general",
+  "_fixtureNote": "Fictional positions for FIXTURES=1 mode. No real people. CD-12 and Governor are fully researched (shown); State Senate 28 has an incomplete entry and Comptroller is missing a candidate, so nobody in those races is shown.",
+  "candidates": [
+    {
+      "contestId": "fx-cd-12",
+      "name": "Sample Candidate G",
+      "researchedAt": "2026-10-20",
+      "complete": true,
+      "incompleteReason": null,
+      "website": "https://example.org/sample-candidate-g",
+      "sourcesChecked": [
+        { "label": "Campaign website (fictional)", "url": "https://example.org/sample-candidate-g", "type": "campaign-site", "found": true },
+        { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-g", "type": "questionnaire", "found": true },
+        { "label": "House office website (fictional)", "url": "https://example.org/sample-candidate-g/office", "type": "official-site", "found": true },
+        { "label": "District 12 debate, Oct 8 (fictional)", "url": "https://example.org/sample-debate/cd-12", "type": "debate", "found": true },
+        { "label": "Campaign social media accounts (fictional)", "url": null, "type": "social", "found": false }
+      ],
+      "stances": [
+        {
+          "issue": "housing",
+          "summary": "Supports expanding the federal Low-Income Housing Tax Credit to pay for more rental homes for families with modest incomes.",
+          "quote": "More homes that working families can afford, in every neighborhood.",
+          "source": { "label": "Campaign website: Housing (fictional)", "url": "https://example.org/sample-candidate-g/housing", "type": "campaign-site", "date": "2026-09-14" }
+        },
+        {
+          "issue": "housing",
+          "summary": "Proposes federal grants for cities that change zoning rules to allow more apartments near train and bus stations.",
+          "quote": null,
+          "source": { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-g", "type": "questionnaire", "date": "2026-09-30" }
+        },
+        {
+          "issue": "health",
+          "summary": "Wants to cap out-of-pocket insulin costs at $35 a month for every patient, including people without insurance.",
+          "quote": "No one should ration insulin because of what it costs.",
+          "source": { "label": "District 12 debate transcript (fictional)", "url": "https://example.org/sample-debate/cd-12", "type": "debate", "date": "2026-10-08" }
+        },
+        {
+          "issue": "climate",
+          "summary": "Backs federal funding for flood barriers and storm drains in the district’s coastal neighborhoods.",
+          "quote": null,
+          "source": { "label": "House office website (fictional)", "url": "https://example.org/sample-candidate-g/office", "type": "official-site", "date": null }
+        }
+      ]
+    },
+    {
+      "contestId": "fx-cd-12",
+      "name": "Sample Candidate H",
+      "researchedAt": "2026-10-20",
+      "complete": true,
+      "incompleteReason": null,
+      "website": "https://example.org/sample-candidate-h",
+      "sourcesChecked": [
+        { "label": "Campaign website (fictional)", "url": "https://example.org/sample-candidate-h", "type": "campaign-site", "found": true },
+        { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-h", "type": "questionnaire", "found": true },
+        { "label": "Sample radio interview, Oct 2 (fictional)", "url": "https://example.org/sample-interview/candidate-h", "type": "interview", "found": true },
+        { "label": "District 12 debate, Oct 8 (fictional)", "url": "https://example.org/sample-debate/cd-12", "type": "debate", "found": false },
+        { "label": "Campaign social media accounts (fictional)", "url": null, "type": "social", "found": false }
+      ],
+      "stances": [
+        {
+          "issue": "housing",
+          "summary": "Wants to cut federal permitting rules that, the candidate says, slow down the building of new homes.",
+          "quote": "Washington makes it too slow and too expensive to build.",
+          "source": { "label": "Campaign website: Issues (fictional)", "url": "https://example.org/sample-candidate-h/issues", "type": "campaign-site", "date": "2026-09-20" }
+        },
+        {
+          "issue": "taxes",
+          "summary": "Plans to keep the 2017 individual income tax rates in place for households at every income level.",
+          "quote": null,
+          "source": { "label": "Sample radio interview (fictional)", "url": "https://example.org/sample-interview/candidate-h", "type": "interview", "date": "2026-10-02" }
+        },
+        {
+          "issue": "transportation",
+          "summary": "Supports spending federal money to repair bridges and tunnels before paying for new transit lines.",
+          "quote": null,
+          "source": { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-h", "type": "questionnaire", "date": "2026-09-30" }
+        }
+      ]
+    },
+    {
+      "contestId": "fx-governor",
+      "name": "Sample Candidate A",
+      "researchedAt": "2026-10-19",
+      "complete": true,
+      "incompleteReason": null,
+      "website": "https://example.org/sample-candidate-a",
+      "sourcesChecked": [
+        { "label": "Campaign website (fictional)", "url": "https://example.org/sample-candidate-a", "type": "campaign-site", "found": true },
+        { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-a", "type": "questionnaire", "found": true },
+        { "label": "Governor’s debate, Oct 15 (fictional)", "url": "https://example.org/sample-debate/governor", "type": "debate", "found": true }
+      ],
+      "stances": [
+        {
+          "issue": "education",
+          "summary": "Proposes free full-day prekindergarten for every three-year-old in the state within four years.",
+          "quote": "Every three-year-old deserves a seat in a pre-K classroom.",
+          "source": { "label": "Campaign website: Education (fictional)", "url": "https://example.org/sample-candidate-a/education", "type": "campaign-site", "date": "2026-09-10" }
+        },
+        {
+          "issue": "transportation",
+          "summary": "Seeks a state audit of transit authority spending before any fare increase is approved.",
+          "quote": null,
+          "source": { "label": "Governor’s debate transcript (fictional)", "url": "https://example.org/sample-debate/governor", "type": "debate", "date": "2026-10-15" }
+        },
+        {
+          "issue": "housing",
+          "summary": "Favors a state tax credit for renters whose rent is more than a third of their income.",
+          "quote": null,
+          "source": { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-a", "type": "questionnaire", "date": "2026-09-28" }
+        }
+      ]
+    },
+    {
+      "contestId": "fx-governor",
+      "name": "Sample Candidate B",
+      "researchedAt": "2026-10-19",
+      "complete": true,
+      "incompleteReason": null,
+      "website": "https://example.org/sample-candidate-b",
+      "sourcesChecked": [
+        { "label": "Campaign website (fictional)", "url": "https://example.org/sample-candidate-b", "type": "campaign-site", "found": false },
+        { "label": "Sample Voter Guide questionnaire (not returned, fictional)", "url": "https://example.org/sample-questionnaire/candidate-b", "type": "questionnaire", "found": false },
+        { "label": "Governor’s debate, Oct 15 (fictional)", "url": "https://example.org/sample-debate/governor", "type": "debate", "found": false }
+      ],
+      "stances": []
+    },
+    {
+      "contestId": "fx-sd-28",
+      "name": "Sample Candidate J",
+      "researchedAt": "2026-10-18",
+      "complete": true,
+      "incompleteReason": null,
+      "website": "https://example.org/sample-candidate-j",
+      "sourcesChecked": [
+        { "label": "Campaign website (fictional)", "url": "https://example.org/sample-candidate-j", "type": "campaign-site", "found": true },
+        { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-j", "type": "questionnaire", "found": true }
+      ],
+      "stances": [
+        {
+          "issue": "housing",
+          "summary": "Supports extending rent stabilization to buildings with six or more apartments across the state.",
+          "quote": null,
+          "source": { "label": "Campaign website: Issues (fictional)", "url": "https://example.org/sample-candidate-j/issues", "type": "campaign-site", "date": "2026-09-05" }
+        },
+        {
+          "issue": "labor",
+          "summary": "Backs raising the state minimum wage by one dollar a year until it reaches $20 an hour.",
+          "quote": null,
+          "source": { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-j", "type": "questionnaire", "date": "2026-09-29" }
+        }
+      ]
+    },
+    {
+      "contestId": "fx-sd-28",
+      "name": "Sample Candidate K",
+      "researchedAt": "2026-10-18",
+      "complete": false,
+      "incompleteReason": "The campaign website was offline when checked, and the questionnaire answers haven’t been reviewed yet.",
+      "website": null,
+      "sourcesChecked": [
+        { "label": "Campaign website (offline when checked, fictional)", "url": "https://example.org/sample-candidate-k", "type": "campaign-site", "found": false },
+        { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-k", "type": "questionnaire", "found": true }
+      ],
+      "stances": [
+        {
+          "issue": "taxes",
+          "summary": "Opposes any increase in state income tax rates for households earning under $500,000 a year.",
+          "quote": null,
+          "source": { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-k", "type": "questionnaire", "date": "2026-09-29" }
+        }
+      ]
+    },
+    {
+      "contestId": "fx-comptroller",
+      "name": "Sample Candidate D",
+      "researchedAt": "2026-10-17",
+      "complete": true,
+      "incompleteReason": null,
+      "website": null,
+      "sourcesChecked": [
+        { "label": "Official office website (fictional)", "url": "https://example.org/sample-candidate-d/office", "type": "official-site", "found": true },
+        { "label": "Sample radio interview (fictional)", "url": "https://example.org/sample-interview/candidate-d", "type": "interview", "found": true }
+      ],
+      "stances": [
+        {
+          "issue": "budget",
+          "summary": "Proposes publishing every state contract worth more than $1 million online within 30 days of signing.",
+          "quote": null,
+          "source": { "label": "Official office website (fictional)", "url": "https://example.org/sample-candidate-d/office", "type": "official-site", "date": "2026-08-30" }
+        },
+        {
+          "issue": "taxes",
+          "summary": "Calls for a yearly public report on the cost of every state tax break for businesses.",
+          "quote": "Taxpayers should see what every tax break costs them.",
+          "source": { "label": "Sample radio interview (fictional)", "url": "https://example.org/sample-interview/candidate-d", "type": "interview", "date": "2026-10-06" }
+        }
+      ]
+    }
+  ]
+}

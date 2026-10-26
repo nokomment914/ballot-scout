@@ -69,6 +69,9 @@ jobs:
       - name: Validate seed ballots
         run: node scripts/validate-seed.mjs
 
+      - name: Validate positions
+        run: node scripts/validate-stances.mjs
+
       - name: Unit tests
         run: npm test
 

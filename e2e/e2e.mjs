@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // End-to-end test in sample-data mode (FIXTURES=1) with Playwright + Chromium.
-// Searches an address, picks issues, opens candidate records, and checks for console
-// errors and horizontal scrolling at 390px and 1280px in light and dark mode.
-// Screenshots go to /screenshots.
+// Searches an address, picks issues, opens candidate records (the "At a glance" box and every
+// tab), and checks for console errors and horizontal scrolling at 390px and 1280px in light and
+// dark mode. Screenshots go to /screenshots.
 //
 // Playwright is not a project dependency. The script looks for it in this order:
 //   PLAYWRIGHT_MODULE env var, a local node_modules/playwright, then /opt/npm-tools.
@@ -103,9 +103,13 @@ async function run() {
         const sdNames = await page.locator('#contest-fx-sd-28 .candidate h4').allTextContents();
         check(sdNames.join('|') === 'Sample Candidate J|Sample Candidate K', `State Senate alphabetical (${sdNames.join(', ')})`);
 
-        // Identical sections for every candidate.
+        // Identical sections for every candidate, with "At a glance" right above the tabs.
         const tabCounts = await page.locator('.candidate').evaluateAll((els) => els.map((e) => e.querySelectorAll('[role="tab"]').length));
-        check(tabCounts.every((n) => n === 5), 'every candidate has the same 5 tabs');
+        check(tabCounts.every((n) => n === 6), 'every candidate has the same 6 tabs');
+        const firstTabs = await page.locator('.candidate').evaluateAll((els) => els.map((e) => { const t = e.querySelector('[role="tab"]'); return `${t.textContent}|${t.getAttribute('aria-selected')}`; }));
+        check(firstTabs.every((t) => t === 'Positions on your issues|true'), '"Positions on your issues" is the first tab and open by default');
+        const glanceBeforeTabs = await page.locator('.candidate').evaluateAll((els) => els.every((e) => e.querySelector('.glance')?.nextElementSibling === e.querySelector('.tabs')));
+        check(glanceBeforeTabs, 'every candidate has an "At a glance" box right before the tabs');
 
         // Labels.
         check(await page.locator('#contest-fx-supreme-1 .record-label', { hasText: 'Judicial races have no voting records' }).count() === 3, 'judicial label on each judicial candidate');
@@ -116,6 +120,40 @@ async function run() {
         const g = page.locator('#contest-fx-cd-12 .candidate', { hasText: 'Sample Candidate G' });
         await g.scrollIntoViewIfNeeded();
         await waitForRecords(g);
+
+        // At a glance: three plain lines, the positions as a list, and the footnote.
+        const glance = g.locator('.glance');
+        check(await glance.locator('h5', { hasText: 'At a glance' }).isVisible(), 'At a glance box is shown');
+        const leads = await glance.locator('.glance-list > li > strong').allTextContents();
+        check(leads.join('|') === 'Money:|Positions:|Record:', `At a glance has Money, Positions and Record lines (${leads.join(' ')})`);
+        const glanceText = await glance.textContent();
+        check(/Raised \$1\.2 million for this race through Sep 30, 2026/.test(glanceText), 'money line gives the FEC total and date');
+        check(/Outside groups reported spending \$1,500 supporting and \$250 opposing\./.test(glanceText), 'money line gives outside spending for and against');
+        const glancePositions = await glance.locator('.glance-positions li').allTextContents();
+        check(glancePositions.length === 2 && glancePositions[0].startsWith('Housing — Supports expanding') && glancePositions[1].startsWith('Health care — Wants to cap'), `positions line lists the first position per issue (${glancePositions.length})`);
+        check(/5 recorded votes on your issues, most recently on Mar 2, 2026\./.test(glanceText), 'record line counts the votes in the Votes tab');
+        check(glanceText.includes('Details and sources are in the tabs below.'), 'At a glance footnote is shown');
+        const glanceBox = await glance.boundingBox();
+        const tabsBox = await g.locator('.tabs').boundingBox();
+        check(glanceBox && tabsBox && glanceBox.y + glanceBox.height <= tabsBox.y, 'At a glance sits above the tabs');
+
+        // Positions on your issues (the first tab, open by default).
+        const positions = g.locator('.tabpanel[data-key="positions"]');
+        check(await positions.isVisible(), 'Positions tab is open by default');
+        check(await positions.locator('.row').count() === 3, 'positions tab lists every position on the chosen issues');
+        check(await positions.locator('.row .evidence-type', { hasText: 'Housing' }).count() === 2, 'each position is labeled with its issue');
+        check(await positions.locator('blockquote.quote cite').count() === 2, 'quotes are shown with a citation');
+        check(await positions.locator('.position-source a', { hasText: 'Campaign website: Housing (fictional)' }).count() === 1, 'each position links to its source');
+        check((await positions.locator('.position-source').first().textContent()).includes('(campaign website, Sep 14, 2026)'), 'source line gives the type and date');
+        check((await positions.textContent()).includes('Also has stated positions on: Climate, energy and environment.'), 'other stated issues are listed');
+        const checked = positions.locator('details.more');
+        check(await checked.locator('summary').textContent() === 'Sources checked (5)', 'sources checked are listed, collapsed');
+        check(!(await checked.evaluate((d) => d.open)), 'sources checked start collapsed');
+        await checked.locator('summary').click();
+        check(await checked.locator('li', { hasText: 'No statements found' }).count() === 1, 'sources with nothing found are listed too');
+        await g.screenshot({ path: path.join(SHOTS, `candidate-positions-${tag}.png`) });
+        await checked.locator('summary').click();
+
         const voteRows = await g.locator('.tabpanel[data-key="votes"] .row').count();
         check(voteRows >= 4, `Candidate G shows votes on the chosen issues (${voteRows})`);
         check(await g.locator('.tabpanel[data-key="votes"] a', { hasText: 'Official roll call' }).count() > 0, 'votes link to official roll calls');
@@ -150,8 +188,26 @@ async function run() {
         await a.scrollIntoViewIfNeeded();
         await waitForRecords(a);
         await a.locator('.person-switch button', { hasText: 'running mate' }).click();
-        await a.locator('.tabpanel[data-key="votes"] .row').first().waitFor({ timeout: 10000 });
+        await a.locator('.tabpanel[data-key="votes"] .row').first().waitFor({ state: 'attached', timeout: 10000 });
         check(await a.locator('.tabpanel[data-key="votes"] .row').count() >= 1, 'running mate records load');
+        check((await a.locator('.tabpanel[data-key="positions"]').textContent()).includes('Positions for this ticket are listed under the candidate for Governor.'), 'running mate points to the ticket’s positions');
+
+        // Judicial candidates: no positions, with the reason.
+        const judge = page.locator('#contest-fx-supreme-1 .candidate', { hasText: 'Sample Candidate N' });
+        await judge.scrollIntoViewIfNeeded();
+        await waitForRecords(judge);
+        const judicialNote = 'Under New York’s rules for judicial campaigns, judicial candidates can’t pledge or commit to positions on issues that may come before the court';
+        check((await judge.locator('.tabpanel[data-key="positions"] .empty').textContent()).startsWith(judicialNote), 'judicial candidate shows the judicial note in the Positions tab');
+        check((await judge.locator('.glance').textContent()).includes(judicialNote), 'judicial note in the At a glance box');
+
+        // A race with an incomplete candidate shows positions for nobody in it.
+        for (const name of ['Sample Candidate J', 'Sample Candidate K']) {
+          const card = page.locator('#contest-fx-sd-28 .candidate', { hasText: name });
+          await card.scrollIntoViewIfNeeded();
+          await waitForRecords(card);
+          check((await card.locator('.tabpanel[data-key="positions"] .empty').textContent()) === 'Positions for this race haven’t been fully researched yet, so none are shown for any candidate in it.', `${name}: race not fully researched, so no positions`);
+          check(await card.locator('.tabpanel[data-key="positions"] .row').count() === 0, `${name}: no positions listed`);
+        }
 
         // State candidate money from the NYS Board of Elections data (identical layout for both).
         const j = page.locator('#contest-fx-sd-28 .candidate', { hasText: 'Sample Candidate J' });
@@ -182,9 +238,9 @@ async function run() {
           return bad;
         });
         check(badText.length === 0, `no "null", "undefined", NaN or Invalid Date text on the page${badText.length ? `: ${badText.slice(0, 5).join(' | ')}` : ''}`);
-        // Each candidate's five panels are all filled (identical structure, nothing left loading).
-        const panelsFilled = await page.locator('.candidate').evaluateAll((els) => els.every((e) => [...e.querySelectorAll('.tabpanel')].every((p) => p.childElementCount > 0 && !p.querySelector('.loading'))));
-        check(panelsFilled, 'every candidate panel is filled');
+        // Each candidate's six panels and glance box are all filled (identical structure, nothing left loading).
+        const panelsFilled = await page.locator('.candidate').evaluateAll((els) => els.every((e) => [...e.querySelectorAll('.glance, .tabpanel')].every((p) => p.childElementCount > 0 && !p.querySelector('.loading'))));
+        check(panelsFilled, 'every candidate panel and At a glance box is filled');
         await page.screenshot({ path: path.join(SHOTS, `results-${tag}.png`), fullPage: true });
 
         // Methodology page renders the mapping table.

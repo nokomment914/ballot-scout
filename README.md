@@ -2,6 +2,8 @@
 
 A nonpartisan politician report card. A voter enters the address where they're registered and picks up to five issues. Ballot Scout shows every contest and candidate on their ballot, and for each candidate:
 
+- **At a glance:** three plain lines (money, positions, record) built from the tabs below with fixed sentence templates; every number comes from the Money and Votes tabs
+- **Positions on your issues:** the candidate's stated positions, paraphrased by fixed writing rules from their own website, questionnaires and quoted statements, each linked to where they said it (not listed for judicial races)
 - **Votes on your issues:** date, bill, question, their vote, result, and a link to the official roll call
 - **Bills they sponsored:** status, whether it became law, and the official summary, quoted
 - **What their policies did:** only official evidence (Congressional Budget Office estimates, Congressional Research Service summaries, New York sponsor-memo fiscal notes, the Governor's messages) plus a "Find GAO reviews" link
@@ -14,13 +16,14 @@ The ballot page also shows, for the federal race on each ballot, outside spendin
 
 ## Impartiality rules (enforced in code)
 
-1. Every candidate gets the same five sections in the same layout.
+1. Every candidate gets the same "At a glance" box and the same six sections in the same layout.
 2. Candidates appear in ballot order when the data gives a position for everyone in the contest; otherwise alphabetically by last name. Never by party.
 3. No grades, scores, ratings, endorsements, "alignment" percentages, or adjectives about candidates. Parties, votes and money all use the same neutral styling.
-4. No AI-written descriptions. Summaries are official text quoted verbatim with a link.
+4. Official text is quoted verbatim. Position summaries are short paraphrases of the candidate's own statements, written to the same rules for every candidate, each linked to where the candidate said it.
 5. Every fact links to its primary record, and every section shows its source and last-updated date.
 6. A missing record is labeled, not penalized: "No legislative voting record in these databases", "Executive office: no voting record" (with the Governor's signatures and vetoes shown), "Judicial races have no voting records," or, for city, county, town and village offices, "City, county, town and village records aren't covered by this guide yet."
 7. If a name can't be matched to exactly one database record, nothing is linked.
+8. Positions for a race are shown only when every candidate in it has been fully researched; until then, no one's are.
 
 The full rules, sources, issue-mapping tables and known gaps are on the site's **How it works** page (`/methodology`).
 
@@ -100,6 +103,16 @@ The researched file (updated Oct 25, 2026) has 300 contests, 579 candidates and 
 
 Not yet included: local proposals outside the city beyond the one found on a sample ballot (not every sample ballot was checked), and the NYC proposals' full text and abstracts (the site links to the official documents). If a file only has fictional "Sample Candidate" names, the site shows a "Sample data" banner.
 
+## Updating positions
+
+Candidates' stated positions live in `data/stances/ny-2026-general.json` (it starts with no candidates). Each entry names a candidate in a contest of the ballot file (`contestId` and `name`, matched by full name the same way as the ballot), with `researchedAt`, `website`, every source checked (`sourcesChecked`: label, URL, type and whether anything was `found`), the positions (`stances`: issue id from `lib/issues.js`, summary, optional short quote, and a linked source), and `complete` (`true` only when every required source check was done) with `incompleteReason` (`null` when complete). After editing it, check it:
+
+```
+node scripts/validate-stances.mjs
+```
+
+It enforces the writing rules (each summary starts with a plain verb from a fixed list, no characterizing words, quotes of 14 words or fewer, a linked source for every summary), checks every entry against the ballot file, and warns about races that won't be shown yet. A race's positions appear only when every candidate in it has a complete entry. Judicial candidates' positions are never listed, and running mates' are listed under the candidate for Governor. The nightly job runs the same check.
+
 ## Data refresh
 
 | Data | How it's updated |
@@ -111,6 +124,7 @@ Not yet included: local proposals outside the city beyond the one found on a sam
 | Outside spending for and against each federal candidate (FEC Schedule E, with each spender's committee type) | Nightly GitHub Action → `data/fec/outside.json` |
 | The Israel and Palestine vote list | By hand, from the Clerk of the House: `data/issues/israel-palestine.json` |
 | Ballot contests and candidates | When you replace the seed file |
+| Candidates' stated positions | By hand: `data/stances/ny-2026-general.json`, checked by `scripts/validate-stances.mjs` |
 
 ## Limitations
 
@@ -137,10 +151,12 @@ Zero runtime dependencies: Vercel serverless functions in `/api` (Node 20+ ES mo
 ```
 api/          ballot.js (POST), candidate.js (GET), meta.js (GET)
 lib/          one module per source: geocoder, civic, seed, congress, votes, nysenate, openstates, fec,
-              plus issues.js (the single issue-mapping table), order.js, labels.js, ids.js, ballot.js, candidate.js
+              plus issues.js (the single issue-mapping table), order.js, labels.js, ids.js, ballot.js, candidate.js,
+              stances.js and validate-stances.js (stated positions), summary.js (the "At a glance" lines)
 lib/build/    pure transforms used by the data build scripts
-scripts/      build-votes.mjs, build-nysenate.mjs, build-nymoney.mjs, build-outside.mjs, build-data.mjs, validate-seed.mjs
-data/         ballots/ (seed), issues/ (published vote lists), votes/, ny/ and fec/ (built nightly)
+scripts/      build-votes.mjs, build-nysenate.mjs, build-nymoney.mjs, build-outside.mjs, build-data.mjs, validate-seed.mjs,
+              validate-stances.mjs
+data/         ballots/ (seed), stances/ (researched positions), issues/ (published vote lists), votes/, ny/ and fec/ (built nightly)
 fixtures/     fictional sample data for FIXTURES=1
 public/       index.html, methodology.html, assets/
 tests/        node:test unit tests, plus the build scripts run end to end against a local mock of each API
@@ -159,5 +175,5 @@ npm i --no-save playwright && npx playwright install chromium && npm run e2e   #
 
 API:
 - `POST /api/ballot` with `{"address": "...", "issues": ["housing", "health"]}` returns districts, election info, polling places, contests and candidates (each with an opaque `id`). Never cached.
-- `GET /api/candidate?id=<id>&issues=housing,health&more=0|1` returns the five sections. CDN-cached for 6 hours. `more=1` adds amendment and committee votes.
+- `GET /api/candidate?id=<id>&issues=housing,health&more=0|1` returns the "At a glance" summary and the six sections. CDN-cached for 6 hours. `more=1` adds amendment and committee votes.
 - `GET /api/meta` returns the issue list and mapping tables, data freshness and mode.

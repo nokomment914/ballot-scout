@@ -17,6 +17,7 @@
     "build-ny": "node scripts/build-nysenate.mjs",
     "build-ny-money": "node scripts/build-nymoney.mjs",
     "build-outside": "node scripts/build-outside.mjs",
-    "validate-seed": "node scripts/validate-seed.mjs"
+    "validate-seed": "node scripts/validate-seed.mjs",
+    "validate-stances": "node scripts/validate-stances.mjs"
   }
 }

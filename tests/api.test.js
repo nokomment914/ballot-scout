@@ -68,7 +68,7 @@ test('POST /api/ballot validation and method errors', async () => {
   assert.equal(res.statusCode, 413);
 });
 
-test('GET /api/candidate returns the same five sections for every candidate', async () => {
+test('GET /api/candidate returns the same sections for every candidate', async () => {
   const { default: ballot } = await import('../api/ballot.js');
   const { default: handler } = await import('../api/candidate.js');
   const res = mockRes();
@@ -81,8 +81,10 @@ test('GET /api/candidate returns the same five sections for every candidate', as
     assert.equal(r.statusCode, 200);
     assert.match(r.headers['cache-control'], /s-maxage=/);
     const rec = r.json();
-    assert.deepEqual(Object.keys(rec.sections), ['votes', 'sponsored', 'effects', 'money', 'sources']);
-    for (const key of ['votes', 'sponsored', 'effects', 'money']) assert.ok(rec.sections[key].status, `${key} has a status`);
+    assert.deepEqual(Object.keys(rec.sections), ['summary', 'stances', 'votes', 'sponsored', 'effects', 'money', 'sources']);
+    for (const key of ['stances', 'votes', 'sponsored', 'effects', 'money']) assert.ok(rec.sections[key].status, `${key} has a status`);
+    assert.deepEqual(rec.sections.summary.lines.map((l) => l.kind), ['money', 'positions', 'record']);
+    for (const l of rec.sections.summary.lines) assert.ok(l.text || l.items?.length, `${l.kind} line has text`);
     // No scores, grades or ratings anywhere in the payload.
     assert.ok(!/"(score|grade|rating|alignment)"/i.test(r.body));
   }

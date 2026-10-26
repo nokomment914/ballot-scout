@@ -190,7 +190,7 @@ input[type="text"][aria-invalid="true"] { border-color: var(--error-text); }
 /* Tabs: a tidy two-column grid in narrow cards, one row when the card is wide. */
 .candidate { container-type: inline-size; }
 .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 4px 0 10px; }
-.tabs .tab:last-child { grid-column: 1 / -1; }
+.tabs .tab:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .tab { min-height: 44px; padding: 8px 10px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--surface-2); cursor: pointer; font-size: .9rem; font-weight: 550; text-align: center; line-height: 1.25; }
 @container (min-width: 640px) {
   .tabs { display: flex; flex-wrap: wrap; }
@@ -215,6 +215,20 @@ input[type="text"][aria-invalid="true"] { border-color: var(--error-text); }
 .quote cite { display: block; font-style: normal; font-size: .82rem; color: var(--text-2); margin-top: 4px; }
 .evidence { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 6px; }
 .evidence-type { font-size: .82rem; font-weight: 650; color: var(--text-2); text-transform: uppercase; letter-spacing: .04em; }
+.row > .evidence-type { margin: 0 0 2px; }
+
+/* At a glance (above the tabs) and stated positions */
+.glance { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; margin: 0 0 10px; }
+.glance:empty { display: none; }
+.glance-title { font-size: .98rem; margin: 0 0 6px; }
+.glance .loading { margin: 0; font-size: .92rem; }
+.glance-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: .94rem; }
+.glance-positions { margin: 4px 0 0; padding-left: 1.1em; display: grid; gap: 3px; }
+.glance-issue { font-weight: 600; }
+.glance-note { font-size: .82rem; color: var(--text-2); margin: 8px 0 0; }
+.position-summary { margin: 0 0 4px; }
+.position-source { font-size: .84rem; color: var(--text-2); margin: 4px 0 0; }
+.tabpanel .rows + .panel-note { margin-top: 10px; }
 
 .money-kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; margin: 0 0 10px; font-size: .94rem; }
 .money-kv dt { color: var(--text-2); }

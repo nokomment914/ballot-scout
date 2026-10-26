@@ -35,6 +35,8 @@
         <li><a href="#sources">Data sources and update schedule</a></li>
         <li><a href="#ballot">How we find your ballot</a></li>
         <li><a href="#linking">How candidates are linked to records</a></li>
+        <li><a href="#glance">The “At a glance” box</a></li>
+        <li><a href="#positions">Positions on your issues</a></li>
         <li><a href="#votes">Which votes are included</a></li>
         <li><a href="#issues">Issue mapping tables</a></li>
         <li><a href="#israel">The Israel and Palestine vote list</a></li>
@@ -51,10 +53,11 @@
       <h2 id="rules-h">Impartiality rules</h2>
       <p>These rules are enforced in the code, not just promised here.</p>
       <ul>
-        <li><strong>Same fields for everyone.</strong> Every candidate gets the same five sections (Votes on your issues, Bills they sponsored, What their policies did, Money, Sources) in the same layout, whether or not they have records.</li>
+        <li><strong>Same fields for everyone.</strong> Every candidate gets the same “At a glance” box and the same six sections (Positions on your issues, Votes on your issues, Bills they sponsored, What their policies did, Money, Sources) in the same layout, whether or not they have records.</li>
         <li><strong>Neutral order.</strong> Candidates appear in official ballot order when our data gives a position for every candidate in a contest. Otherwise they’re listed alphabetically by last name. Party is never used to order anything.</li>
         <li><strong>No judgments.</strong> No grades, scores, ratings, endorsements, “alignment” percentages, or adjectives about candidates. Party lines, votes and money are all styled identically, with no party colors.</li>
-        <li><strong>No AI-written descriptions.</strong> Any summary is official text quoted verbatim, such as Congressional Research Service bill summaries, Congressional Budget Office estimate titles, New York sponsor memos, and the Governor’s messages, with a link to the source. Long text is shortened only by cutting it off with an ellipsis.</li>
+        <li><strong>Quoted, or paraphrased by fixed rules.</strong> Official text is quoted verbatim. Position summaries are short paraphrases of the candidate’s own statements, written to the same rules for every candidate, each linked to where the candidate said it. Quoted official text includes Congressional Research Service bill summaries, Congressional Budget Office estimate titles, New York sponsor memos and the Governor’s messages, each with a link to the source; long text is shortened only by cutting it off with an ellipsis.</li>
+        <li><strong>Whole races, not single candidates.</strong> Positions for a race are shown only when every candidate in it has been fully researched. Until then, no one’s are, so a candidate’s positions never appear next to an opponent who hasn’t been researched yet.</li>
         <li><strong>Everything is linked.</strong> Each vote links to its official roll call or bill page, each bill to its official page, and each dollar figure to the FEC. Each section shows its source and when it was last updated.</li>
         <li><strong>No record isn’t a mark against anyone.</strong> Candidates who haven’t served in a legislature are labeled “No legislative voting record in these databases.” Executive officeholders are labeled “Executive office: no voting record,” with documented official actions shown where a database exists (the Governor’s bill signatures and vetoes). Judicial candidates are labeled “Judicial races have no voting records.” Candidates for city, county, town and village offices are labeled “City, county, town and village records aren’t covered by this guide yet.”</li>
         <li><strong>When unsure, we show nothing.</strong> If a name can’t be matched to exactly one database record, we don’t link it, so no one is shown someone else’s record.</li>
@@ -88,6 +91,7 @@
             <tr><td><a href="https://geocoding.geo.census.gov/geocoder/">U.S. Census Bureau Geocoder</a></td><td>Turns your address into your congressional, state senate and assembly districts and county.</td><td>Live on each lookup</td></tr>
             <tr><td><a href="https://developers.google.com/civic-information">Google Civic Information API</a></td><td>Election list and voter information: contests, candidates, ballot order, polling places, early-voting sites and election office links. (Google retired its Representatives endpoint in 2025; we don’t use it.)</td><td>Live, cached up to 1 hour</td></tr>
             <tr><td>Researched ballot file</td><td>A hand-researched list of contests and candidates for New York’s November 3, 2026 general election in New York City, Westchester, Nassau and Suffolk, from the NYS Board of Elections certification and the county Boards of Elections’ candidate lists, with a source link for every entry, used where Google’s data is missing or incomplete.</td><td>When re-researched</td></tr>
+            <tr><td>Researched positions file</td><td>Candidates’ stated positions on the issues, from their own campaign websites, nonpartisan questionnaires, official websites, social media accounts and direct quotes in debates, interviews and news reports, with a link to every source and a list of every source checked (see <a href="#positions">Positions on your issues</a>).</td><td>When re-researched</td></tr>
             <tr><td><a href="https://clerk.house.gov/Votes">Clerk of the U.S. House</a></td><td>The official roll calls behind the published Israel and Palestine vote list, with each listed member’s vote read from the Clerk’s record.</td><td>When the list is re-checked</td></tr>
             <tr><td><a href="https://api.congress.gov/">Congress.gov API</a> (Library of Congress)</td><td>Bills each member sponsored, each bill’s policy area, title, status, laws, CRS summaries and links to CBO cost estimates.</td><td>Nightly for voted-on bills; live (cached) for sponsored bills</td></tr>
             <tr><td><a href="https://voteview.com/data">Voteview</a> (UCLA)</td><td>Every House and Senate roll call and how each member voted, by Bioguide ID. Links go to the official Clerk of the House and Senate records.</td><td>Nightly</td></tr>
@@ -130,6 +134,42 @@
         <li>A sitting legislator whose record isn’t linked yet (for example, before the nightly data job has run) is labeled “Legislative record not linked yet,” not “no record.”</li>
       </ol>
       <p>Each candidate’s Sources tab shows which rule linked each record.</p>
+    </section>
+
+    <section id="glance" aria-labelledby="glance-h">
+      <h2 id="glance-h">The “At a glance” box</h2>
+      <p>The box at the top of each candidate’s card has three lines, written by Ballot Scout from fixed sentence templates, the same way for every candidate. All numbers come from the Money and Votes tabs below it. There are no adjectives and no comparisons between candidates.</p>
+      <ul>
+        <li><strong>Money:</strong> for federal candidates, the total raised for this race through the latest FEC report and the share of money from individual donors that came in donations of $200 or less, plus outside spending reported for and against them, when there is any. For New York State candidates matched to a registered committee, the sum of itemized monetary contributions in the filings covered: schedules A, B and C (from individuals and partnerships, from corporations, and from all other contributors). In-kind contributions, transfers, loans, refunds, public matching funds and other receipts aren’t counted. If a filing’s schedules can’t be told apart reliably, the line points to the Money tab instead of giving a total. A running mate’s line points to the candidate for Governor, whose committee the ticket shares. Everyone else’s line says that no totals are shown and, where the Money tab has them, that it links to the official filings.</li>
+        <li><strong>Positions:</strong> the first stated position on each issue you picked, from the Positions tab, or the reason none is shown.</li>
+        <li><strong>Record:</strong> how many recorded votes on your issues the Votes tab lists, the date of the most recent one and the count for each issue, and, for a sitting Governor, how many bills on your issues they signed or vetoed.</li>
+      </ul>
+      <p>Amounts are rounded: millions to one decimal place ($3.5 million), amounts from $10,000 to the nearest thousand ($812,000), and amounts from $1,000 to the nearest hundred ($9,500). The tabs show exact figures.</p>
+    </section>
+
+    <section id="positions" aria-labelledby="positions-h">
+      <h2 id="positions-h">Positions on your issues</h2>
+      <p>This tab lists what each candidate has said they would do on the issues you picked. Each position is a short paraphrase of the candidate’s own statement, written by Ballot Scout with AI assistance and then checked against its source. Every one links to where the candidate said it, with the type of source and its date, and any quote is the candidate’s exact words.</p>
+      <h3>Sources</h3>
+      <ul>
+        <li><strong>Used:</strong> the candidate’s campaign website; questionnaires they answered for nonpartisan voter guides; an officeholder’s official website; the candidate’s own social media accounts; and debates, interviews and news reports, only where the candidate is quoted directly.</li>
+        <li><strong>Never used:</strong> what opponents, parties, endorsers or interest groups say about a candidate; ratings and scorecards; ads paid for by anyone else; opinion pieces; and anonymous or unsourced claims. Votes aren’t used here; they’re in the Votes tab.</li>
+      </ul>
+      <h3>Writing rules</h3>
+      <p>The same rules apply to every candidate. These are checked in code, and a file that breaks any of them isn’t shown for anyone:</p>
+      <ul>
+        <li>Each summary starts with a plain verb from a fixed list: Supports, Opposes, Proposes, Calls, Pledges, Promises, Says, Wants, Plans, Would, Favors, Seeks, Backs, Rejects, Argues, Advocates, Aims, Intends or Prioritizes.</li>
+        <li>No characterizing words, such as strong, bold, common-sense, radical, extreme, dangerous, failed, reckless, corrupt, champion, fight, proud, progressive, conservative, far-left, far-right, socialist, woke, great, terrible or crisis.</li>
+        <li>Quotes are no longer than 14 words.</li>
+        <li>Every summary links to its source.</li>
+      </ul>
+      <p>Summaries also aim for 8 to 30 words and at most two positions per issue, and every quote is checked word for word against its source.</p>
+      <h3>Equal effort across a race</h3>
+      <p>Every candidate in a race is checked against the same kinds of sources: campaign website, nonpartisan questionnaires, official website, social media accounts, debates and interviews. Each card lists every source checked, including those where nothing was found. A candidate’s research is marked complete only when every check has been done, and a race’s positions are shown only when every candidate in it is complete. Until then the tab says so for everyone in the race, so you never see one candidate’s positions next to an opponent who hasn’t been researched. When a researched candidate has said nothing on your issues, the tab says that, lists the sources checked, and names the other issues they have stated positions on.</p>
+      <h3>Judicial races</h3>
+      <p>New York’s Rules Governing Judicial Conduct (22 NYCRR 100.5(A)(4)(d)) bar judicial candidates from making pledges or promises of conduct in office, or commitments on cases, controversies or issues likely to come before the court, that are inconsistent with the impartial performance of the office. So this guide doesn’t list positions for judicial races. Running mates’ positions are listed under the candidate for Governor.</p>
+      <h3>Corrections</h3>
+      <p>If a summary misstates what a candidate said, a link is broken, or a statement is missing, <a href="#report">report an error</a> with a link to the candidate’s own words. Campaigns can send corrections the same way. Every correction is checked against the same rules.</p>
     </section>
 
     <section id="votes" aria-labelledby="votes-h">
@@ -215,6 +255,7 @@
         <li>The Israel and Palestine list covers House votes from January 3, 2023 through October 17, 2026. Two checks are still open and are listed with the vote list.</li>
         <li>Outside spending covers federal races only, and the FEC’s processed totals can trail recent spending by weeks; 24- and 48-hour reports are shown separately to cover that gap.</li>
         <li>New York State money figures are sums of itemized transactions, not the official report totals, and appear only for candidates matched to exactly one registered committee.</li>
+        <li>Stated positions are researched by hand, race by race, and only for races in the researched ballot file. A race shows no positions until every candidate in it has been fully researched.</li>
         <li>Incumbency for judicial candidates isn’t verified in the researched ballot file, so no judicial candidate shows an “Incumbent” badge.</li>
         <li>Outside New York, ballots depend on Google’s Civic Information API, and state legislative records aren’t included yet.</li>
       </ul>

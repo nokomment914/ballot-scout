@@ -3,6 +3,7 @@
 
 const MAX_ISSUES = 5;
 const TABS = [
+  ['positions', 'Positions on your issues'],
   ['votes', 'Votes on your issues'],
   ['sponsored', 'Bills they sponsored'],
   ['effects', 'What their policies did'],
@@ -364,6 +365,8 @@ function renderCandidate(cand, contest) {
   if (cand.runningMate) people.push({ id: cand.runningMate.id, name: cand.runningMate.name, profile: cand.runningMate.profile, role: 'running-mate' });
 
   const labelBox = h('div', { class: 'labels' });
+  // "At a glance" sits right above the tabs; it exists while the records load.
+  const glance = h('div', { class: 'glance' });
   const el = h('section', { class: 'candidate', 'aria-labelledby': `${id}-name`, 'data-token': cand.id, 'data-person': '0' },
     h('div', { class: 'candidate-head' },
       h('h4', { id: `${id}-name` }, cand.name),
@@ -383,14 +386,21 @@ function renderCandidate(cand, contest) {
       people.map((p, i) => h('button', { type: 'button', 'aria-pressed': i === 0 ? 'true' : 'false', 'data-index': String(i), onclick: (e) => switchPerson(el, people, i, e.currentTarget) }, p.role === 'running-mate' ? `${p.name} (running mate)` : p.name))
     ) : null,
     labelBox,
+    glance,
     tablist,
     ...panels
   );
   el._people = people;
   renderLabels(el, people[0]);
-  el.querySelectorAll('.tabpanel').forEach((p) => p.replaceChildren(document.getElementById('tpl-loading').content.cloneNode(true)));
+  showLoading(el);
   if (state.observer) state.observer.observe(el);
   return el;
+}
+
+function showLoading(el) {
+  const loading = () => document.getElementById('tpl-loading').content.cloneNode(true);
+  el.querySelector('.glance')?.replaceChildren(h('h5', { class: 'glance-title' }, 'At a glance'), loading());
+  el.querySelectorAll('.tabpanel').forEach((p) => p.replaceChildren(loading()));
 }
 
 function renderLabels(el, person) {
@@ -446,7 +456,7 @@ async function loadCandidate(el, force = false) {
   const token = el.dataset.token;
   const key = `${token}|${state.issues.join(',')}|${state.more ? 1 : 0}`;
   el.dataset.loading = '1';
-  el.querySelectorAll('.tabpanel').forEach((p) => p.replaceChildren(document.getElementById('tpl-loading').content.cloneNode(true)));
+  showLoading(el);
   try {
     if (!state.records.has(key)) {
       const url = `/api/candidate?id=${encodeURIComponent(token)}&issues=${encodeURIComponent(state.issues.join(','))}&more=${state.more ? 1 : 0}`;
@@ -462,6 +472,7 @@ async function loadCandidate(el, force = false) {
     el.dataset.loaded = '1';
   } catch (err) {
     state.records.delete(key);
+    el.querySelector('.glance')?.replaceChildren();
     el.querySelectorAll('.tabpanel').forEach((p) => p.replaceChildren(
       h('p', { class: 'empty' }, err.message || 'Couldn’t load records.'),
       h('button', { type: 'button', class: 'btn btn-small', onclick: () => loadCandidate(el, true) }, 'Try again')
@@ -481,6 +492,8 @@ function fill(target, nodes) {
 
 function renderRecord(el, rec) {
   const s = rec.sections;
+  renderGlance(el, rec);
+  fill(panel(el, 'positions'), renderPositions(s.stances));
   fill(panel(el, 'votes'), renderVotes(s.votes, rec));
   fill(panel(el, 'sponsored'), renderSponsored(s.sponsored));
   fill(panel(el, 'effects'), renderEffects(s.effects));
@@ -496,6 +509,61 @@ function sourceFooter(sources) {
 
 function issueTags(ids) {
   return (ids ?? []).map(issueLabel).join(', ');
+}
+
+// ---------- at a glance and stated positions ----------
+const GLANCE_LEADS = { money: 'Money:', positions: 'Positions:', record: 'Record:' };
+const GLANCE_NOTE = 'Summary written by Ballot Scout from official records and the candidate’s own statements, by the same rules for every candidate. Details and sources are in the tabs below.';
+const SOURCE_TYPES = { 'campaign-site': 'campaign website', questionnaire: 'questionnaire', 'official-site': 'official website', social: 'social media', interview: 'interview', debate: 'debate', news: 'news report' };
+const capFirst = (s) => (s ? `${s[0].toUpperCase()}${s.slice(1)}` : s);
+
+function renderGlance(el, rec) {
+  const box = el.querySelector('.glance');
+  if (!box) return;
+  const lines = rec.sections.summary?.lines ?? [];
+  if (!lines.length) { box.replaceChildren(); return; }
+  box.replaceChildren(
+    h('h5', { class: 'glance-title' }, 'At a glance'),
+    h('ul', { class: 'glance-list' }, lines.map((l) => h('li', {},
+      h('strong', {}, GLANCE_LEADS[l.kind] ?? ''), ' ',
+      l.items?.length
+        ? h('ul', { class: 'glance-positions' }, l.items.map((it) => h('li', {}, h('span', { class: 'glance-issue' }, it.issueLabel), ` — ${it.text}`)))
+        : l.text
+    ))),
+    h('p', { class: 'glance-note' }, GLANCE_NOTE)
+  );
+}
+
+function positionSource(src) {
+  if (!src) return null;
+  const detail = [SOURCE_TYPES[src.type], fmtDate(src.date)].filter(Boolean).join(', ');
+  return h('p', { class: 'position-source' }, 'Source: ', extLink(src.url, src.label), detail ? ` (${detail})` : '');
+}
+
+function renderPositions(st) {
+  if (!st) return [h('p', { class: 'empty' }, 'Positions aren’t available right now.')];
+  const out = [h('p', { class: 'panel-note small' }, st.explainer)];
+  if (st.note) out.push(h('p', { class: st.items.length ? 'panel-note' : 'empty' }, st.note));
+  if (st.items.length) {
+    out.push(h('ul', { class: 'rows' }, st.items.map((it) => h('li', { class: 'row' },
+      h('p', { class: 'evidence-type' }, it.issueLabel),
+      h('p', { class: 'position-summary' }, it.summary),
+      it.quote ? h('blockquote', { class: 'quote' }, it.quote, h('cite', {}, 'Quoted verbatim from the source below')) : null,
+      positionSource(it.source)
+    ))));
+  }
+  if (st.otherIssues?.length) out.push(h('p', { class: 'panel-note' }, `Also has stated positions on: ${st.otherIssues.join(', ')}.`));
+  if (st.sourcesChecked?.length) {
+    out.push(h('details', { class: 'more' },
+      h('summary', {}, `Sources checked (${st.sourcesChecked.length})`),
+      h('ul', { class: 'source-list' }, st.sourcesChecked.map((s) => h('li', {},
+        s.url ? extLink(s.url, s.label) : s.label,
+        h('span', { class: 'meta' }, [capFirst(SOURCE_TYPES[s.type]), s.found === true ? 'Statements found' : s.found === false ? 'No statements found' : null].filter(Boolean).join(' · '))
+      )))
+    ));
+  }
+  out.push(sourceFooter(st.sources));
+  return out;
 }
 
 function renderVotes(v, rec) {
