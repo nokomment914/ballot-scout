@@ -1,0 +1,1564 @@
+{
+  "at": "2026-10-26T14:17:52.449Z",
+  "filerColumns": [
+    {
+      "name": "FILER_ID",
+      "field": "filer_id"
+    },
+    {
+      "name": "FILER_NAME",
+      "field": "filer_name"
+    },
+    {
+      "name": "COMPLIANCE_TYPE_DESC",
+      "field": "compliance_type_desc"
+    },
+    {
+      "name": "FILER_TYPE_DESC",
+      "field": "filer_type_desc"
+    },
+    {
+      "name": "FILER_STATUS",
+      "field": "filer_status"
+    },
+    {
+      "name": "COMMITTEE_TYPE_DESC",
+      "field": "committee_type_desc"
+    },
+    {
+      "name": "OFFICE_DESC",
+      "field": "office_desc"
+    },
+    {
+      "name": "DISTRICT",
+      "field": "district"
+    },
+    {
+      "name": "COUNTY_DESC",
+      "field": "county_desc"
+    },
+    {
+      "name": "MUNICIPALITY_DESC, SUBDIVISION_DESC",
+      "field": "municipality_desc_subdivision"
+    },
+    {
+      "name": "TREASURER_FIRST_NAME",
+      "field": "treasurer_first_name"
+    },
+    {
+      "name": "TREASURER_MIDDLE_NAME",
+      "field": "treasurer_middle_name"
+    },
+    {
+      "name": "TREASURER_LAST_NAME",
+      "field": "treasurer_last_name"
+    },
+    {
+      "name": "ADDRESS",
+      "field": "address"
+    },
+    {
+      "name": "CITY",
+      "field": "city"
+    },
+    {
+      "name": "STATE",
+      "field": "state"
+    },
+    {
+      "name": "ZIPCODE",
+      "field": "zipcode"
+    }
+  ],
+  "disclosureColumns": [
+    {
+      "name": "FILER_ID",
+      "field": "filer_id"
+    },
+    {
+      "name": "FILER_PREVIOUS_ID",
+      "field": "filer_previous_id"
+    },
+    {
+      "name": "CAND_COMM_NAME",
+      "field": "cand_comm_name"
+    },
+    {
+      "name": "ELECTION_YEAR",
+      "field": "election_year"
+    },
+    {
+      "name": "ELECTION_TYPE",
+      "field": "election_type"
+    },
+    {
+      "name": "COUNTY_DESC",
+      "field": "county_desc"
+    },
+    {
+      "name": "FILING_ABBREV",
+      "field": "filing_abbrev"
+    },
+    {
+      "name": "FILING_DESC",
+      "field": "filing_desc"
+    },
+    {
+      "name": "R_AMEND",
+      "field": "r_amend"
+    },
+    {
+      "name": "FILING_CAT_DESC",
+      "field": "filing_cat_desc"
+    },
+    {
+      "name": "FILING_SCHED_ABBREV",
+      "field": "filing_sched_abbrev"
+    },
+    {
+      "name": "FILING_SCHED_DESC",
+      "field": "filing_sched_desc"
+    },
+    {
+      "name": "LOAN_LIB_NUMBER",
+      "field": "loan_lib_number"
+    },
+    {
+      "name": "TRANS_NUMBER",
+      "field": "trans_number"
+    },
+    {
+      "name": "TRANS_MAPPING",
+      "field": "trans_mapping"
+    },
+    {
+      "name": "SCHED_DATE",
+      "field": "sched_date"
+    },
+    {
+      "name": "ORG_DATE",
+      "field": "org_date"
+    },
+    {
+      "name": "CNTRBR_TYPE_DESC",
+      "field": "cntrbr_type_desc"
+    },
+    {
+      "name": "CNTRBN_TYPE_DESC",
+      "field": "cntrbn_type_desc"
+    },
+    {
+      "name": "TRANSFER_TYPE_DESC",
+      "field": "transfer_type_desc"
+    },
+    {
+      "name": "RECEIPT_TYPE_DESC",
+      "field": "receipt_type_desc"
+    },
+    {
+      "name": "RECEIPT_CODE_DESC",
+      "field": "receipt_code_desc"
+    },
+    {
+      "name": "PURPOSE_CODE_DESC",
+      "field": "purpose_code_desc"
+    },
+    {
+      "name": "R_SUBCONTRACTOR",
+      "field": "r_subcontractor"
+    },
+    {
+      "name": "FLNG_ENT_NAME",
+      "field": "flng_ent_name"
+    },
+    {
+      "name": "FLNG_ENT_FIRST_NAME",
+      "field": "flng_ent_first_name"
+    },
+    {
+      "name": "FLNG_ENT_MIDDLE_NAME",
+      "field": "flng_ent_middle_name"
+    },
+    {
+      "name": "FLNG_ENT_LAST_NAME",
+      "field": "flng_ent_last_name"
+    },
+    {
+      "name": "FLNG_ENT_ADD1",
+      "field": "flng_ent_add1"
+    },
+    {
+      "name": "FLNG_ENT_CITY",
+      "field": "flng_ent_city"
+    },
+    {
+      "name": "FLNG_ENT_STATE",
+      "field": "flng_ent_state"
+    },
+    {
+      "name": "FLNG_ENT_ZIP",
+      "field": "flng_ent_zip"
+    },
+    {
+      "name": "FLNG_ENT_COUNTRY",
+      "field": "flng_ent_country"
+    },
+    {
+      "name": "PAYMENT_TYPE_DESC",
+      "field": "payment_type_desc"
+    },
+    {
+      "name": "PAY_NUMBER",
+      "field": "pay_number"
+    },
+    {
+      "name": "OWED_AMT",
+      "field": "owed_amt"
+    },
+    {
+      "name": "ORG_AMT",
+      "field": "org_amt"
+    },
+    {
+      "name": "LOAN_OTHER_DESC",
+      "field": "loan_other_desc"
+    },
+    {
+      "name": "TRANS_EXPLNTN",
+      "field": "trans_explntn"
+    },
+    {
+      "name": "R_ITEMIZED",
+      "field": "r_itemized"
+    },
+    {
+      "name": "R_LIABILITY",
+      "field": "r_liability"
+    },
+    {
+      "name": "ELECTION_YEAR_R",
+      "field": "election_year_r"
+    },
+    {
+      "name": "OFFICE_DESC",
+      "field": "office_desc"
+    },
+    {
+      "name": "DISTRICT",
+      "field": "district"
+    },
+    {
+      "name": "DIST_OFF_CAND_BAL_PROP",
+      "field": "dist_off_cand_bal_prop"
+    },
+    {
+      "name": "TREAS_OCCUPATION",
+      "field": "treas_occupation"
+    },
+    {
+      "name": "TREAS_EMPLOYER",
+      "field": "treas_employer"
+    },
+    {
+      "name": "TREAS_ADD1",
+      "field": "treas_add1"
+    },
+    {
+      "name": "TREAS_CITY",
+      "field": "treas_city"
+    },
+    {
+      "name": "TREAS_STATE",
+      "field": "treas_state"
+    },
+    {
+      "name": "TREAS_ZIP",
+      "field": "treas_zip"
+    },
+    {
+      "name": "IE_CNTRBR_OCC",
+      "field": "ie_cntrbr_occ"
+    },
+    {
+      "name": "IE_CNTRBR_EMP",
+      "field": "ie_cntrbr_emp"
+    },
+    {
+      "name": "R_IE_SUPPORTED",
+      "field": "r_ie_supported"
+    },
+    {
+      "name": "R_CLAIM",
+      "field": "r_claim"
+    },
+    {
+      "name": "R_IN_DISTRICT",
+      "field": "r_in_district"
+    },
+    {
+      "name": "R_MINOR",
+      "field": "r_minor"
+    },
+    {
+      "name": "R_VENDOR",
+      "field": "r_vendor"
+    },
+    {
+      "name": "R_LOBBYIST",
+      "field": "r_lobbyist"
+    },
+    {
+      "name": "R_CONTRIBUTIONS",
+      "field": "r_contributions"
+    },
+    {
+      "name": "R_SUPPORT_OPPOSE",
+      "field": "r_support_oppose"
+    },
+    {
+      "name": "R_IS_QUALIFIED_EXPENSE",
+      "field": "r_is_qualified_expense"
+    },
+    {
+      "name": "FILING_TRANS_ID",
+      "field": "filing_trans_id"
+    }
+  ],
+  "filerMeta": {
+    "name": "Campaign Finance Filer Data: Beginning 1974",
+    "rowsUpdatedAt": 1793006574,
+    "viewLastModified": 1793006456
+  },
+  "disclosureMeta": {
+    "name": "Campaign Finance Disclosure Reports Data: Beginning 1999",
+    "rowsUpdatedAt": 1792930552,
+    "viewLastModified": 1793008671,
+    "description": "All Campaign Finance Disclosure Reports Filed with the New York Board of Elections since July 1999"
+  },
+  "complianceTypes": [
+    {
+      "compliance_type_desc": "COMMITTEE",
+      "n": "28089"
+    },
+    {
+      "compliance_type_desc": "CANDIDATE",
+      "n": "36673"
+    }
+  ],
+  "committeeTypes": [
+    {
+      "n": "36673"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee - Housekeeping",
+      "n": "9"
+    },
+    {
+      "committee_type_desc": "Party County Housekeeping Committee",
+      "n": "18"
+    },
+    {
+      "committee_type_desc": "Constituted State Housekeeping Committee",
+      "n": "14"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee - Town",
+      "n": "576"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee - Housekeeping - Town",
+      "n": "7"
+    },
+    {
+      "committee_type_desc": "Political Action Committee",
+      "n": "2448"
+    },
+    {
+      "committee_type_desc": "Public Campaign Finance Committee",
+      "n": "614"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee - Housekeeping - Village",
+      "n": "1"
+    },
+    {
+      "committee_type_desc": "Ballot Issue Committee",
+      "n": "187"
+    },
+    {
+      "committee_type_desc": "Constituted County Housekeeping Committee",
+      "n": "35"
+    },
+    {
+      "committee_type_desc": "Party County Committee",
+      "n": "224"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee - Housekeeping - City",
+      "n": "1"
+    },
+    {
+      "committee_type_desc": "Constituted State Committee",
+      "n": "14"
+    },
+    {
+      "committee_type_desc": "Party State Housekeeping Committee",
+      "n": "9"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee",
+      "n": "112"
+    },
+    {
+      "committee_type_desc": "Independent Expenditure Committee",
+      "n": "382"
+    },
+    {
+      "committee_type_desc": "Authorized Multi-Candidate Committee",
+      "n": "1415"
+    },
+    {
+      "committee_type_desc": "Party State Committee",
+      "n": "32"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee - Village",
+      "n": "35"
+    },
+    {
+      "committee_type_desc": "Authorized Single Candidate Committee",
+      "n": "21562"
+    },
+    {
+      "committee_type_desc": "Constituted County Committee",
+      "n": "300"
+    },
+    {
+      "committee_type_desc": "Duly Constituted Sub-Committee of a County Committee-City",
+      "n": "94"
+    }
+  ],
+  "disclosureYears": [
+    {
+      "election_year": "2027",
+      "n": "17"
+    },
+    {
+      "election_year": "2026",
+      "n": "1219031"
+    },
+    {
+      "election_year": "2025",
+      "n": "769458"
+    },
+    {
+      "election_year": "2024",
+      "n": "784225"
+    },
+    {
+      "election_year": "2023",
+      "n": "662050"
+    },
+    {
+      "election_year": "2022",
+      "n": "927520"
+    },
+    {
+      "election_year": "2021",
+      "n": "671779"
+    },
+    {
+      "election_year": "2020",
+      "n": "717418"
+    }
+  ],
+  "people": {
+    "HOCHUL": [
+      {
+        "filer": {
+          "filer_id": "16851",
+          "filer_name": "Friends for Kathy Hochul",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "ACTIVE",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Sheila",
+          "treasurer_last_name": "Heinze",
+          "address": "609 Hillview Place, SW",
+          "city": "Leesburg",
+          "state": "VA",
+          "zipcode": "20175"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2026",
+            "n": "49584"
+          },
+          {
+            "election_year": "2025",
+            "n": "4759"
+          },
+          {
+            "election_year": "2024",
+            "n": "5378"
+          },
+          {
+            "election_year": "2023",
+            "n": "2170"
+          },
+          {
+            "election_year": "2022",
+            "n": "34288"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "27197",
+          "filer_name": "Kathy C. Hochul",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "ACTIVE",
+          "office_desc": "Governor",
+          "address": "405 Gull Landing",
+          "city": "Buffalo",
+          "state": "NY",
+          "zipcode": "14202"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "38771",
+          "filer_name": "Kathleen C. Hochul",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "County Clerk",
+          "county_desc": "Erie",
+          "municipality_desc_subdivision": "Erie,County",
+          "address": "405 Gull Landing",
+          "city": "Buffalo",
+          "state": "NY",
+          "zipcode": "14202"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "4678",
+          "filer_name": "Friends Of Kathy Hochul",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Erie",
+          "municipality_desc_subdivision": "Erie,County",
+          "treasurer_first_name": "Joan",
+          "treasurer_middle_name": "A.",
+          "treasurer_last_name": "Kesner",
+          "address": "5533 Wyndfield Ct.",
+          "city": "Hamburg",
+          "state": "NY",
+          "zipcode": "14075"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2014",
+            "n": "34"
+          },
+          {
+            "election_year": "2013",
+            "n": "10"
+          },
+          {
+            "election_year": "2012",
+            "n": "34"
+          },
+          {
+            "election_year": "2011",
+            "n": "82"
+          },
+          {
+            "election_year": "2010",
+            "n": "598"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      }
+    ],
+    "KRUEGER": [
+      {
+        "filer": {
+          "filer_id": "14602",
+          "filer_name": "Friends Of Liz Krueger",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Bradley",
+          "treasurer_last_name": "Usher",
+          "address": "42-05 Layton Street",
+          "city": "Elmhurst",
+          "state": "NY",
+          "zipcode": "11373"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2025",
+            "n": "1"
+          },
+          {
+            "election_year": "2024",
+            "n": "7"
+          },
+          {
+            "election_year": "2023",
+            "n": "92"
+          },
+          {
+            "election_year": "2022",
+            "n": "439"
+          },
+          {
+            "election_year": "2021",
+            "n": "16"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "25724",
+          "filer_name": "Liz  Krueger",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "State Senator",
+          "district": "28",
+          "address": "350 East 78th Street     Apt. 5G",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10075"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "27168",
+          "filer_name": "Liz  Krueger",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "State Senator",
+          "district": "28",
+          "address": "350 East 78th Street, #5g",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10075"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "371436",
+          "filer_name": "Krueger for New York",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "ACTIVE",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Bradley",
+          "treasurer_last_name": "Usher",
+          "address": "42-05 Layton Street",
+          "city": "Elmhurst",
+          "state": "NY",
+          "zipcode": "11373"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2026",
+            "n": "212"
+          },
+          {
+            "election_year": "2025",
+            "n": "71"
+          },
+          {
+            "election_year": "2024",
+            "n": "277"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "383163",
+          "filer_name": "Dana  Krueger",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "Supervisor",
+          "county_desc": "Madison",
+          "municipality_desc_subdivision": "Hamilton,Town",
+          "address": "1004 PRESTON HILL RD",
+          "city": "EARLVILLE",
+          "state": "NY",
+          "zipcode": "13332"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      }
+    ],
+    "SIMONE": [
+      {
+        "filer": {
+          "filer_id": "11517",
+          "filer_name": "Committee To Elect Anthony Simone",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "ACTIVE",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Schenectady",
+          "municipality_desc_subdivision": "Niskayuna,Town",
+          "treasurer_first_name": "Mary",
+          "treasurer_last_name": "Boyle",
+          "address": "2811 Foxwood Drive S",
+          "city": "Clifton Park",
+          "state": "NY",
+          "zipcode": "12065"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2026",
+            "n": "3"
+          },
+          {
+            "election_year": "2025",
+            "n": "6"
+          },
+          {
+            "election_year": "2023",
+            "n": "26"
+          },
+          {
+            "election_year": "2021",
+            "n": "18"
+          },
+          {
+            "election_year": "2019",
+            "n": "34"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "14041",
+          "filer_name": "Simonetta-Blair For Dewitt",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Onondaga",
+          "municipality_desc_subdivision": "Dewitt,Town",
+          "treasurer_first_name": "Lynn",
+          "treasurer_last_name": "Simonetta-Blair",
+          "address": "602 Hamilton Pkwy",
+          "city": "Dewitt",
+          "state": "NY",
+          "zipcode": "13214"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2014",
+            "n": "4"
+          },
+          {
+            "election_year": "2013",
+            "n": "25"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "16366",
+          "filer_name": "Friends Of Simone Levine",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Kings",
+          "municipality_desc_subdivision": "Kings,County",
+          "treasurer_first_name": "Luke",
+          "treasurer_last_name": "Haseloff",
+          "address": "483 7th Ave  Apt 4",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zipcode": "11215"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2009",
+            "n": "24"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "16966",
+          "filer_name": "Committee To Elect Michael Simone",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Putnam",
+          "municipality_desc_subdivision": "Putnam,County",
+          "treasurer_first_name": "Richard",
+          "treasurer_middle_name": "F.",
+          "treasurer_last_name": "Weiss",
+          "address": "704 Route 6",
+          "city": "Mahopac",
+          "state": "NY",
+          "zipcode": "10541"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2025",
+            "n": "9"
+          },
+          {
+            "election_year": "2024",
+            "n": "14"
+          },
+          {
+            "election_year": "2023",
+            "n": "13"
+          },
+          {
+            "election_year": "2022",
+            "n": "12"
+          },
+          {
+            "election_year": "2021",
+            "n": "15"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "175929",
+          "filer_name": "Michael J Simonelli",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "County Legislator",
+          "district": "13",
+          "county_desc": "Suffolk",
+          "municipality_desc_subdivision": "Suffolk,County",
+          "address": "254 Moriches Road",
+          "city": "Saint James",
+          "state": "NY",
+          "zipcode": "11780"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "175930",
+          "filer_name": "Friends of Michael Simonelli",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Suffolk",
+          "municipality_desc_subdivision": "Suffolk,County",
+          "treasurer_first_name": "Nancy",
+          "treasurer_last_name": "Marks",
+          "address": "47 Flintlock Dr",
+          "city": "Shirley",
+          "state": "NY",
+          "zipcode": "11967"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2023",
+            "n": "10"
+          },
+          {
+            "election_year": "2022",
+            "n": "9"
+          },
+          {
+            "election_year": "2021",
+            "n": "242"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "216875",
+          "filer_name": "Tony  Simone",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "Member of Assembly",
+          "district": "75",
+          "address": "505 West 37 Street",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10018"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "30441",
+          "filer_name": "Simone  Shapiro",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "Town Clerk",
+          "county_desc": "Westchester",
+          "municipality_desc_subdivision": "Bedford,Town",
+          "address": "21 Katonalis Wood Road",
+          "city": "Katonah",
+          "state": "NY",
+          "zipcode": "10536"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      }
+    ],
+    "LASHER": [
+      {
+        "filer": {
+          "filer_id": "11015",
+          "filer_name": "Friends Of Micah Lasher",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "New York",
+          "municipality_desc_subdivision": "New York,County",
+          "treasurer_first_name": "Stephanie",
+          "treasurer_middle_name": "L.",
+          "treasurer_last_name": "Lasher",
+          "address": "875 West End Ave.",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10025"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2009",
+            "n": "187"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "11238",
+          "filer_name": "Friends Of Howard Lasher",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Susan",
+          "treasurer_last_name": "Lasher",
+          "address": "50 Brighton 1st Road",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zipcode": "11235"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "11712",
+          "filer_name": "Friends Of Susan Lasher",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Lenora",
+          "treasurer_middle_name": "Sicilia",
+          "treasurer_last_name": "Smallman",
+          "address": "C/O Friends Of Susan Lasher",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zipcode": "11235"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2002",
+            "n": "122"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "21814",
+          "filer_name": "Lasher For Senate",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Stephanie",
+          "treasurer_middle_name": "L.",
+          "treasurer_last_name": "Lasher",
+          "address": "875 West End Ave.",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10025"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2017",
+            "n": "20"
+          },
+          {
+            "election_year": "2016",
+            "n": "1153"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "22996",
+          "filer_name": "Howard  Lasher",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "Member of Assembly",
+          "district": "46",
+          "address": "50 Brighton 1st Road",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zipcode": "11235"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "26265",
+          "filer_name": "Susan  Lasher",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "Member of Assembly",
+          "district": "46",
+          "address": "3000 Ocean Parkway",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zipcode": "11235"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "27489",
+          "filer_name": "Micah Charles Lasher",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "State Senator",
+          "district": "31",
+          "address": "194 Riverside Drive",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10025"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "298520",
+          "filer_name": "Ariel  B. Lasher",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "Town Justice",
+          "county_desc": "Saratoga",
+          "municipality_desc_subdivision": "Providence,Town",
+          "address": "419 Fayville Rd",
+          "city": "Galway",
+          "state": "NY",
+          "zipcode": "12074"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      }
+    ],
+    "BLAKEMAN": [
+      {
+        "filer": {
+          "filer_id": "11378",
+          "filer_name": "Friends Of Bruce Blakeman",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Alan",
+          "treasurer_middle_name": "S.",
+          "treasurer_last_name": "Kappel",
+          "address": "567 Pacing Way",
+          "city": "Westbury",
+          "state": "NY",
+          "zipcode": "11590"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2009",
+            "n": "3"
+          },
+          {
+            "election_year": "2005",
+            "n": "2"
+          },
+          {
+            "election_year": "2004",
+            "n": "1"
+          },
+          {
+            "election_year": "2003",
+            "n": "16"
+          },
+          {
+            "election_year": "2002",
+            "n": "1"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "15814",
+          "filer_name": "Friends Of Bruce Blakeman Inc.",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Nassau",
+          "municipality_desc_subdivision": "Hempstead,Town",
+          "treasurer_first_name": "Joann",
+          "treasurer_last_name": "Adams",
+          "address": "PO Box 157",
+          "city": "Merrick",
+          "state": "NY",
+          "zipcode": "11566"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2022",
+            "n": "4"
+          },
+          {
+            "election_year": "2021",
+            "n": "18"
+          },
+          {
+            "election_year": "2020",
+            "n": "28"
+          },
+          {
+            "election_year": "2019",
+            "n": "268"
+          },
+          {
+            "election_year": "2018",
+            "n": "154"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "165157",
+          "filer_name": "Bruce   Blakeman",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "ACTIVE",
+          "office_desc": "Governor",
+          "address": "PO Box 157",
+          "city": "Merrick",
+          "state": "NY",
+          "zipcode": "11566"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "165158",
+          "filer_name": "Blakeman for Nassau",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "ACTIVE",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Nassau",
+          "municipality_desc_subdivision": "Nassau,County",
+          "treasurer_first_name": "Joann",
+          "treasurer_last_name": "Adams",
+          "address": "PO Box 157",
+          "city": "Merrick",
+          "state": "NY",
+          "zipcode": "11566"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2026",
+            "n": "195"
+          },
+          {
+            "election_year": "2025",
+            "n": "3327"
+          },
+          {
+            "election_year": "2024",
+            "n": "557"
+          },
+          {
+            "election_year": "2023",
+            "n": "454"
+          },
+          {
+            "election_year": "2022",
+            "n": "873"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "25264",
+          "filer_name": "Bruce  Blakeman",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "State Comptroller",
+          "address": "39 Clubside Drive",
+          "city": "Woodmere",
+          "state": "NY",
+          "zipcode": "11598"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "32236",
+          "filer_name": "Bruce A. Blakeman",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "Councilman",
+          "district": "3",
+          "county_desc": "Nassau",
+          "municipality_desc_subdivision": "Hempstead,Town",
+          "address": "200 Bermuda Street  Unit 1",
+          "city": "Atlantic Beach",
+          "state": "NY",
+          "zipcode": "11509"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "383426",
+          "filer_name": "Segal  Blakeman",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "Family Court Judge",
+          "district": "10",
+          "county_desc": "Nassau",
+          "municipality_desc_subdivision": "Nassau,County",
+          "address": "200 Bermuda St UNIT 1",
+          "city": "Atlantic Beach",
+          "state": "NY",
+          "zipcode": "11509"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "42602",
+          "filer_name": "Bruce A Blakeman",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "Mayor",
+          "county_desc": "New York",
+          "municipality_desc_subdivision": "New York,County",
+          "address": "954 Lexington Av.  #240",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10021"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      }
+    ],
+    "DINAPOLI": [
+      {
+        "filer": {
+          "filer_id": "13539",
+          "filer_name": "Dinapoli For New York 2006",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "James",
+          "treasurer_last_name": "Procopio",
+          "address": "221 Middle Neck Rd., Apt. M5",
+          "city": "Great Neck",
+          "state": "NY",
+          "zipcode": "11021"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2009",
+            "n": "13"
+          },
+          {
+            "election_year": "2008",
+            "n": "33"
+          },
+          {
+            "election_year": "2007",
+            "n": "193"
+          },
+          {
+            "election_year": "2006",
+            "n": "348"
+          },
+          {
+            "election_year": "2005",
+            "n": "155"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "14684",
+          "filer_name": "Dinapoli For County Executive",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "county_desc": "Nassau",
+          "municipality_desc_subdivision": "Nassau,County",
+          "treasurer_first_name": "James",
+          "treasurer_last_name": "Procopio",
+          "address": "221 Middle Neck Rd., Apt. M5",
+          "city": "Great Neck",
+          "state": "NY",
+          "zipcode": "11021"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2007",
+            "n": "3"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "22271",
+          "filer_name": "Dinapoli 2022 Inc.",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "committee_type_desc": "Authorized Single Candidate Committee",
+          "treasurer_first_name": "Margaret",
+          "treasurer_last_name": "May",
+          "address": "151 Linden Road",
+          "city": "Mineola",
+          "state": "NY",
+          "zipcode": "11501"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2023",
+            "n": "79"
+          },
+          {
+            "election_year": "2022",
+            "n": "1987"
+          },
+          {
+            "election_year": "2021",
+            "n": "984"
+          },
+          {
+            "election_year": "2020",
+            "n": "614"
+          },
+          {
+            "election_year": "2019",
+            "n": "500"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "22938",
+          "filer_name": "Thomas P Dinapoli",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "Member of Assembly",
+          "district": "16",
+          "address": "100 Great Neck Road",
+          "city": "Great Neck",
+          "state": "NY",
+          "zipcode": "11021"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "28878",
+          "filer_name": "Thomas P Dinapoli",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "TERMINATED",
+          "office_desc": "Lt. Governor",
+          "address": "100 Great Neck Road",
+          "city": "Great Neck",
+          "state": "NY",
+          "zipcode": "11021"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "28979",
+          "filer_name": "Thomas P. DiNapoli",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "State",
+          "filer_status": "ACTIVE",
+          "office_desc": "State Comptroller",
+          "address": "100 Great Neck Road",
+          "city": "Great Neck",
+          "state": "NY",
+          "zipcode": "11021"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      },
+      {
+        "filer": {
+          "filer_id": "308716",
+          "filer_name": "DiNapoli for New York",
+          "compliance_type_desc": "COMMITTEE",
+          "filer_type_desc": "State",
+          "filer_status": "ACTIVE",
+          "committee_type_desc": "Public Campaign Finance Committee",
+          "treasurer_first_name": "Margaret",
+          "treasurer_last_name": "May",
+          "address": "151 Linden Road",
+          "city": "Mineola",
+          "state": "NY",
+          "zipcode": "11501"
+        },
+        "disclosuresByYear": [
+          {
+            "election_year": "2026",
+            "n": "9201"
+          },
+          {
+            "election_year": "2025",
+            "n": "1528"
+          },
+          {
+            "election_year": "2024",
+            "n": "1250"
+          },
+          {
+            "election_year": "2023",
+            "n": "596"
+          }
+        ],
+        "disclosuresByYearNumeric": null
+      },
+      {
+        "filer": {
+          "filer_id": "40294",
+          "filer_name": "Thomas P. Dinapoli",
+          "compliance_type_desc": "CANDIDATE",
+          "filer_type_desc": "County",
+          "filer_status": "TERMINATED",
+          "office_desc": "County Executive",
+          "county_desc": "Nassau",
+          "municipality_desc_subdivision": "Nassau,County",
+          "state": "NY"
+        },
+        "disclosuresByYear": [],
+        "disclosuresByYearNumeric": []
+      }
+    ]
+  },
+  "disclosureNameField": "cand_comm_name",
+  "byName": {
+    "HOCHUL": [
+      {
+        "filer_id": "16851",
+        "cand_comm_name": "Friends for Kathy Hochul",
+        "election_year": "2025",
+        "n": "4759"
+      },
+      {
+        "filer_id": "16851",
+        "cand_comm_name": "Friends for Kathy Hochul",
+        "election_year": "2026",
+        "n": "49584"
+      }
+    ],
+    "KRUEGER": [
+      {
+        "filer_id": "14602",
+        "cand_comm_name": "Friends Of Liz Krueger",
+        "election_year": "2025",
+        "n": "1"
+      },
+      {
+        "filer_id": "371436",
+        "cand_comm_name": "Krueger for New York",
+        "election_year": "2025",
+        "n": "71"
+      },
+      {
+        "filer_id": "371436",
+        "cand_comm_name": "Krueger for New York",
+        "election_year": "2026",
+        "n": "212"
+      }
+    ]
+  }
+}
