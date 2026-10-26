@@ -1,10 +1,29 @@
 {
   "schemaVersion": 1,
-  "status": "not-built",
-  "generatedAt": null,
-  "congresses": [],
-  "rollcallCount": 0,
-  "voteview": { "downloadedAt": null },
-  "congressGov": { "status": "not-built", "lastRun": null, "billsTotal": 0, "billsWithPolicyArea": 0 },
-  "note": "Run scripts/build-votes.mjs (the nightly GitHub Action does this) to build the federal vote indexes."
+  "status": "ok",
+  "generatedAt": "2026-10-26T05:18:08.515Z",
+  "congresses": [
+    118,
+    119
+  ],
+  "rollcallCount": 1729,
+  "rollcallsScanned": 3515,
+  "members": 638,
+  "voteview": {
+    "downloadedAt": "2026-10-26T05:18:08.515Z",
+    "urls": [
+      "https://voteview.com/static/data/out/votes/HS118_votes.csv",
+      "https://voteview.com/static/data/out/votes/HS119_votes.csv"
+    ]
+  },
+  "congressGov": {
+    "status": "ok",
+    "lastRun": "2026-10-26T05:18:08.515Z",
+    "billsTotal": 826,
+    "billsWithPolicyArea": 826,
+    "voteviewFallbackPolicyAreas": 213,
+    "calls": 826,
+    "errors": 0,
+    "remaining": 0
+  }
 }

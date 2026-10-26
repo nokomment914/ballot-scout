@@ -1,0 +1,343 @@
+{
+  "builtAt": "2026-10-26T05:23:03.007Z",
+  "source": {
+    "id": "fec-outside",
+    "label": "Federal Election Commission: independent expenditures (Schedule E, via the OpenFEC API)",
+    "url": "https://www.fec.gov/data/independent-expenditures/"
+  },
+  "cycles": [
+    2026,
+    2024
+  ],
+  "note": "Totals are from the FEC’s processed reports. 24- and 48-hour reports are summed separately (latest version of each, memo entries excluded) because they usually reappear on the next regular report.",
+  "candidates": {
+    "NY|us-house|3|thomasrsuozzi": {
+      "name": "Thomas R. Suozzi",
+      "contestId": "us-house-ny-3",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|3|michaeljlipetrijr": {
+      "name": "Michael J. LiPetri Jr.",
+      "contestId": "us-house-ny-3",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|5|gregorywmeeks": {
+      "name": "Gregory W. Meeks",
+      "contestId": "us-house-ny-5",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|5|georgemarsh": {
+      "name": "George Marsh",
+      "contestId": "us-house-ny-5",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|6|gracemeng": {
+      "name": "Grace Meng",
+      "contestId": "us-house-ny-6",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|6|josephchou": {
+      "name": "Joseph Chou",
+      "contestId": "us-house-ny-6",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|7|clairevaldez": {
+      "name": "Claire Valdez",
+      "contestId": "us-house-ny-7",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|7|melvinrivera": {
+      "name": "Melvin Rivera",
+      "contestId": "us-house-ny-7",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|7|priscillaghaznavi": {
+      "name": "Priscilla Ghaznavi",
+      "contestId": "us-house-ny-7",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|8|hakeemsjeffries": {
+      "name": "Hakeem S. Jeffries",
+      "contestId": "us-house-ny-8",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|8|lewismizrahi": {
+      "name": "Lewis Mizrahi",
+      "contestId": "us-house-ny-8",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|9|yvettedclarke": {
+      "name": "Yvette D. Clarke",
+      "contestId": "us-house-ny-9",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|9|joelazumah": {
+      "name": "Joel Azumah",
+      "contestId": "us-house-ny-9",
+      "status": "not-found",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|10|bradlander": {
+      "name": "Brad Lander",
+      "contestId": "us-house-ny-10",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|10|jenniferemoore": {
+      "name": "Jennifer E. Moore",
+      "contestId": "us-house-ny-10",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|11|mikedecillis": {
+      "name": "Mike DeCillis",
+      "contestId": "us-house-ny-11",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|11|nicolemalliotakis": {
+      "name": "Nicole Malliotakis",
+      "contestId": "us-house-ny-11",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|12|micahclasher": {
+      "name": "Micah C. Lasher",
+      "contestId": "us-house-ny-12",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|12|carolineshinkle": {
+      "name": "Caroline Shinkle",
+      "contestId": "us-house-ny-12",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|12|wilneidanegron": {
+      "name": "Wilneida Negron",
+      "contestId": "us-house-ny-12",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|12|karenortiz": {
+      "name": "Karen Ortiz",
+      "contestId": "us-house-ny-12",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|13|darializaavilachevalier": {
+      "name": "Darializa Avila Chevalier",
+      "contestId": "us-house-ny-13",
+      "status": "not-found",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|13|jomomwilliams": {
+      "name": "Jomo M. Williams",
+      "contestId": "us-house-ny-13",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|14|alexandriaocasiocortez": {
+      "name": "Alexandria Ocasio-Cortez",
+      "contestId": "us-house-ny-14",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|14|diamanthysenaj": {
+      "name": "Diamant Hysenaj",
+      "contestId": "us-house-ny-14",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|15|ritchietorres": {
+      "name": "Ritchie Torres",
+      "contestId": "us-house-ny-15",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|15|stylosapaskis": {
+      "name": "Stylo Sapaskis",
+      "contestId": "us-house-ny-15",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|15|gonzaloduran": {
+      "name": "Gonzalo Duran",
+      "contestId": "us-house-ny-15",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|15|andreeaston": {
+      "name": "Andre Easton",
+      "contestId": "us-house-ny-15",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|15|josevega": {
+      "name": "Jose Vega",
+      "contestId": "us-house-ny-15",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|16|georgeslatimer": {
+      "name": "George S. Latimer",
+      "contestId": "us-house-ny-16",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|16|josephjcinquemani": {
+      "name": "Joseph J. Cinquemani",
+      "contestId": "us-house-ny-16",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|17|caitconley": {
+      "name": "Cait Conley",
+      "contestId": "us-house-ny-17",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|17|mikelawler": {
+      "name": "Mike Lawler",
+      "contestId": "us-house-ny-17",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|1|christopherjgallant": {
+      "name": "Christopher J. Gallant",
+      "contestId": "us-house-ny-1",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|1|nicholasjlalota": {
+      "name": "Nicholas J. LaLota",
+      "contestId": "us-house-ny-1",
+      "status": "not-found",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|2|patrickhalpin": {
+      "name": "Patrick Halpin",
+      "contestId": "us-house-ny-2",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|2|andrewrgarbarino": {
+      "name": "Andrew R. Garbarino",
+      "contestId": "us-house-ny-2",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|4|lauraagillen": {
+      "name": "Laura A. Gillen",
+      "contestId": "us-house-ny-4",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|4|jeaninecdriscoll": {
+      "name": "Jeanine C. Driscoll",
+      "contestId": "us-house-ny-4",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    },
+    "NY|us-house|4|blaytarnoff": {
+      "name": "Blay Tarnoff",
+      "contestId": "us-house-ny-4",
+      "status": "error",
+      "fecCandidateId": null,
+      "cycles": {},
+      "links": []
+    }
+  }
+}
