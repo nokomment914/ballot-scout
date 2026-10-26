@@ -124,6 +124,8 @@ test('record line counts the votes the Votes tab lists', () => {
   assert.equal(record({ items: [], note: 'Judicial races have no voting records. Judges don’t vote on legislation.' }), 'Judicial races have no voting records.');
   assert.equal(record({ items: [], note: 'No recorded votes on Housing, Taxes in the sessions covered. The Israel and Palestine list covers U.S. House roll calls on military aid and arms; this candidate has no votes on it.' }), 'No recorded votes on Housing, Taxes in the sessions covered.');
   assert.equal(record({ items: [] }), 'No recorded votes on your issues.');
+  const many = Array.from({ length: 80 }, (_, i) => v(`2026-0${(i % 6) + 1}-01`, ['housing']));
+  assert.equal(record({ items: many, capped: true }), 'At least 80 recorded votes on your issues, most recently on Jun 1, 2026. The Votes tab lists the most recent.', 'a capped list is a floor, not a total');
   assert.equal(record(undefined), 'No recorded votes on your issues.');
 });
 
