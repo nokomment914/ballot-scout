@@ -527,8 +527,9 @@ function renderGlance(el, rec) {
     h('ul', { class: 'glance-list' }, lines.map((l) => h('li', {},
       h('strong', {}, GLANCE_LEADS[l.kind] ?? ''), ' ',
       l.items?.length
-        ? h('ul', { class: 'glance-positions' }, l.items.map((it) => h('li', {}, h('span', { class: 'glance-issue' }, it.issueLabel), ` — ${it.text}`)))
-        : l.text
+        ? h('ul', { class: 'glance-positions' }, l.items.map((it) => h('li', it.none ? { class: 'none' } : {}, h('span', { class: 'glance-issue' }, it.issueLabel), ` — ${it.text}`)))
+        : l.text,
+      l.note ? h('span', { class: 'glance-sub' }, l.note) : null
     ))),
     h('p', { class: 'glance-note' }, GLANCE_NOTE)
   );
@@ -543,6 +544,7 @@ function positionSource(src) {
 function renderPositions(st) {
   if (!st) return [h('p', { class: 'empty' }, 'Positions aren’t available right now.')];
   const out = [h('p', { class: 'panel-note small' }, st.explainer)];
+  if (st.unreadable) out.push(h('p', { class: 'panel-note unreadable' }, st.unreadable.note, ' ', extLink(st.unreadable.url, 'Open the campaign website')));
   if (st.note) out.push(h('p', { class: st.items.length ? 'panel-note' : 'empty' }, st.note));
   if (st.items.length) {
     out.push(h('ul', { class: 'rows' }, st.items.map((it) => h('li', { class: 'row' },
@@ -551,6 +553,12 @@ function renderPositions(st) {
       it.quote ? h('blockquote', { class: 'quote' }, it.quote, h('cite', {}, 'Quoted verbatim from the source below')) : null,
       positionSource(it.source)
     ))));
+  }
+  const missing = (st.missing ?? []).filter((m) => m.searchUrl);
+  if (missing.length && (st.status === 'ok' || st.status === 'none-on-issues')) {
+    if (st.items.length) out.push(h('p', { class: 'panel-note' }, `No statement found in the sources checked on: ${missing.map((m) => m.issueLabel).join(', ')}. That doesn’t mean the candidate hasn’t spoken about it.`));
+    const links = missing.flatMap((m, i) => [i ? ' · ' : '', extLink(m.searchUrl, m.issueLabel)]);
+    out.push(h('p', { class: 'panel-note small news-search' }, 'Search news coverage of this candidate (Google News): ', ...links));
   }
   if (st.otherIssues?.length) out.push(h('p', { class: 'panel-note' }, `Also has stated positions on: ${st.otherIssues.join(', ')}.`));
   if (st.sourcesChecked?.length) {

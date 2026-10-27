@@ -52,6 +52,7 @@
       "complete": true,
       "incompleteReason": null,
       "website": "https://example.org/sample-candidate-h",
+      "websiteUnreadable": { "url": "https://example.org/sample-candidate-h/issues", "checked": "2026-10-20", "reason": "shows no readable text" },
       "sourcesChecked": [
         { "label": "Campaign website (fictional)", "url": "https://example.org/sample-candidate-h", "type": "campaign-site", "found": true },
         { "label": "Sample Voter Guide questionnaire (fictional)", "url": "https://example.org/sample-questionnaire/candidate-h", "type": "questionnaire", "found": true },

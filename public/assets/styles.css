@@ -226,6 +226,10 @@ input[type="text"][aria-invalid="true"] { border-color: var(--error-text); }
 .glance-positions { margin: 4px 0 0; padding-left: 1.1em; display: grid; gap: 3px; }
 .glance-issue { font-weight: 600; }
 .glance-note { font-size: .82rem; color: var(--text-2); margin: 8px 0 0; }
+.glance-positions li.none { color: var(--text-2); }
+.glance-sub { display: block; font-size: .88rem; color: var(--text-2); margin-top: 3px; }
+.panel-note.unreadable { border-left: 3px solid var(--border); padding-left: 8px; color: var(--text); }
+.news-search a { white-space: nowrap; }
 .position-summary { margin: 0 0 4px; }
 .position-source { font-size: .84rem; color: var(--text-2); margin: 4px 0 0; }
 .tabpanel .rows + .panel-note { margin-top: 10px; }

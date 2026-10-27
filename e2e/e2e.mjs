@@ -130,7 +130,8 @@ async function run() {
         check(/Raised \$1\.2 million for this race through Sep 30, 2026/.test(glanceText), 'money line gives the FEC total and date');
         check(/Outside groups reported spending \$1,500 supporting and \$250 opposing\./.test(glanceText), 'money line gives outside spending for and against');
         const glancePositions = await glance.locator('.glance-positions li').allTextContents();
-        check(glancePositions.length === 2 && glancePositions[0].startsWith('Housing — Supports expanding') && glancePositions[1].startsWith('Health care — Wants to cap'), `positions line lists the first position per issue (${glancePositions.length})`);
+        check(glancePositions[0]?.startsWith('Housing — Supports expanding') && glancePositions[1]?.startsWith('Health care — Wants to cap'), `positions line lists the first position per issue (${glancePositions.length})`);
+        check(glancePositions.length > 2 && glancePositions.slice(2).every((t) => t.endsWith('— No statement found in the sources checked.')), 'issues with nothing found are named in the positions line');
         check(/5 recorded votes on your issues, most recently on Mar 2, 2026\./.test(glanceText), 'record line counts the votes in the Votes tab');
         check(glanceText.includes('Details and sources are in the tabs below.'), 'At a glance footnote is shown');
         const glanceBox = await glance.boundingBox();
@@ -146,6 +147,9 @@ async function run() {
         check(await positions.locator('.position-source a', { hasText: 'Campaign website: Housing (fictional)' }).count() === 1, 'each position links to its source');
         check((await positions.locator('.position-source').first().textContent()).includes('(campaign website, Sep 14, 2026)'), 'source line gives the type and date');
         check((await positions.textContent()).includes('Also has stated positions on: Climate, energy and environment.'), 'other stated issues are listed');
+        check((await positions.textContent()).includes('No statement found in the sources checked on:'), 'issues with nothing found are named in the Positions tab');
+        const newsLinks = positions.locator('.news-search a');
+        check(await newsLinks.count() >= 1 && /news\.google\.com\/search/.test(await newsLinks.first().getAttribute('href')), 'each issue with nothing found links to a news search (sample mode rewrites outside links to example.org)');
         const checked = positions.locator('details.more');
         check(await checked.locator('summary').textContent() === 'Sources checked (5)', 'sources checked are listed, collapsed');
         check(!(await checked.evaluate((d) => d.open)), 'sources checked start collapsed');

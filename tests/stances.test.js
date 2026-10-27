@@ -8,7 +8,8 @@ import os from 'node:os';
 import path from 'node:path';
 import { encodeCandidateToken, decodeCandidateToken } from '../lib/ids.js';
 import { recordProfile } from '../lib/labels.js';
-import { stancesSection, indexStances, raceResearched, STANCE_NOTES, STANCES_EXPLAINER } from '../lib/stances.js';
+import { stancesSection, indexStances, raceResearched, STANCE_NOTES, STANCES_EXPLAINER, ISSUE_NEWS_TERMS, searchName, newsSearchUrl } from '../lib/stances.js';
+import { ISSUES } from '../lib/issues.js';
 import { validateStances } from '../lib/validate-stances.js';
 
 const FIXTURE_SEED = JSON.parse(fs.readFileSync(new URL('../fixtures/ballot-seed.json', import.meta.url), 'utf8'));
@@ -95,12 +96,51 @@ test('ok: every stance on the selected issues, in issue order, with sources and 
 test('none-on-issues: the entry exists but says nothing on the selected issues', withFixtures(() => {
   const b = section('fx-governor', 'Sample Candidate B', ['housing', 'health']);
   assert.equal(b.status, 'none-on-issues');
-  assert.equal(b.note, 'No public statement on Housing, Health care was found in the sources checked (listed below).');
+  assert.equal(b.note, 'Ballot Scout found no statement from this candidate on Housing, Health care in the sources it checked (listed below). That doesn’t mean they haven’t spoken about it: the news searches below may find more.');
   assert.deepEqual(b.items, []);
   assert.equal(b.sourcesChecked.length, 3);
+  assert.deepEqual(b.missing.map((m) => [m.issue, m.issueLabel]), [['housing', 'Housing'], ['health', 'Health care']]);
+  assert.equal(b.missing[0].searchUrl, `https://news.google.com/search?q=${encodeURIComponent('"Sample Candidate B" housing')}&hl=en-US&gl=US&ceid=US:en`);
+  assert.equal(b.unreadable, null);
   const g = section('fx-cd-12', 'Sample Candidate G', ['labor']);
   assert.equal(g.status, 'none-on-issues');
   assert.deepEqual(g.otherIssues, ['Housing', 'Health care', 'Climate, energy and environment']);
+}));
+
+test('ok: issues with nothing found are listed with the same news search for every candidate', withFixtures(() => {
+  const s = section('fx-cd-12', 'Sample Candidate G', ['housing', 'israel-palestine', 'taxes']);
+  assert.equal(s.status, 'ok');
+  assert.deepEqual(s.missing.map((m) => m.issue), ['israel-palestine', 'taxes']);
+  assert.equal(s.missing[0].searchUrl, `https://news.google.com/search?q=${encodeURIComponent('"Sample Candidate G" Israel OR Gaza')}&hl=en-US&gl=US&ceid=US:en`);
+  assert.equal(section('fx-cd-12', 'Sample Candidate G', ['housing']).missing.length, 0);
+}));
+
+test('news search helpers: names as news reports print them, a fixed term list per issue', () => {
+  assert.equal(searchName('Kathy C. Hochul'), 'Kathy Hochul');
+  assert.equal(searchName('Joseph P. Addabbo Jr.'), 'Joseph Addabbo');
+  assert.equal(searchName('Jordan J.G. Wright'), 'Jordan Wright');
+  assert.equal(searchName('Nathaniel Hezekiah III'), 'Nathaniel Hezekiah');
+  for (const i of ISSUES) assert.ok(ISSUE_NEWS_TERMS[i.id], `search words for ${i.id}`);
+  assert.equal(newsSearchUrl('Pat Example', 'not-an-issue'), null);
+  assert.equal(newsSearchUrl('', 'housing'), null);
+});
+
+test('a campaign website that couldn’t be read is named, dated and linked, and the race still shows', withFixtures(() => {
+  const h = section('fx-cd-12', 'Sample Candidate H', ['housing']);
+  assert.equal(h.status, 'ok');
+  assert.deepEqual(h.unreadable, {
+    url: 'https://example.org/sample-candidate-h/issues', checked: '2026-10-20', reason: 'shows no readable text',
+    note: 'Ballot Scout couldn’t read this candidate’s campaign website when it checked on Oct 20, 2026: the site shows no readable text. Positions stated only there aren’t summarized here, so read it directly.',
+  });
+  assert.equal(section('fx-cd-12', 'Sample Candidate G', ['housing']).unreadable, null, 'only the candidate whose site couldn’t be read');
+  const bad = clone(FIXTURE_STANCES);
+  bad.candidates.find((e) => e.name === 'Sample Candidate H').websiteUnreadable = { url: 'not a url', checked: 'Oct 26', reason: 'not on the allowlist' };
+  const r = validateStances(bad, FIXTURE_SEED);
+  assert.ok(r.errors.some((e) => /websiteUnreadable\.url must be an http/.test(e)));
+  assert.ok(r.errors.some((e) => /websiteUnreadable\.checked must be YYYY-MM-DD/.test(e)));
+  assert.ok(r.errors.some((e) => /websiteUnreadable\.reason must be one of: blocks automated reading \| did not load \| shows no readable text/.test(e)), 'a page we merely weren’t given isn’t unreadable');
+  bad.candidates.find((e) => e.name === 'Sample Candidate H').websiteUnreadable = 'yes';
+  assert.ok(validateStances(bad, FIXTURE_SEED).errors.some((e) => /websiteUnreadable must be an object/.test(e)));
 }));
 
 test('judicial and running-mate statuses come before any lookup', withFixtures(() => {
@@ -255,6 +295,9 @@ test('validateStances catches each error type', () => {
   assert.ok(hasError(oneEntry((f, c, s) => { delete s.summary; }), /summary is required/));
   assert.ok(hasError(oneEntry((f, c, s) => { s.summary = 'Has a plan to expand federal tax credits for new rental homes.'; }), /summary must start with one of: Supports, Opposes/));
   assert.ok(hasError(oneEntry((f, c, s) => { s.summary = 'supports expanding federal tax credits for new rental homes in the district.'; }), /must start with/), 'the verb is capitalized');
+  for (const verb of ['Said', 'Called', 'Urged', 'Signed', 'Wrote', 'Condemned', 'Criticized', 'Praised']) {
+    assert.equal(hasError(oneEntry((f, c, s) => { s.summary = `${verb} in 2024 that federal tax credits for new rental homes should grow.`; }), /must start with/), false, `${verb} opens a dated statement`);
+  }
   for (const word of ['Strongly', 'common-sense', 'CRISIS', 'far-left', 'Fighting']) {
     const r = oneEntry((f, c, s) => { s.summary = `Supports a ${word} approach to federal tax credits for new rental homes.`; });
     assert.ok(hasError(r, new RegExp(`uses words that aren’t allowed: ${word.toLowerCase()}`)), word);

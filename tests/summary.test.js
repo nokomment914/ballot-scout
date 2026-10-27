@@ -102,8 +102,16 @@ test('positions line follows the Positions tab', () => {
   assert.deepEqual(ok.items, [
     { issueLabel: 'Housing', text: 'Supports more federal tax credits for rental homes.' },
     { issueLabel: 'Health care', text: 'Wants to cap insulin costs at $35 a month for every patient.' },
-  ], 'the first stance per selected issue, in issue order');
-  assert.deepEqual(positions({ status: 'none-on-issues', note: 'No public statement on Housing was found.', items: [] }), { kind: 'positions', text: 'No public statement found on your issues in the sources checked.', items: [] });
+    { issueLabel: 'Taxes', text: 'No statement found in the sources checked.', none: true },
+  ], 'the first stance per selected issue, in issue order; an issue with nothing found is named, not left out');
+  assert.equal(ok.note, undefined);
+  assert.deepEqual(positions({ status: 'none-on-issues', note: 'Ballot Scout found no statement…', items: [] }),
+    { kind: 'positions', text: 'No statement on your issues found in the sources checked. The Positions tab has news searches for more.', items: [] });
+  const unread = { url: 'https://example.org/site', checked: '2026-10-26', reason: 'did not load', note: '…' };
+  assert.equal(positions({ status: 'ok', items: [{ issue: 'housing', issueLabel: 'Housing', summary: 'Supports more federal tax credits for rental homes.' }], unreadable: unread }).note,
+    'Ballot Scout couldn’t read this candidate’s campaign website; the Positions tab links to it.');
+  assert.equal(positions({ status: 'none-on-issues', note: '…', items: [], unreadable: unread }).note,
+    'Ballot Scout couldn’t read this candidate’s campaign website; the Positions tab links to it.');
   assert.equal(positions({ status: 'not-researched', note: 'Positions for this race haven’t been fully researched yet, so none are shown for any candidate in it.', items: [] }).text, 'Positions not researched yet.');
   assert.equal(positions({ status: 'judicial', note: 'Under New York’s rules for judicial campaigns, …', items: [] }).text, 'Under New York’s rules for judicial campaigns, …');
   assert.equal(positions({ status: 'running-mate', note: 'Positions for this ticket are listed under the candidate for Governor.', items: [] }).text, 'Positions for this ticket are listed under the candidate for Governor.');
