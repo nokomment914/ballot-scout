@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-28T15:14:55.331Z",
+  "builtAt": "2026-10-29T15:25:07.820Z",
   "source": {
     "id": "fec-outside",
     "label": "Federal Election Commission: independent expenditures (Schedule E, via the OpenFEC API)",
@@ -205,7 +205,8 @@
       "status": "not-found",
       "fecCandidateId": null,
       "cycles": {},
-      "links": []
+      "links": [],
+      "stale": true
     },
     "NY|us-house|13|jomomwilliams": {
       "name": "Jomo M. Williams",
