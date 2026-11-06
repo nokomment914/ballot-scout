@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
   "status": "ok",
-  "generatedAt": "2026-11-05T16:31:03.985Z",
+  "generatedAt": "2026-11-06T15:58:19.734Z",
   "session": 2025,
   "openLegislation": {
     "status": "ok",
-    "lastUpdated": "2026-11-05T16:30:28.803Z",
-    "bills": 25530,
-    "apiCalls": 3,
+    "lastUpdated": "2026-11-06T15:57:44.857Z",
+    "bills": 25535,
+    "apiCalls": 9,
     "pending": 0
   },
   "openStates": {
     "status": "ok",
-    "lastUpdated": "2026-11-05T16:31:03.317Z",
-    "exportUpdatedAt": "2026-11-04T23:22:52.153971+00:00",
-    "exportUrl": "https://data.openstates.org/csv/latest/NY_2025-2026_csv_5gXJcd6PKyhSKM76U0JzjK.zip",
+    "lastUpdated": "2026-11-06T15:58:19.007Z",
+    "exportUpdatedAt": "2026-11-05T23:23:30.137401+00:00",
+    "exportUrl": "https://data.openstates.org/csv/latest/NY_2025-2026_csv_5kEZwuiS8iOBW3krAakyZq.zip",
     "voteEvents": 2005
   },
   "note": "Run scripts/build-nysenate.mjs (the nightly GitHub Action does this) to build the New York indexes.",
   "nyMoney": {
     "status": "ok",
-    "lastUpdated": "2026-11-05T16:33:14.341Z",
+    "lastUpdated": "2026-11-06T15:59:50.568Z",
     "matched": 172,
     "unmatched": 108
   }
