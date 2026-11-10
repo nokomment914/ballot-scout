@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "status": "ok",
-  "generatedAt": "2026-11-09T18:51:30.899Z",
+  "generatedAt": "2026-11-10T16:28:13.690Z",
   "congresses": [
     118,
     119
   ],
-  "rollcallCount": 1729,
-  "rollcallsScanned": 3515,
+  "rollcallCount": 1731,
+  "rollcallsScanned": 3518,
   "members": 638,
   "voteview": {
-    "downloadedAt": "2026-11-09T18:51:30.899Z",
+    "downloadedAt": "2026-11-10T16:28:13.690Z",
     "urls": [
       "https://voteview.com/static/data/out/votes/HS118_votes.csv",
       "https://voteview.com/static/data/out/votes/HS119_votes.csv"
@@ -18,11 +18,11 @@
   },
   "congressGov": {
     "status": "ok",
-    "lastRun": "2026-11-09T18:51:30.899Z",
-    "billsTotal": 826,
-    "billsWithPolicyArea": 826,
-    "voteviewFallbackPolicyAreas": 213,
-    "calls": 0,
+    "lastRun": "2026-11-10T16:28:13.690Z",
+    "billsTotal": 828,
+    "billsWithPolicyArea": 828,
+    "voteviewFallbackPolicyAreas": 214,
+    "calls": 2,
     "errors": 0,
     "remaining": 0
   }
