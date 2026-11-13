@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-12T16:55:30.500Z",
+  "builtAt": "2026-11-13T16:34:08.286Z",
   "source": {
     "id": "fec-outside",
     "label": "Federal Election Commission: independent expenditures (Schedule E, via the OpenFEC API)",
@@ -330,7 +330,8 @@
       "status": "not-found",
       "fecCandidateId": null,
       "cycles": {},
-      "links": []
+      "links": [],
+      "stale": true
     },
     "NY|us-house|2|patrickhalpin": {
       "name": "Patrick Halpin",
