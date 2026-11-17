@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "status": "ok",
-  "generatedAt": "2026-11-16T18:37:33.530Z",
+  "generatedAt": "2026-11-17T17:39:20.917Z",
   "congresses": [
     118,
     119
   ],
   "rollcallCount": 1733,
-  "rollcallsScanned": 3530,
+  "rollcallsScanned": 3532,
   "members": 638,
   "voteview": {
-    "downloadedAt": "2026-11-16T18:37:33.530Z",
+    "downloadedAt": "2026-11-17T17:39:20.917Z",
     "urls": [
       "https://voteview.com/static/data/out/votes/HS118_votes.csv",
       "https://voteview.com/static/data/out/votes/HS119_votes.csv"
@@ -18,7 +18,7 @@
   },
   "congressGov": {
     "status": "ok",
-    "lastRun": "2026-11-16T18:37:33.530Z",
+    "lastRun": "2026-11-17T17:39:20.917Z",
     "billsTotal": 830,
     "billsWithPolicyArea": 830,
     "voteviewFallbackPolicyAreas": 216,
